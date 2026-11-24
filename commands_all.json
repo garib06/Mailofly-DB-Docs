@@ -1,0 +1,5832 @@
+[
+  {
+    "command": "page.rename",
+    "params": {
+      "name": "1. Database Overview"
+    }
+  },
+  {
+    "command": "page.setBackground",
+    "params": {
+      "color": "#0B1020"
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Page Container: Database Overview & Metadata Dashboard",
+      "x": 60,
+      "y": 60,
+      "width": 1440,
+      "height": 1100,
+      "props": {
+        "fill": "#0B1020",
+        "layout": "vertical",
+        "gap": 24,
+        "padding": 40,
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Header Block",
+      "props": {
+        "fill": "#00000000",
+        "layout": "vertical",
+        "gap": 6,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Title",
+      "text": "1. Database Overview & Metadata Dashboard",
+      "props": {
+        "fontSize": 26,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Subtitle",
+      "text": "Supabase Production Database Audit: mailofly | PostgreSQL 17.6 (aarch64) | Ref: aymarrhbnaygxkaorjfl",
+      "props": {
+        "fontSize": 13,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric Grid Row 1",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 18,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric: Total Tables",
+      "width": 326,
+      "height": 115,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 12,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 4,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "L",
+      "text": "Total Tables",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "V",
+      "text": "169",
+      "props": {
+        "fontSize": 28,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "S",
+      "text": "104 Public Base | 7 Views | 58 System",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric: Foreign Key Constraints",
+      "width": 326,
+      "height": 115,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 12,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 4,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "L",
+      "text": "Foreign Key Constraints",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "V",
+      "text": "215",
+      "props": {
+        "fontSize": 28,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "S",
+      "text": "Active Referential Constraints",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric: Total Indexes",
+      "width": 326,
+      "height": 115,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 12,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 4,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "L",
+      "text": "Total Indexes",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "V",
+      "text": "523",
+      "props": {
+        "fontSize": 28,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "S",
+      "text": "B-tree, Unique & Compound",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric: RLS Security Coverage",
+      "width": 326,
+      "height": 115,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 12,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 4,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "L",
+      "text": "RLS Security Coverage",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "V",
+      "text": "100%",
+      "props": {
+        "fontSize": 28,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "S",
+      "text": "104 of 104 Public Tables Secured",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric Grid Row 2",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 18,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric: Total Columns",
+      "width": 326,
+      "height": 115,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 12,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 4,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "L",
+      "text": "Total Columns",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "V",
+      "text": "1,771",
+      "props": {
+        "fontSize": 28,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "S",
+      "text": "Across all tables and views",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric: Stored Functions",
+      "width": 326,
+      "height": 115,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 12,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 4,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "L",
+      "text": "Stored Functions",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "V",
+      "text": "224",
+      "props": {
+        "fontSize": 28,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "S",
+      "text": "Triggers, RLS helpers & RPCs",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric: Database Size",
+      "width": 326,
+      "height": 115,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 12,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 4,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "L",
+      "text": "Database Size",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "V",
+      "text": "~50.5 MB",
+      "props": {
+        "fontSize": 28,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "S",
+      "text": "Top: emails (14.4MB), ses_logs (11.4MB)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Metric: FKs Missing Indexes",
+      "width": 326,
+      "height": 115,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 12,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 4,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "L",
+      "text": "FKs Missing Indexes",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "V",
+      "text": "59",
+      "props": {
+        "fontSize": 28,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "S",
+      "text": "High-priority index opportunities",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Overview Content Row",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 20,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Architecture Card",
+      "width": 670,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 24,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83c\udfe2 Core SaaS Domain Model",
+      "props": {
+        "fontSize": 16,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Desc",
+      "text": "\u2022 Multi-Tenancy Boundary:\n  The `organizations` table acts as the master multi-tenant anchor. All customer data (contacts, campaigns, emails, mailboxes, domains) is strictly partitioned by organization_id.\n\n\u2022 Email Dispatch & AWS SES Ingestion:\n  High-volume transactional and marketing email pipeline. Webhook events stream into `ses_event_inbox`, recorded in `ses_event_log`, and update `ses_recipient_outcomes`.\n\n\u2022 Drip & Event Automation:\n  Automations workflow system (automations, automation_runs, automation_run_steps, automation_events) drives behavioral email sequences.\n\n\u2022 Audience & CRM:\n  Rich contact model with dynamic segmentation (segment_contacts), custom properties (contact_property_values), and subscription state.",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Schema Inventory Card",
+      "width": 670,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 24,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udcca Schema & Object Inventory",
+      "props": {
+        "fontSize": 16,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Desc",
+      "text": "\u2022 public Schema: 104 Base Tables, 7 Views, 224 Functions, 119 Enums\n  Contains the complete application domain (tenancy, campaigns, contacts, billing).\n\n\u2022 auth Schema: 27 Tables\n  Managed by Supabase GoTrue (users, identities, sessions, mfa_factors, refresh_tokens).\n\n\u2022 storage Schema: 10 Tables\n  Supabase Storage engine (buckets, objects, s3_multipart_uploads).\n\n\u2022 realtime Schema: 10 Tables\n  Realtime broadcast, presence, and change data capture subscriptions.\n\n\u2022 extensions & cron Schemas: 6 Tables\n  pg_cron scheduled jobs (mail queue crons) and vault secret keys.",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "page.add",
+    "params": {
+      "name": "2. Entity Relationship Diagram"
+    }
+  },
+  {
+    "command": "page.setBackground",
+    "params": {
+      "color": "#0B1020"
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Page Container: Entity Relationship Diagram (Core Application Modules)",
+      "x": 60,
+      "y": 60,
+      "width": 1440,
+      "height": 1100,
+      "props": {
+        "fill": "#0B1020",
+        "layout": "vertical",
+        "gap": 24,
+        "padding": 40,
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Header Block",
+      "props": {
+        "fill": "#00000000",
+        "layout": "vertical",
+        "gap": 6,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Title",
+      "text": "2. Entity Relationship Diagram (Core Application Modules)",
+      "props": {
+        "fontSize": 26,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Subtitle",
+      "text": "Mapped foreign key constraints across Tenancy, CRM, Campaigns, Deliveries, Automations & Billing",
+      "props": {
+        "fontSize": 13,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "ERD Modules Container",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 24,
+        "sizingH": "fill",
+        "wrap": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Module: Tenancy & Identity",
+      "width": 320,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 14,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Module Title",
+      "text": "\ud83d\udce6 Tenancy & Identity",
+      "props": {
+        "fontSize": 15,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: organizations",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 organizations",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  name: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  slug: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  owner_id: uuid",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  created_at: tstz",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: organization_members",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 organization_members",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 org_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 user_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  role: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: users",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 users",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid (auth)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  email: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  full_name: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  avatar_url: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Module: Audience & Contacts",
+      "width": 320,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 14,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Module Title",
+      "text": "\ud83d\udce6 Audience & Contacts",
+      "props": {
+        "fontSize": 15,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: contacts",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 contacts",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 org_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  email: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  status: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  created_at: tstz",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: contact_segments",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 contact_segments",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 org_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  name: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  filter_rules: jsonb",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: segment_contacts",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 segment_contacts",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid (Junction)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 segment_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 contact_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Module: Campaigns & Broadcasts",
+      "width": 320,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 14,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Module Title",
+      "text": "\ud83d\udce6 Campaigns & Broadcasts",
+      "props": {
+        "fontSize": 15,
+        "fill": "#8B5CF6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: campaigns",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 campaigns",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 org_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  name: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  status: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  subject: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: campaign_runs",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 campaign_runs",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 campaign_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  started_at: tstz",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  status: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: campaign_run_audience",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 campaign_run_audience",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid (Junction)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 run_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 contact_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Module: Sending & Delivery",
+      "width": 320,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 16,
+        "layout": "vertical",
+        "gap": 14,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Module Title",
+      "text": "\ud83d\udce6 Sending & Delivery",
+      "props": {
+        "fontSize": 15,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: mailboxes",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 mailboxes",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 org_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  email: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  status: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  daily_limit: int",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: emails",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 emails",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 mailbox_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  recipient: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  subject: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  status: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table: ses_event_log",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 8,
+        "padding": 12,
+        "layout": "vertical",
+        "gap": 4,
+        "sizingH": "fill",
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Table Name",
+      "text": "\ud83d\udcc4 ses_event_log",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "PK",
+      "text": "\ud83d\udd11 id: uuid",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  \ud83d\udd17 email_id: uuid (FK)",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  event_type: text",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "  timestamp: tstz",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "page.add",
+    "params": {
+      "name": "3. Schema-wise Database Structure"
+    }
+  },
+  {
+    "command": "page.setBackground",
+    "params": {
+      "color": "#0B1020"
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Page Container: Schema-wise Database Structure & Breakdown",
+      "x": 60,
+      "y": 60,
+      "width": 1440,
+      "height": 1100,
+      "props": {
+        "fill": "#0B1020",
+        "layout": "vertical",
+        "gap": 24,
+        "padding": 40,
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Header Block",
+      "props": {
+        "fill": "#00000000",
+        "layout": "vertical",
+        "gap": 6,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Title",
+      "text": "3. Schema-wise Database Structure & Breakdown",
+      "props": {
+        "fontSize": 26,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Subtitle",
+      "text": "Categorized inspection of public, auth, storage, realtime, and extension namespaces",
+      "props": {
+        "fontSize": 13,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Schemas Grid",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 20,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Schema: public (Application)",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Schema Name",
+      "text": "public (Application)",
+      "props": {
+        "fontSize": 16,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Schema Sub",
+      "text": "104 Base Tables | 7 Views",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "Core Multi-tenancy: organizations, members, invitations",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "CRM & Audience: contacts, segments, topics, properties",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "Email Infrastructure: mailboxes, domains, smtp, ses_logs",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "Automation Pipeline: automations, runs, steps, events",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "Billing System: plans, subscriptions, addons, ledger",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "Developer Ecosystem: api_keys, webhooks, oauth_clients",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Schema: auth (Supabase GoTrue)",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Schema Name",
+      "text": "auth (Supabase GoTrue)",
+      "props": {
+        "fontSize": 16,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Schema Sub",
+      "text": "27 Tables",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "users: Core user identity records",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "identities: OAuth & email identity mappings",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "sessions & refresh_tokens: Active user JWT sessions",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "mfa_factors & mfa_challenges: Multi-factor auth",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "sso_providers & sso_domains: Enterprise SAML/SSO",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "audit_log_entries: Security and login event tracking",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Schema: storage (Asset Engine)",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Schema Name",
+      "text": "storage (Asset Engine)",
+      "props": {
+        "fontSize": 16,
+        "fill": "#8B5CF6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Schema Sub",
+      "text": "10 Tables",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "buckets: S3 bucket namespaces & configuration",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "objects: File object metadata, paths, and mime types",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "s3_multipart_uploads: Multipart upload state tracker",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "bucket_lifecycle_states: Expiration and lifecycle rules",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Schema: realtime & extensions",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Schema Name",
+      "text": "realtime & extensions",
+      "props": {
+        "fontSize": 16,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Schema Sub",
+      "text": "16 Tables",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "realtime.channels: WebSocket broadcast subscriptions",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "cron.job & job_run_details: Background cron runners",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "vault.secrets: Encrypted secrets storage",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Item Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Txt",
+      "text": "extensions: pg_trgm, uuid-ossp, pgcrypto, etc.",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "page.add",
+    "params": {
+      "name": "4. Table Details"
+    }
+  },
+  {
+    "command": "page.setBackground",
+    "params": {
+      "color": "#0B1020"
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Page Container: Table Details & Data Dictionary (Core Anchor Tables)",
+      "x": 60,
+      "y": 60,
+      "width": 1440,
+      "height": 1100,
+      "props": {
+        "fill": "#0B1020",
+        "layout": "vertical",
+        "gap": 24,
+        "padding": 40,
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Header Block",
+      "props": {
+        "fill": "#00000000",
+        "layout": "vertical",
+        "gap": 6,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Title",
+      "text": "4. Table Details & Data Dictionary (Core Anchor Tables)",
+      "props": {
+        "fontSize": 26,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Subtitle",
+      "text": "Exhaustive column types, constraints, default expressions, indexes, and security policies",
+      "props": {
+        "fontSize": 13,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Tables Detail Row",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 20,
+        "sizingH": "fill",
+        "wrap": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Detail: organizations",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 18,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udccb public.organizations",
+      "props": {
+        "fontSize": 15,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Meta",
+      "text": "4 Policies (Select, Insert, Update, Delete) | 6 Indexes",
+      "props": {
+        "fontSize": 11,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "id (uuid)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "gen_random_uuid(",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "name (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "NOT NULL",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "slug (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "NOT NULL [UNIQUE",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "owner_id (uuid)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "REFERENCES users",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "created_at (timestamptz)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "now()",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Detail: contacts",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 18,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udccb public.contacts",
+      "props": {
+        "fontSize": 15,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Meta",
+      "text": "4 Policies (Org-scoped CRUD) | 7 Indexes (email, org_id)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "id (uuid)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "gen_random_uuid(",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "organization_id (uuid)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "REFERENCES organ",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "email (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "NOT NULL",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "status (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "'subscribed'",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "attributes (jsonb)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "'{}'::jsonb",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Detail: emails",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 18,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udccb public.emails",
+      "props": {
+        "fontSize": 15,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Meta",
+      "text": "3 Policies (Org Member Read/Write) | 8 Indexes (14.36 MB)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "id (uuid)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "gen_random_uuid(",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "mailbox_id (uuid)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "REFERENCES mailb",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "recipient (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "NOT NULL",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "subject (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "NOT NULL",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "status (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "'queued'",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Detail: automations",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 18,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udccb public.automations",
+      "props": {
+        "fontSize": 15,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Meta",
+      "text": "4 Policies (Org-scoped CRUD) | 4 Indexes",
+      "props": {
+        "fontSize": 11,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "id (uuid)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "gen_random_uuid(",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "organization_id (uuid)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "REFERENCES organ",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "name (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "NOT NULL",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "trigger_type (text)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "NOT NULL",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Col Line",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 6,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "is_active (boolean)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Def",
+      "text": "false",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "page.add",
+    "params": {
+      "name": "5. Relationship Map"
+    }
+  },
+  {
+    "command": "page.setBackground",
+    "params": {
+      "color": "#0B1020"
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Page Container: Database Relationship Map & Cardinality Matrix",
+      "x": 60,
+      "y": 60,
+      "width": 1440,
+      "height": 1100,
+      "props": {
+        "fill": "#0B1020",
+        "layout": "vertical",
+        "gap": 24,
+        "padding": 40,
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Header Block",
+      "props": {
+        "fill": "#00000000",
+        "layout": "vertical",
+        "gap": 6,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Title",
+      "text": "5. Database Relationship Map & Cardinality Matrix",
+      "props": {
+        "fontSize": 26,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Subtitle",
+      "text": "Structural mapping of 1:1, 1:N, N:M Junction Tables, and Standalone Entities",
+      "props": {
+        "fontSize": 13,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Rel Matrix Container",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 20,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "RelCard: One-to-Many (1 : N)",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Rel Title",
+      "text": "One-to-Many (1 : N)",
+      "props": {
+        "fontSize": 15,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "organizations \u2500\u2500< campaigns",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "organizations \u2500\u2500< contacts",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "organizations \u2500\u2500< mailboxes",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "organizations \u2500\u2500< automations",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "campaigns \u2500\u2500< campaign_runs",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "mailboxes \u2500\u2500< emails",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "emails \u2500\u2500< ses_event_log",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "plans \u2500\u2500< organization_subscriptions",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "RelCard: Many-to-Many Junctions (N : M)",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Rel Title",
+      "text": "Many-to-Many Junctions (N : M)",
+      "props": {
+        "fontSize": 15,
+        "fill": "#8B5CF6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "segment_contacts (segments \u2194 contacts)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "organization_members (orgs \u2194 users)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "campaign_run_audience (runs \u2194 contacts)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "contact_topics (contacts \u2194 topics)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "admin_role_permissions (roles \u2194 perms)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "billing_addon_orders (orgs \u2194 addons)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "RelCard: One-to-One (1 : 1)",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Rel Title",
+      "text": "One-to-One (1 : 1)",
+      "props": {
+        "fontSize": 15,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "users \u2194 account_lifecycle_state",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "organizations \u2194 organization_usage",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "organizations \u2194 org_sending_protection",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "organizations \u2194 org_billing_plan_state",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "RelCard: Standalone / Unrelated",
+      "width": 325,
+      "height": 380,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Rel Title",
+      "text": "Standalone / Unrelated",
+      "props": {
+        "fontSize": 15,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "global_suppression_list (System-wide)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "app_settings (Platform-wide config)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "test_apply (Orphaned test table)",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "page.add",
+    "params": {
+      "name": "6. Index & Performance Analysis"
+    }
+  },
+  {
+    "command": "page.setBackground",
+    "params": {
+      "color": "#0B1020"
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Page Container: Index & Database Performance Analysis",
+      "x": 60,
+      "y": 60,
+      "width": 1440,
+      "height": 1100,
+      "props": {
+        "fill": "#0B1020",
+        "layout": "vertical",
+        "gap": 24,
+        "padding": 40,
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Header Block",
+      "props": {
+        "fill": "#00000000",
+        "layout": "vertical",
+        "gap": 6,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Title",
+      "text": "6. Index & Database Performance Analysis",
+      "props": {
+        "fontSize": 26,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Subtitle",
+      "text": "Table sizing analysis, index coverage audit, and 59 foreign key indexing opportunities",
+      "props": {
+        "fontSize": 13,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Perf Grid Container",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 20,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Table Sizing Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udce6 Top Tables by Storage Size",
+      "props": {
+        "fontSize": 16,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Name",
+      "text": "public.emails",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Size",
+      "text": "14.36 MB (379 rows (heavy body/payloads))",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Name",
+      "text": "public.ses_event_log",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Size",
+      "text": "11.37 MB (963 rows (SES JSON webhooks))",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Name",
+      "text": "public.api_key_request_logs",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Size",
+      "text": "9.82 MB (485 rows (API request dumps))",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Name",
+      "text": "public.contacts",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Size",
+      "text": "4.38 MB (1,224 rows (attributes jsonb))",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Name",
+      "text": "public.ses_event_inbox",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Size",
+      "text": "2.08 MB (1,000 rows (event queue))",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "horizontal",
+        "mainAlign": "spaceBetween",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Name",
+      "text": "public.ses_recipient_outcomes",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Size",
+      "text": "1.34 MB (2,357 rows (delivery logs))",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Missing Indexes Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\u26a0\ufe0f Missing Indexes on Foreign Keys (59 Found)",
+      "props": {
+        "fontSize": 16,
+        "fill": "#EF4444"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Sub",
+      "text": "Foreign keys lacking dedicated B-tree indexes cause sequential table scans on deletes and joins.",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "\u2022 automation_waiting_events.automation_id",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Tgt",
+      "text": "   -> references automations.id",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "\u2022 billing_addon_orders.addon_id",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Tgt",
+      "text": "   -> references billing_addons.id",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "\u2022 campaign_run_audience.organization_id",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Tgt",
+      "text": "   -> references organizations.id",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "\u2022 automations.user_id",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Tgt",
+      "text": "   -> references users.id",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "\u2022 billing_dodo_snapshots.organization_id",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Tgt",
+      "text": "   -> references organizations.id",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "\u2022 billing_fulfilled_payments.organization_id",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Tgt",
+      "text": "   -> references organizations.id",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Col",
+      "text": "\u2022 billing_payment_ledger.plan_id",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Tgt",
+      "text": "   -> references plans.id",
+      "props": {
+        "fontSize": 10,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Perf Rec Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\ude80 Performance Optimization Plan",
+      "props": {
+        "fontSize": 16,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Notes",
+      "text": "1. Index Unindexed Foreign Keys [HIGH]:\n   Adding indexes on high-frequency tables (e.g. campaign_run_audience, automation_events) prevents full sequential scans during cascading deletes.\n\n2. Log Table Archiving / Retention [MEDIUM]:\n   ses_event_log and api_key_request_logs account for >40% of database storage despite low row counts. Implement a 30-day or 90-day retention partition.\n\n3. Autovacuum Tuning [LOW]:\n   Dead tuple accumulation is normal on event queue tables (ses_event_inbox). Ensure autovacuum_vacuum_scale_factor is set to 0.05 for queue tables.",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "page.add",
+    "params": {
+      "name": "7. Security & RLS Visualization"
+    }
+  },
+  {
+    "command": "page.setBackground",
+    "params": {
+      "color": "#0B1020"
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Page Container: Security & Row Level Security (RLS) Audit",
+      "x": 60,
+      "y": 60,
+      "width": 1440,
+      "height": 1100,
+      "props": {
+        "fill": "#0B1020",
+        "layout": "vertical",
+        "gap": 24,
+        "padding": 40,
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Header Block",
+      "props": {
+        "fill": "#00000000",
+        "layout": "vertical",
+        "gap": 6,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Title",
+      "text": "7. Security & Row Level Security (RLS) Audit",
+      "props": {
+        "fontSize": 26,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Subtitle",
+      "text": "Audit of 104 RLS-enabled public tables, 219 active policies, and 33 service-role boundaries",
+      "props": {
+        "fontSize": 13,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Security Container",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 20,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Posture Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udee1\ufe0f Row Level Security Posture",
+      "props": {
+        "fontSize": 16,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Desc",
+      "text": "\u2022 100% RLS Adoption:\n  All 104 base tables in the public schema have Row Level Security enabled (rls_enabled: true). Zero tables have open, unmanaged public access.\n\n\u2022 219 Defined RLS Policies:\n  Fine-grained access control using auth.uid() and organization_id tenancy checks.\n\n\u2022 33 Service-Role Locked Tables:\n  Tables with RLS enabled but 0 client-facing policies. These are entirely shielded from the Supabase Data API and accessible only via trusted backend workers.\n\n\u2022 28 Public / Anon Policies:\n  Permits unauthenticated read access to public marketing assets (blog posts, authors, public pricing plans, newsletter signups).",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Service Role Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udd12 Service-Role Isolated Tables (33)",
+      "props": {
+        "fontSize": 16,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Sub",
+      "text": "Strict backend isolation: zero policies exist, blocking direct PostgREST client queries.",
+      "props": {
+        "fontSize": 11,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 billing_payment_ledger",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 billing_addon_orders",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 billing_fulfilled_payments",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 billing_webhook_inbox",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 billing_dodo_snapshots",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 account_lifecycle_state",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 account_lifecycle_policy",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 account_lifecycle_deletions",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 7,
+        "layout": "horizontal",
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "\u2022 campaign_run_audience",
+      "props": {
+        "fontSize": 11,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Security Recs Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udd0d Security Recommendations",
+      "props": {
+        "fontSize": 16,
+        "fill": "#8B5CF6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Recs",
+      "text": "1. Regular Policy Audit on Blog & Public Endpoints:\n   Ensure blog_posts and newsletter_subscribers policies do not accidentally expose draft or subscriber PII to 'anon'.\n\n2. Explicit Documentation of Service-Role Tables:\n   Document the 33 service-role tables in code repository documentation to prevent frontend developers from attempting direct client reads.\n\n3. Storage Object RLS Alignment:\n   Confirm that storage.objects policies reflect the organization-scoped access model used in public tables.",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "page.add",
+    "params": {
+      "name": "8. Health & Recommendations"
+    }
+  },
+  {
+    "command": "page.setBackground",
+    "params": {
+      "color": "#0B1020"
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Page Container: Database Health Score & Prioritized Action Plan",
+      "x": 60,
+      "y": 60,
+      "width": 1440,
+      "height": 1100,
+      "props": {
+        "fill": "#0B1020",
+        "layout": "vertical",
+        "gap": 24,
+        "padding": 40,
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Header Block",
+      "props": {
+        "fill": "#00000000",
+        "layout": "vertical",
+        "gap": 6,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Title",
+      "text": "8. Database Health Score & Prioritized Action Plan",
+      "props": {
+        "fontSize": 26,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Page Subtitle",
+      "text": "Comprehensive architectural evaluation and implementation roadmap for mailofly",
+      "props": {
+        "fontSize": 13,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Health Container",
+      "props": {
+        "fill": "#00000000",
+        "layout": "horizontal",
+        "gap": 20,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Health Score Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 24,
+        "layout": "vertical",
+        "gap": 14,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83c\udfc6 Database Health Rating",
+      "props": {
+        "fontSize": 18,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Score",
+      "text": "88 / 100",
+      "props": {
+        "fontSize": 48,
+        "fill": "#22C55E"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Grade",
+      "text": "GRADE: A- (Production Ready, Solid Security)",
+      "props": {
+        "fontSize": 13,
+        "fill": "#F8FAFC"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Summary",
+      "text": "Strengths:\n\u2022 100% RLS compliance on all public tables.\n\u2022 Clear multi-tenant relational hierarchy with organization_id.\n\u2022 215 properly declared foreign keys.\n\nAreas for Improvement:\n\u2022 59 foreign keys missing indexes.\n\u2022 Heavy log table bloat on email and SES webhook tables.\n\u2022 1 orphaned table missing primary key (test_apply).",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Findings Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 10,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\udccb Actionable Findings",
+      "props": {
+        "fontSize": 16,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "gap": 2,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "[HIGH] Index 59 Foreign Key Columns",
+      "props": {
+        "fontSize": 12,
+        "fill": "#EF4444"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "A",
+      "text": "Run migration adding indexes on unindexed FKs to avoid join scans.",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "gap": 2,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "[MEDIUM] SES Event Log Retention",
+      "props": {
+        "fontSize": 12,
+        "fill": "#F59E0B"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "A",
+      "text": "Implement archival/partitioning on ses_event_log (11.4MB).",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "gap": 2,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "[LOW] Remove test_apply Table",
+      "props": {
+        "fontSize": 12,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "A",
+      "text": "Clean up the orphaned test_apply table which has no PK.",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Row",
+      "props": {
+        "fill": "#111827",
+        "cornerRadius": 6,
+        "padding": 8,
+        "layout": "vertical",
+        "gap": 2,
+        "sizingH": "fill"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "T",
+      "text": "[INFO] Service-Role Table Inventory",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "A",
+      "text": "Document the 33 backend-only tables for frontend teams.",
+      "props": {
+        "fontSize": 10,
+        "fill": "#94A3B8"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Roadmap Card",
+      "width": 440,
+      "height": 420,
+      "props": {
+        "fill": "#172033",
+        "cornerRadius": 14,
+        "padding": 20,
+        "layout": "vertical",
+        "gap": 12,
+        "stroke": "#1E293B",
+        "strokeWeight": 1
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "\ud83d\uddfa\ufe0f Suggested Optimization Roadmap",
+      "props": {
+        "fontSize": 16,
+        "fill": "#3B82F6"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Roadmap",
+      "text": "Phase 1: Immediate Wins (Week 1)\n\u2022 Create B-tree indexes on high-traffic FKs: automation_waiting_events, campaign_run_audience, billing_addon_orders.\n\u2022 Drop or migrate `public.test_apply`.\n\nPhase 2: Data Lifecycle (Month 1)\n\u2022 Establish automated 90-day retention policies on `ses_event_log` and `api_key_request_logs`.\n\u2022 Evaluate table partitioning for `public.emails` as row volume grows.\n\nPhase 3: Continuous Monitoring (Ongoing)\n\u2022 Enable and monitor `pg_stat_statements` for slow query tracking.\n\u2022 Perform monthly RLS policy audits on new tables.",
+      "props": {
+        "fontSize": 12,
+        "fill": "#94A3B8"
+      }
+    }
+  }
+]

@@ -1,0 +1,2202 @@
+{
+  "collected_at": "2026-11-24T07:03:58.961796+00:00",
+  "database": "mailofly",
+  "project_ref": "aymarrhbnaygxkaorjfl",
+  "metadata_type": "policies.json",
+  "record_count": 219,
+  "source_info": {
+    "query": "pg_policies"
+  },
+  "data": [
+    {
+      "schema_name": "cron",
+      "table_name": "job",
+      "policy_name": "cron_job_policy",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "(username = CURRENT_USER)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "cron",
+      "table_name": "job_run_details",
+      "policy_name": "cron_job_run_details_policy",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "(username = CURRENT_USER)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "admin_permissions",
+      "policy_name": "Admins can read permissions catalog",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "admin_role_permissions",
+      "policy_name": "Admins can read role permissions",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "admin_role_permissions",
+      "policy_name": "Super admins can modify role permissions",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "has_admin_permission('roles.manage'::text)",
+      "with_check_expression": "has_admin_permission('roles.manage'::text)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "admin_roles",
+      "policy_name": "Admins can read admin roles",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "admin_roles",
+      "policy_name": "Super admins can modify admin roles",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "has_admin_permission('roles.manage'::text)",
+      "with_check_expression": "has_admin_permission('roles.manage'::text)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_key_request_logs",
+      "policy_name": "Org members can view api key request logs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM api_keys k\n  WHERE ((k.id = api_key_request_logs.api_key_id) AND is_organization_member(k.organization_id, 'viewer'::organization_role))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_key_request_logs",
+      "policy_name": "Users can view request logs for own api keys",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM api_keys k\n  WHERE ((k.id = api_key_request_logs.api_key_id) AND (k.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_keys",
+      "policy_name": "Org admins can delete api keys",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_keys",
+      "policy_name": "Org admins can insert api keys",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_keys",
+      "policy_name": "Org admins can update api keys",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_keys",
+      "policy_name": "Org members can view api keys",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "app_settings",
+      "policy_name": "Users cannot access app_settings",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "false",
+      "with_check_expression": "false"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_event_receipts",
+      "policy_name": "Members can read event receipts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members m\n  WHERE ((m.organization_id = automation_event_receipts.organization_id) AND (m.user_id = ( SELECT auth.uid() AS uid)))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_events",
+      "policy_name": "App admins full access automation events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_events",
+      "policy_name": "Org admins can delete automation events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_events",
+      "policy_name": "Org admins can insert automation events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_events",
+      "policy_name": "Org admins can update automation events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_events",
+      "policy_name": "Org members can view automation events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_run_steps",
+      "policy_name": "App admins full access automation run steps",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_run_steps",
+      "policy_name": "Org admins can delete automation run steps",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM automation_runs r\n  WHERE ((r.id = automation_run_steps.run_id) AND is_organization_member(r.organization_id, 'admin'::organization_role))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_run_steps",
+      "policy_name": "Org admins can insert automation run steps",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(EXISTS ( SELECT 1\n   FROM automation_runs r\n  WHERE ((r.id = automation_run_steps.run_id) AND is_organization_member(r.organization_id, 'admin'::organization_role))))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_run_steps",
+      "policy_name": "Org admins can update automation run steps",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM automation_runs r\n  WHERE ((r.id = automation_run_steps.run_id) AND is_organization_member(r.organization_id, 'admin'::organization_role))))",
+      "with_check_expression": "(EXISTS ( SELECT 1\n   FROM automation_runs r\n  WHERE ((r.id = automation_run_steps.run_id) AND is_organization_member(r.organization_id, 'admin'::organization_role))))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_run_steps",
+      "policy_name": "Org members can view automation run steps",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM automation_runs r\n  WHERE ((r.id = automation_run_steps.run_id) AND is_organization_member(r.organization_id, 'viewer'::organization_role))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_runs",
+      "policy_name": "App admins full access automation runs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_runs",
+      "policy_name": "Org admins can delete automation runs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_runs",
+      "policy_name": "Org admins can insert automation runs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_runs",
+      "policy_name": "Org admins can update automation runs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_runs",
+      "policy_name": "Org members can view automation runs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_waiting_events",
+      "policy_name": "App admins full access automation waiting events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_waiting_events",
+      "policy_name": "Org admins can delete automation waiting events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_waiting_events",
+      "policy_name": "Org admins can insert automation waiting events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_waiting_events",
+      "policy_name": "Org admins can update automation waiting events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automation_waiting_events",
+      "policy_name": "Org members can view automation waiting events",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automations",
+      "policy_name": "App admins full access automations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automations",
+      "policy_name": "Org admins can delete automations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automations",
+      "policy_name": "Org admins can insert automations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automations",
+      "policy_name": "Org admins can update automations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "automations",
+      "policy_name": "Org members can view automations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "billing_addons",
+      "policy_name": "Admins full access billing_addons",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "billing_addons",
+      "policy_name": "Anyone can read active billing addons",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{anon,authenticated}",
+      "command": "SELECT",
+      "using_expression": "(is_active = true)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_authors",
+      "policy_name": "blog_authors_admin_delete",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_authors",
+      "policy_name": "blog_authors_admin_insert",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_authors",
+      "policy_name": "blog_authors_admin_update",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_authors",
+      "policy_name": "blog_authors_select_all",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "true",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_categories",
+      "policy_name": "blog_categories_admin_delete",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_categories",
+      "policy_name": "blog_categories_admin_insert",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_categories",
+      "policy_name": "blog_categories_admin_update",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_categories",
+      "policy_name": "blog_categories_select_all",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "true",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_posts",
+      "policy_name": "blog_posts_admin_delete",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_posts",
+      "policy_name": "blog_posts_admin_insert",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_posts",
+      "policy_name": "blog_posts_admin_update",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_posts",
+      "policy_name": "blog_posts_select_published_or_admin",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "((published = true) OR is_app_admin())",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaign_runs",
+      "policy_name": "Org admins can delete campaign runs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaign_runs",
+      "policy_name": "Org admins can insert campaign runs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaign_runs",
+      "policy_name": "Org members can view campaign runs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "policy_name": "Org admins can delete campaigns",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "policy_name": "Org admins can insert campaigns",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "policy_name": "Org admins can update campaigns",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "policy_name": "Org members can view campaigns",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_properties",
+      "policy_name": "Admins can manage contact_properties of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = contact_properties.organization_id) AND (om.user_id = auth.uid()) AND (om.role = ANY (ARRAY['owner'::organization_role, 'admin'::organization_role])))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_properties",
+      "policy_name": "Service role has full access to contact_properties",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "((auth.jwt() ->> 'role'::text) = 'service_role'::text)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_properties",
+      "policy_name": "Users can view contact_properties of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = contact_properties.organization_id) AND (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_property_values",
+      "policy_name": "Admins can manage contact_property_values of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = contact_property_values.organization_id) AND (om.user_id = auth.uid()) AND (om.role = ANY (ARRAY['owner'::organization_role, 'admin'::organization_role])))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_property_values",
+      "policy_name": "Service role has full access to contact_property_values",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "((auth.jwt() ->> 'role'::text) = 'service_role'::text)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_property_values",
+      "policy_name": "Users can view contact_property_values of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = contact_property_values.organization_id) AND (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_segments",
+      "policy_name": "Org admins can delete contact segments",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_segments",
+      "policy_name": "Org admins can insert contact segments",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_segments",
+      "policy_name": "Org admins can update contact segments",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_segments",
+      "policy_name": "Org members can view contact segments",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_subscription_events",
+      "policy_name": "subscription_events_org_read",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members m\n  WHERE ((m.organization_id = contact_subscription_events.organization_id) AND (m.user_id = ( SELECT auth.uid() AS uid)))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_topics",
+      "policy_name": "Admins can manage contact_topics of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = contact_topics.organization_id) AND (om.user_id = auth.uid()) AND (om.role = ANY (ARRAY['owner'::organization_role, 'admin'::organization_role])))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_topics",
+      "policy_name": "Service role has full access to contact_topics",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "((auth.jwt() ->> 'role'::text) = 'service_role'::text)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_topics",
+      "policy_name": "Users can view contact_topics of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = contact_topics.organization_id) AND (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contacts",
+      "policy_name": "Org admins can delete contacts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contacts",
+      "policy_name": "Org admins can insert contacts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contacts",
+      "policy_name": "Org admins can update contacts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contacts",
+      "policy_name": "Org members can view contacts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "email_send_confirmations",
+      "policy_name": "Service role full access on email_send_confirmations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "command": "ALL",
+      "using_expression": "true",
+      "with_check_expression": "true"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "policy_name": "Org admins can delete mail logs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "policy_name": "Org admins can insert mail logs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "policy_name": "Org admins can update mail logs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "policy_name": "Org members can view mail logs",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "global_suppression_list",
+      "policy_name": "Authenticated users can read global suppression list",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "true",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "help_ai_queries",
+      "policy_name": "Admins can view all help queries",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = 'admin'::user_role))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "help_ai_queries",
+      "policy_name": "Users can insert their own help queries",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(auth.uid() = user_id)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "help_ai_queries",
+      "policy_name": "Users can view their own help queries",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(auth.uid() = user_id)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "policy_name": "Admins full access to identities",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "policy_name": "Org admins can delete identities",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "policy_name": "Org admins can insert identities",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "policy_name": "Org admins can update identities",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "policy_name": "Org members can view identities",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "mailbox_aliases",
+      "policy_name": "Org admins can create mailbox aliases",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "mailbox_aliases",
+      "policy_name": "Org admins can delete mailbox aliases",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "mailbox_aliases",
+      "policy_name": "Org members can view mailbox aliases",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "mailboxes",
+      "policy_name": "Org admins can create mailboxes",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (created_by = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "mailboxes",
+      "policy_name": "Org admins can delete mailboxes",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "mailboxes",
+      "policy_name": "Org admins can update mailboxes",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "mailboxes",
+      "policy_name": "Org members can view mailboxes",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "native_template_versions",
+      "policy_name": "native_versions_read",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "newsletter_subscribers",
+      "policy_name": "Allow newsletter subscribe inserts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{anon,authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "true"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_access_tokens",
+      "policy_name": "Service role full access on oauth_access_tokens",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "command": "ALL",
+      "using_expression": "true",
+      "with_check_expression": "true"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_access_tokens",
+      "policy_name": "Users can revoke own access tokens",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "(user_id = auth.uid())",
+      "with_check_expression": "(user_id = auth.uid())"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_access_tokens",
+      "policy_name": "Users can view own access tokens",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(user_id = auth.uid())",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_authorization_codes",
+      "policy_name": "Service role full access on oauth_authorization_codes",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "command": "ALL",
+      "using_expression": "true",
+      "with_check_expression": "true"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_authorization_requests",
+      "policy_name": "Authenticated users can view/update own authorization requests",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "((user_id = auth.uid()) OR (user_id IS NULL))",
+      "with_check_expression": "((user_id = auth.uid()) OR (user_id IS NULL))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_authorization_requests",
+      "policy_name": "Service role full access on oauth_authorization_requests",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "command": "ALL",
+      "using_expression": "true",
+      "with_check_expression": "true"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_clients",
+      "policy_name": "Service role full access on oauth_clients",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "command": "ALL",
+      "using_expression": "true",
+      "with_check_expression": "true"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_clients",
+      "policy_name": "Users can delete their organization oauth clients",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "((user_id = auth.uid()) OR (organization_id IN ( SELECT om.organization_id\n   FROM organization_members om\n  WHERE (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_clients",
+      "policy_name": "Users can insert oauth clients for their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "((user_id = auth.uid()) AND ((organization_id IS NULL) OR (organization_id IN ( SELECT om.organization_id\n   FROM organization_members om\n  WHERE (om.user_id = auth.uid())))))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_clients",
+      "policy_name": "Users can update their organization oauth clients",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "((user_id = auth.uid()) OR (organization_id IN ( SELECT om.organization_id\n   FROM organization_members om\n  WHERE (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_clients",
+      "policy_name": "Users can view their organization oauth clients",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "((user_id = auth.uid()) OR (organization_id IN ( SELECT om.organization_id\n   FROM organization_members om\n  WHERE (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_refresh_tokens",
+      "policy_name": "Service role full access on oauth_refresh_tokens",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "command": "ALL",
+      "using_expression": "true",
+      "with_check_expression": "true"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_addon_subscriptions",
+      "policy_name": "organization_addon_subscriptions_select_policy",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = organization_addon_subscriptions.organization_id) AND (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_addons",
+      "policy_name": "Admins full access organization_addons",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_addons",
+      "policy_name": "Org members can read addons",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_credit_transactions",
+      "policy_name": "Organization members read credit transactions",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = organization_credit_transactions.organization_id) AND (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_invitations",
+      "policy_name": "Admins can create invitations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_invitations",
+      "policy_name": "Admins can delete invitations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_invitations",
+      "policy_name": "Admins can update invitations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_invitations",
+      "policy_name": "Members can view org invitations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(is_organization_member(organization_id, 'admin'::organization_role) OR (lower(TRIM(BOTH FROM email)) = lower(TRIM(BOTH FROM ( SELECT u.email\n   FROM users u\n  WHERE (u.id = auth.uid()))))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_members",
+      "policy_name": "Admins can add members",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) OR ((user_id = auth.uid()) AND (role = 'owner'::organization_role)))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_members",
+      "policy_name": "Admins can remove members",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_members",
+      "policy_name": "Admins can update members",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_members",
+      "policy_name": "Members can view org membership",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_subscriptions",
+      "policy_name": "Admins full access organization_subscriptions",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_subscriptions",
+      "policy_name": "Org members can read subscription",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_usage",
+      "policy_name": "Admins full access organization_usage",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_usage",
+      "policy_name": "Org members can read usage",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organizations",
+      "policy_name": "Admins can update organizations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organizations",
+      "policy_name": "Authenticated users can create organizations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(created_by = auth.uid())"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organizations",
+      "policy_name": "Members can view their organizations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(is_organization_member(id, 'viewer'::organization_role) OR (created_by = auth.uid()))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organizations",
+      "policy_name": "Owners can delete organizations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(id, 'owner'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "plans",
+      "policy_name": "Admins manage plans",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "plans",
+      "policy_name": "Anyone can read active plans",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{anon,authenticated}",
+      "command": "SELECT",
+      "using_expression": "(is_active = true)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "platform_email_preferences",
+      "policy_name": "Insert own report preferences for member organizations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "((user_id = ( SELECT auth.uid() AS uid)) AND (EXISTS ( SELECT 1\n   FROM organization_members membership\n  WHERE ((membership.organization_id = platform_email_preferences.organization_id) AND (membership.user_id = ( SELECT auth.uid() AS uid))))))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "platform_email_preferences",
+      "policy_name": "Read own report preferences",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "platform_email_preferences",
+      "policy_name": "Update own report preferences",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check_expression": "(user_id = ( SELECT auth.uid() AS uid))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "queue_fallback_jobs",
+      "policy_name": "service_role_all",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "command": "ALL",
+      "using_expression": "true",
+      "with_check_expression": "true"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "received_emails",
+      "policy_name": "Admins can delete received_emails of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "DELETE",
+      "using_expression": "((EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = received_emails.organization_id) AND (om.user_id = auth.uid()) AND (om.role = ANY (ARRAY['owner'::organization_role, 'admin'::organization_role]))))) OR (user_id = auth.uid()))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "received_emails",
+      "policy_name": "Service role has full access to received_emails",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "((auth.jwt() ->> 'role'::text) = 'service_role'::text)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "received_emails",
+      "policy_name": "Users can view received_emails of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "((EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = received_emails.organization_id) AND (om.user_id = auth.uid())))) OR (user_id = auth.uid()))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "received_emails",
+      "policy_name": "received_emails_hide_pending",
+      "is_permissive": "RESTRICTIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(NOT quota_pending)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "referral_earnings",
+      "policy_name": "Referrers read own earnings",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "((( SELECT auth.uid() AS uid) = referrer_user_id) OR ( SELECT is_app_admin() AS is_app_admin))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "referral_payout_methods",
+      "policy_name": "Users manage own payout methods",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "((( SELECT auth.uid() AS uid) = user_id) OR ( SELECT is_app_admin() AS is_app_admin))",
+      "with_check_expression": "(( SELECT auth.uid() AS uid) = user_id)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "referral_withdrawal_requests",
+      "policy_name": "Admins update withdrawal requests",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "( SELECT is_app_admin() AS is_app_admin)",
+      "with_check_expression": "( SELECT is_app_admin() AS is_app_admin)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "referral_withdrawal_requests",
+      "policy_name": "Users insert own withdrawal requests",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(( SELECT auth.uid() AS uid) = user_id)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "referral_withdrawal_requests",
+      "policy_name": "Users read own withdrawal requests",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "((( SELECT auth.uid() AS uid) = user_id) OR ( SELECT is_app_admin() AS is_app_admin))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "roles",
+      "policy_name": "Roles are viewable by authenticated users",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "true",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_contacts",
+      "policy_name": "Org admins can delete segment contacts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM contact_segments s\n  WHERE ((s.id = segment_contacts.segment_id) AND is_organization_member(s.organization_id, 'admin'::organization_role))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_contacts",
+      "policy_name": "Org admins can insert segment contacts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(EXISTS ( SELECT 1\n   FROM contact_segments s\n  WHERE ((s.id = segment_contacts.segment_id) AND is_organization_member(s.organization_id, 'admin'::organization_role))))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_contacts",
+      "policy_name": "Org members can view segment contacts",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM contact_segments s\n  WHERE ((s.id = segment_contacts.segment_id) AND is_organization_member(s.organization_id, 'viewer'::organization_role))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_google_sheets",
+      "policy_name": "Org admins can delete segment google sheets",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_google_sheets",
+      "policy_name": "Org admins can insert segment google sheets",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_google_sheets",
+      "policy_name": "Org admins can update segment google sheets",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_google_sheets",
+      "policy_name": "Org members can view segment google sheets",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "sending_domains",
+      "policy_name": "Org admins can delete sending domains",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "sending_domains",
+      "policy_name": "Org admins can insert sending domains",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "sending_domains",
+      "policy_name": "Org admins can update sending domains",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "sending_domains",
+      "policy_name": "Org members can view sending domains",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "smtp_credentials",
+      "policy_name": "Org admins can delete smtp credentials",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "smtp_credentials",
+      "policy_name": "Org admins can insert smtp credentials",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (created_by = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "smtp_credentials",
+      "policy_name": "Org admins can update smtp credentials",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "smtp_credentials",
+      "policy_name": "Org members can view smtp credentials",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "supabase_integrations",
+      "policy_name": "Org admins can delete supabase integrations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "supabase_integrations",
+      "policy_name": "Org admins can insert supabase integrations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (created_by = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "supabase_integrations",
+      "policy_name": "Org admins can update supabase integrations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "supabase_integrations",
+      "policy_name": "Org members can view supabase integrations",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "support_ticket_messages",
+      "policy_name": "support_ticket_messages_insert",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "((sender_id = auth.uid()) AND (((sender_role = 'user'::text) AND (EXISTS ( SELECT 1\n   FROM support_tickets t\n  WHERE ((t.id = support_ticket_messages.ticket_id) AND (t.created_by = auth.uid()))))) OR ((sender_role = 'admin'::text) AND (EXISTS ( SELECT 1\n   FROM users u\n  WHERE ((u.id = auth.uid()) AND (u.role = 'admin'::user_role)))))))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "support_ticket_messages",
+      "policy_name": "support_ticket_messages_select",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "((EXISTS ( SELECT 1\n   FROM support_tickets t\n  WHERE ((t.id = support_ticket_messages.ticket_id) AND (t.created_by = auth.uid())))) OR (EXISTS ( SELECT 1\n   FROM users u\n  WHERE ((u.id = auth.uid()) AND (u.role = 'admin'::user_role)))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "support_tickets",
+      "policy_name": "Admins can update support tickets",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "support_tickets",
+      "policy_name": "Admins can view all support tickets",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "support_tickets",
+      "policy_name": "Users can create own support tickets",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(auth.uid() = created_by)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "support_tickets",
+      "policy_name": "Users can view own support tickets",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(auth.uid() = created_by)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "template_editor_drafts",
+      "policy_name": "template_draft_delete",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "template_editor_drafts",
+      "policy_name": "template_draft_insert",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "((user_id = auth.uid()) AND is_organization_member(organization_id, 'admin'::organization_role) AND (EXISTS ( SELECT 1\n   FROM templates t\n  WHERE ((t.id = template_editor_drafts.template_id) AND (t.organization_id = template_editor_drafts.organization_id)))))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "template_editor_drafts",
+      "policy_name": "template_draft_read",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "template_editor_drafts",
+      "policy_name": "template_draft_update",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "((user_id = auth.uid()) AND is_organization_member(organization_id, 'admin'::organization_role) AND (EXISTS ( SELECT 1\n   FROM templates t\n  WHERE ((t.id = template_editor_drafts.template_id) AND (t.organization_id = template_editor_drafts.organization_id)))))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "policy_name": "App admins full access templates",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "policy_name": "Authenticated users can view public templates",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(is_public = true)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "policy_name": "Org admins can delete templates",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "policy_name": "Org admins can insert templates",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (user_id = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "policy_name": "Org admins can update templates",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "policy_name": "Org members can view templates",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "tenant_suppression_list",
+      "policy_name": "Org admins can delete from tenant suppression list",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "tenant_suppression_list",
+      "policy_name": "Org admins can insert into tenant suppression list",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "tenant_suppression_list",
+      "policy_name": "Org admins can update tenant suppression list",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "tenant_suppression_list",
+      "policy_name": "Org members can view tenant suppression list",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "topics",
+      "policy_name": "Admins can manage topics of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = topics.organization_id) AND (om.user_id = auth.uid()) AND (om.role = ANY (ARRAY['owner'::organization_role, 'admin'::organization_role])))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "topics",
+      "policy_name": "Service role has full access to topics",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "ALL",
+      "using_expression": "((auth.jwt() ->> 'role'::text) = 'service_role'::text)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "topics",
+      "policy_name": "Users can view topics of their organization",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM organization_members om\n  WHERE ((om.organization_id = topics.organization_id) AND (om.user_id = auth.uid()))))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "user_notifications",
+      "policy_name": "Users read own notifications",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "user_notifications",
+      "policy_name": "Users update own notifications",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check_expression": "(user_id = ( SELECT auth.uid() AS uid))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "user_onboarding_responses",
+      "policy_name": "Admins can read all onboarding responses",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "user_onboarding_responses",
+      "policy_name": "Users can insert own onboarding responses",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(user_id = ( SELECT auth.uid() AS uid))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "user_onboarding_responses",
+      "policy_name": "Users can read own onboarding responses",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "user_onboarding_responses",
+      "policy_name": "Users can update own onboarding responses",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check_expression": "(user_id = ( SELECT auth.uid() AS uid))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "users",
+      "policy_name": "Admins can read all user profiles",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "users",
+      "policy_name": "Admins can update any user profile",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_app_admin()",
+      "with_check_expression": "is_app_admin()"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "users",
+      "policy_name": "Users can read own profile",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "(id = ( SELECT auth.uid() AS uid))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "users",
+      "policy_name": "Users can update own profile",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "(id = ( SELECT auth.uid() AS uid))",
+      "with_check_expression": "(id = ( SELECT auth.uid() AS uid))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "webhook_deliveries",
+      "policy_name": "Org members can view webhook deliveries",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "webhooks",
+      "policy_name": "Org admins can delete webhooks",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "webhooks",
+      "policy_name": "Org admins can insert webhooks",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(is_organization_member(organization_id, 'admin'::organization_role) AND (created_by = auth.uid()))"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "webhooks",
+      "policy_name": "Org admins can update webhooks",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "is_organization_member(organization_id, 'admin'::organization_role)",
+      "with_check_expression": "is_organization_member(organization_id, 'admin'::organization_role)"
+    },
+    {
+      "schema_name": "public",
+      "table_name": "webhooks",
+      "policy_name": "Org members can view webhooks",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "SELECT",
+      "using_expression": "is_organization_member(organization_id, 'viewer'::organization_role)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "public",
+      "table_name": "workspace_uploads",
+      "policy_name": "workspace_uploads_create",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "((user_id = ( SELECT auth.uid() AS uid)) AND (object_path ~~ ((((user_id)::text || '/'::text) || (organization_id)::text) || '/%'::text)) AND (EXISTS ( SELECT 1\n   FROM organization_members m\n  WHERE ((m.organization_id = workspace_uploads.organization_id) AND (m.user_id = ( SELECT auth.uid() AS uid))))))"
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "Authenticated users can upload domain avatars",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "(bucket_id = 'domain-avatars'::text)"
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "Public domain avatar access",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "(bucket_id = 'domain-avatars'::text)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "blog_images_admin_delete",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "((bucket_id = 'blog-images'::text) AND is_app_admin())",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "blog_images_admin_insert",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "((bucket_id = 'blog-images'::text) AND is_app_admin())"
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "blog_images_admin_update",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "((bucket_id = 'blog-images'::text) AND is_app_admin())",
+      "with_check_expression": "((bucket_id = 'blog-images'::text) AND is_app_admin())"
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "blog_images_public_read",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "(bucket_id = 'blog-images'::text)",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "mailofly_active_account_storage",
+      "is_permissive": "RESTRICTIVE",
+      "roles": "{authenticated}",
+      "command": "ALL",
+      "using_expression": "(EXISTS ( SELECT 1\n   FROM users u\n  WHERE (u.id = ( SELECT auth.uid() AS uid))))",
+      "with_check_expression": "(EXISTS ( SELECT 1\n   FROM users u\n  WHERE (u.id = ( SELECT auth.uid() AS uid))))"
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "template_images_authenticated_delete_own",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "DELETE",
+      "using_expression": "((bucket_id = 'template-images'::text) AND ((storage.foldername(name))[1] = (auth.uid())::text))",
+      "with_check_expression": null
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "template_images_authenticated_insert_own_folder",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "INSERT",
+      "using_expression": null,
+      "with_check_expression": "((bucket_id = 'template-images'::text) AND ((storage.foldername(name))[1] = (auth.uid())::text))"
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "template_images_authenticated_update_own",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "command": "UPDATE",
+      "using_expression": "((bucket_id = 'template-images'::text) AND ((storage.foldername(name))[1] = (auth.uid())::text))",
+      "with_check_expression": "((bucket_id = 'template-images'::text) AND ((storage.foldername(name))[1] = (auth.uid())::text))"
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "policy_name": "template_images_public_read",
+      "is_permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "command": "SELECT",
+      "using_expression": "(bucket_id = 'template-images'::text)",
+      "with_check_expression": null
+    }
+  ]
+}

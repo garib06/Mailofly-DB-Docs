@@ -1,0 +1,4193 @@
+{
+  "canvas": {
+    "width": 4260,
+    "height": 2332
+  },
+  "domains": {
+    "tenancy_and_users": {
+      "domainKey": "tenancy_and_users",
+      "displayName": "Organizations, Tenancy & Users",
+      "description": "Multi-tenant boundary enforcement, organization hierarchies, user accounts, invitations, and identity mappings.",
+      "x": 140,
+      "y": 180,
+      "width": 1200,
+      "height": 278,
+      "tables": {
+        "public.organizations": {
+          "x": 170,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 258
+        },
+        "public.organization_members": {
+          "x": 454,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 283
+        },
+        "public.organization_invitations": {
+          "x": 738,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 6
+        },
+        "public.users": {
+          "x": 170,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": 270
+        },
+        "public.accounts": {
+          "x": 454,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.identities": {
+          "x": 738,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": 39
+        },
+        "public.roles": {
+          "x": 170,
+          "y": 357,
+          "width": 260,
+          "height": 44,
+          "rowCount": 2
+        },
+        "public.user_onboarding_responses": {
+          "x": 454,
+          "y": 357,
+          "width": 260,
+          "height": 44,
+          "rowCount": 290
+        }
+      }
+    },
+    "contacts_and_crm": {
+      "domainKey": "contacts_and_crm",
+      "displayName": "Contacts, Audience & CRM",
+      "description": "Audience management, contact attributes, dynamic/static segmentation, subscription status, topics, Google Sheets sync, and suppression lists.",
+      "x": 1480,
+      "y": 180,
+      "width": 1200,
+      "height": 446,
+      "tables": {
+        "public.contacts": {
+          "x": 1510,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1224
+        },
+        "public.contact_properties": {
+          "x": 1794,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 102
+        },
+        "public.contact_property_values": {
+          "x": 2078,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 123
+        },
+        "public.properties": {
+          "x": 1510,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.contact_segments": {
+          "x": 1794,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": 32
+        },
+        "public.segment_contacts": {
+          "x": 2078,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": 924
+        },
+        "public.segment_google_sheets": {
+          "x": 1510,
+          "y": 357,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.topics": {
+          "x": 1794,
+          "y": 357,
+          "width": 260,
+          "height": 44,
+          "rowCount": 6
+        },
+        "public.contact_topics": {
+          "x": 2078,
+          "y": 357,
+          "width": 260,
+          "height": 44,
+          "rowCount": 9
+        },
+        "public.contact_subscription_events": {
+          "x": 1510,
+          "y": 413,
+          "width": 260,
+          "height": 44,
+          "rowCount": 8
+        },
+        "public.contact_subscription_challenges": {
+          "x": 1794,
+          "y": 413,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.managed_audience_programs": {
+          "x": 2078,
+          "y": 413,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1
+        },
+        "public.newsletter_subscribers": {
+          "x": 1510,
+          "y": 469,
+          "width": 260,
+          "height": 44,
+          "rowCount": 8
+        },
+        "public.newsletter_signup_windows": {
+          "x": 1794,
+          "y": 469,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1
+        },
+        "public.tenant_suppression_list": {
+          "x": 2078,
+          "y": 469,
+          "width": 260,
+          "height": 44,
+          "rowCount": 20
+        },
+        "public.global_suppression_list": {
+          "x": 1510,
+          "y": 525,
+          "width": 260,
+          "height": 44,
+          "rowCount": 14
+        }
+      }
+    },
+    "campaigns_and_templates": {
+      "domainKey": "campaigns_and_templates",
+      "displayName": "Campaign Management & Templates",
+      "description": "Marketing email campaigns, run orchestration, snapshot audience bindings, sending holds, and template draft versioning.",
+      "x": 2820,
+      "y": 180,
+      "width": 1200,
+      "height": 278,
+      "tables": {
+        "public.campaigns": {
+          "x": 2850,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 43
+        },
+        "public.campaign_runs": {
+          "x": 3134,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 33
+        },
+        "public.campaign_run_audience": {
+          "x": 3418,
+          "y": 245,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.campaign_sending_holds": {
+          "x": 2850,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.templates": {
+          "x": 3134,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": 70
+        },
+        "public.template_editor_drafts": {
+          "x": 3418,
+          "y": 301,
+          "width": 260,
+          "height": 44,
+          "rowCount": 26
+        },
+        "public.native_template_versions": {
+          "x": 2850,
+          "y": 357,
+          "width": 260,
+          "height": 44,
+          "rowCount": 67
+        }
+      }
+    },
+    "email_delivery_and_ses": {
+      "domainKey": "email_delivery_and_ses",
+      "displayName": "Email Delivery & AWS SES Pipeline",
+      "description": "Outbound email queuing, AWS SES event ingestion, delivery confirmations, send attempts, recipient outcomes, SMTP credentials, and sending domain DKIM/SPF identities.",
+      "x": 140,
+      "y": 598,
+      "width": 1200,
+      "height": 334,
+      "tables": {
+        "public.emails": {
+          "x": 170,
+          "y": 663,
+          "width": 260,
+          "height": 44,
+          "rowCount": 379
+        },
+        "public.email_send_confirmations": {
+          "x": 454,
+          "y": 663,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1
+        },
+        "public.email_usage_operations": {
+          "x": 738,
+          "y": 663,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.ses_event_inbox": {
+          "x": 170,
+          "y": 719,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1000
+        },
+        "public.ses_event_log": {
+          "x": 454,
+          "y": 719,
+          "width": 260,
+          "height": 44,
+          "rowCount": 963
+        },
+        "public.ses_recipient_outcomes": {
+          "x": 738,
+          "y": 719,
+          "width": 260,
+          "height": 44,
+          "rowCount": 2357
+        },
+        "public.ses_send_attempts": {
+          "x": 170,
+          "y": 775,
+          "width": 260,
+          "height": 44,
+          "rowCount": 273
+        },
+        "public.ses_organization_tenants": {
+          "x": 454,
+          "y": 775,
+          "width": 260,
+          "height": 44,
+          "rowCount": 23
+        },
+        "public.sending_domains": {
+          "x": 738,
+          "y": 775,
+          "width": 260,
+          "height": 44,
+          "rowCount": 60
+        },
+        "public.sending_identities": {
+          "x": 170,
+          "y": 831,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.smtp_credentials": {
+          "x": 454,
+          "y": 831,
+          "width": 260,
+          "height": 44,
+          "rowCount": 10
+        }
+      }
+    },
+    "mailboxes_and_inbound": {
+      "domainKey": "mailboxes_and_inbound",
+      "displayName": "Mailboxes, Inbound Email & Stalwart Engine",
+      "description": "Inbound email handling, mailbox alias routing, received emails storage, and Stalwart mail server integration.",
+      "x": 1480,
+      "y": 766,
+      "width": 1200,
+      "height": 278,
+      "tables": {
+        "public.mailboxes": {
+          "x": 1510,
+          "y": 831,
+          "width": 260,
+          "height": 44,
+          "rowCount": 8
+        },
+        "public.mailbox_aliases": {
+          "x": 1794,
+          "y": 831,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.mailbox_queue_events": {
+          "x": 2078,
+          "y": 831,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.received_emails": {
+          "x": 1510,
+          "y": 887,
+          "width": 260,
+          "height": 44,
+          "rowCount": 4
+        },
+        "public.stalwart_accounts": {
+          "x": 1794,
+          "y": 887,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.stalwart_domains": {
+          "x": 2078,
+          "y": 887,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.stalwart_emails": {
+          "x": 1510,
+          "y": 943,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        }
+      }
+    },
+    "automation_and_events": {
+      "domainKey": "automation_and_events",
+      "displayName": "Automation Workflows & Background Queues",
+      "description": "Trigger-based automation state machines, execution step tracking, event receipts, delayed waiting events, and queue worker coordination.",
+      "x": 2820,
+      "y": 598,
+      "width": 1200,
+      "height": 278,
+      "tables": {
+        "public.automations": {
+          "x": 2850,
+          "y": 663,
+          "width": 260,
+          "height": 44,
+          "rowCount": 15
+        },
+        "public.automation_runs": {
+          "x": 3134,
+          "y": 663,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.automation_run_steps": {
+          "x": 3418,
+          "y": 663,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.automation_events": {
+          "x": 2850,
+          "y": 719,
+          "width": 260,
+          "height": 44,
+          "rowCount": 10
+        },
+        "public.automation_event_receipts": {
+          "x": 3134,
+          "y": 719,
+          "width": 260,
+          "height": 44,
+          "rowCount": 310
+        },
+        "public.automation_waiting_events": {
+          "x": 3418,
+          "y": 719,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.queue_fallback_jobs": {
+          "x": 2850,
+          "y": 775,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.mailofly_user_mail_queue_cron": {
+          "x": 3134,
+          "y": 775,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        }
+      }
+    },
+    "billing_and_subscriptions": {
+      "domainKey": "billing_and_subscriptions",
+      "displayName": "Billing, Subscriptions & Ledgers",
+      "description": "Tiered plans, add-ons, credit transactions, payment ledgers, Dodo Payments webhook reconciliation, quota period tracking, and sending limits.",
+      "x": 140,
+      "y": 1072,
+      "width": 1200,
+      "height": 502,
+      "tables": {
+        "public.plans": {
+          "x": 170,
+          "y": 1137,
+          "width": 260,
+          "height": 44,
+          "rowCount": 25
+        },
+        "public.organization_subscriptions": {
+          "x": 454,
+          "y": 1137,
+          "width": 260,
+          "height": 44,
+          "rowCount": 284
+        },
+        "public.organization_billing_plan_state": {
+          "x": 738,
+          "y": 1137,
+          "width": 260,
+          "height": 44,
+          "rowCount": 560
+        },
+        "public.organization_usage": {
+          "x": 170,
+          "y": 1193,
+          "width": 260,
+          "height": 44,
+          "rowCount": 282
+        },
+        "public.organization_email_periods": {
+          "x": 454,
+          "y": 1193,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.organization_email_days": {
+          "x": 738,
+          "y": 1193,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.organization_email_policy": {
+          "x": 170,
+          "y": 1249,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.organization_credit_transactions": {
+          "x": 454,
+          "y": 1249,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.billing_addons": {
+          "x": 738,
+          "y": 1249,
+          "width": 260,
+          "height": 44,
+          "rowCount": 5
+        },
+        "public.organization_addons": {
+          "x": 170,
+          "y": 1305,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.organization_addon_subscriptions": {
+          "x": 454,
+          "y": 1305,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.billing_addon_orders": {
+          "x": 738,
+          "y": 1305,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.billing_fulfilled_payments": {
+          "x": 170,
+          "y": 1361,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.billing_payment_ledger": {
+          "x": 454,
+          "y": 1361,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.billing_dodo_snapshots": {
+          "x": 738,
+          "y": 1361,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.billing_webhook_inbox": {
+          "x": 170,
+          "y": 1417,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.organization_billing_notifications": {
+          "x": 454,
+          "y": 1417,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.organization_billing_notification_policy": {
+          "x": 738,
+          "y": 1417,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1
+        },
+        "public.organization_payment_notice_state": {
+          "x": 170,
+          "y": 1473,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.organization_sending_protection": {
+          "x": 454,
+          "y": 1473,
+          "width": 260,
+          "height": 44,
+          "rowCount": 23
+        }
+      }
+    },
+    "developer_api_and_oauth": {
+      "domainKey": "developer_api_and_oauth",
+      "displayName": "Developer API, Webhooks & OAuth 2.0",
+      "description": "External API key provisioning, request auditing, egress webhook dispatch, OAuth2 application authentication, and Supabase integration bridges.",
+      "x": 1480,
+      "y": 1184,
+      "width": 1200,
+      "height": 334,
+      "tables": {
+        "public.api_keys": {
+          "x": 1510,
+          "y": 1249,
+          "width": 260,
+          "height": 44,
+          "rowCount": 76
+        },
+        "public.api_key_request_logs": {
+          "x": 1794,
+          "y": 1249,
+          "width": 260,
+          "height": 44,
+          "rowCount": 485
+        },
+        "public.webhooks": {
+          "x": 2078,
+          "y": 1249,
+          "width": 260,
+          "height": 44,
+          "rowCount": 2
+        },
+        "public.webhook_deliveries": {
+          "x": 1510,
+          "y": 1305,
+          "width": 260,
+          "height": 44,
+          "rowCount": 25
+        },
+        "public.oauth_clients": {
+          "x": 1794,
+          "y": 1305,
+          "width": 260,
+          "height": 44,
+          "rowCount": 12
+        },
+        "public.oauth_access_tokens": {
+          "x": 2078,
+          "y": 1305,
+          "width": 260,
+          "height": 44,
+          "rowCount": 29
+        },
+        "public.oauth_refresh_tokens": {
+          "x": 1510,
+          "y": 1361,
+          "width": 260,
+          "height": 44,
+          "rowCount": 26
+        },
+        "public.oauth_authorization_codes": {
+          "x": 1794,
+          "y": 1361,
+          "width": 260,
+          "height": 44,
+          "rowCount": 13
+        },
+        "public.oauth_authorization_requests": {
+          "x": 2078,
+          "y": 1361,
+          "width": 260,
+          "height": 44,
+          "rowCount": 13
+        },
+        "public.supabase_integrations": {
+          "x": 1510,
+          "y": 1417,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1
+        }
+      }
+    },
+    "growth_referrals_and_blog": {
+      "domainKey": "growth_referrals_and_blog",
+      "displayName": "Referral Program & Content Engine",
+      "description": "Affiliate partner referrals, commission earnings, withdrawal requests, and public marketing blog CMS.",
+      "x": 2820,
+      "y": 1016,
+      "width": 1200,
+      "height": 222,
+      "tables": {
+        "public.referral_earnings": {
+          "x": 2850,
+          "y": 1081,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.referral_payout_methods": {
+          "x": 3134,
+          "y": 1081,
+          "width": 260,
+          "height": 44,
+          "rowCount": 2
+        },
+        "public.referral_withdrawal_requests": {
+          "x": 3418,
+          "y": 1081,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.blog_posts": {
+          "x": 2850,
+          "y": 1137,
+          "width": 260,
+          "height": 44,
+          "rowCount": 15
+        },
+        "public.blog_authors": {
+          "x": 3134,
+          "y": 1137,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1
+        },
+        "public.blog_categories": {
+          "x": 3418,
+          "y": 1137,
+          "width": 260,
+          "height": 44,
+          "rowCount": 4
+        }
+      }
+    },
+    "lifecycle_and_notifications": {
+      "domainKey": "lifecycle_and_notifications",
+      "displayName": "Account Lifecycle & System Notifications",
+      "description": "Inactivity tracking, account deletion workflows, automated reminder notices, and multi-channel system notifications.",
+      "x": 140,
+      "y": 1714,
+      "width": 1200,
+      "height": 278,
+      "tables": {
+        "public.account_lifecycle_state": {
+          "x": 170,
+          "y": 1779,
+          "width": 260,
+          "height": 44,
+          "rowCount": 281
+        },
+        "public.account_lifecycle_policy": {
+          "x": 454,
+          "y": 1779,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1
+        },
+        "public.account_lifecycle_notices": {
+          "x": 738,
+          "y": 1779,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.account_lifecycle_deletions": {
+          "x": 170,
+          "y": 1835,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "public.user_notifications": {
+          "x": 454,
+          "y": 1835,
+          "width": 260,
+          "height": 44,
+          "rowCount": 3
+        },
+        "public.platform_notification_events": {
+          "x": 738,
+          "y": 1835,
+          "width": 260,
+          "height": 44,
+          "rowCount": 13
+        },
+        "public.platform_email_deliveries": {
+          "x": 170,
+          "y": 1891,
+          "width": 260,
+          "height": 44,
+          "rowCount": 302
+        },
+        "public.platform_email_preferences": {
+          "x": 454,
+          "y": 1891,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        }
+      }
+    },
+    "admin_support_and_logging": {
+      "domainKey": "admin_support_and_logging",
+      "displayName": "Admin RBAC, Support & Workspace Auditing",
+      "description": "Internal staff RBAC, customer support ticketing, AI assistant queries, unified audit logs, workspace asset uploads, and system settings.",
+      "x": 1480,
+      "y": 1658,
+      "width": 1200,
+      "height": 334,
+      "tables": {
+        "public.admin_roles": {
+          "x": 1510,
+          "y": 1723,
+          "width": 260,
+          "height": 44,
+          "rowCount": 10
+        },
+        "public.admin_permissions": {
+          "x": 1794,
+          "y": 1723,
+          "width": 260,
+          "height": 44,
+          "rowCount": 15
+        },
+        "public.admin_role_permissions": {
+          "x": 2078,
+          "y": 1723,
+          "width": 260,
+          "height": 44,
+          "rowCount": 64
+        },
+        "public.support_tickets": {
+          "x": 1510,
+          "y": 1779,
+          "width": 260,
+          "height": 44,
+          "rowCount": 2
+        },
+        "public.support_ticket_messages": {
+          "x": 1794,
+          "y": 1779,
+          "width": 260,
+          "height": 44,
+          "rowCount": 1
+        },
+        "public.help_ai_queries": {
+          "x": 2078,
+          "y": 1779,
+          "width": 260,
+          "height": 44,
+          "rowCount": 11
+        },
+        "public.app_settings": {
+          "x": 1510,
+          "y": 1835,
+          "width": 260,
+          "height": 44,
+          "rowCount": 18
+        },
+        "public.workspace_logs_unified": {
+          "x": 1794,
+          "y": 1835,
+          "width": 260,
+          "height": 44,
+          "rowCount": -1
+        },
+        "public.workspace_uploads": {
+          "x": 2078,
+          "y": 1835,
+          "width": 260,
+          "height": 44,
+          "rowCount": 3
+        },
+        "public.test_apply": {
+          "x": 1510,
+          "y": 1891,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        }
+      }
+    },
+    "external_infrastructure": {
+      "domainKey": "external_infrastructure",
+      "displayName": "Supabase Platform & Extensions Infrastructure",
+      "description": "External auth, storage, pg_cron, pg_net, and vault schemas managed by Supabase platform.",
+      "x": 2820,
+      "y": 1378,
+      "width": 1200,
+      "height": 334,
+      "tables": {
+        "auth.users": {
+          "x": 2850,
+          "y": 1443,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "auth.identities": {
+          "x": 3134,
+          "y": 1443,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "auth.sessions": {
+          "x": 3418,
+          "y": 1443,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "storage.buckets": {
+          "x": 2850,
+          "y": 1499,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "storage.objects": {
+          "x": 3134,
+          "y": 1499,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "cron.job": {
+          "x": 3418,
+          "y": 1499,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "cron.job_run_details": {
+          "x": 2850,
+          "y": 1555,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "net.http_request": {
+          "x": 3134,
+          "y": 1555,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "net._http_response": {
+          "x": 3418,
+          "y": 1555,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "vault.secrets": {
+          "x": 2850,
+          "y": 1611,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        },
+        "vault.decrypted_secrets": {
+          "x": 3134,
+          "y": 1611,
+          "width": 260,
+          "height": 44,
+          "rowCount": 0
+        }
+      }
+    }
+  },
+  "edges_count": 188,
+  "edges": [
+    {
+      "id": "mfk_0",
+      "constraint_name": "identities_user_id_fkey",
+      "source": "auth.identities",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 1465
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_20",
+      "constraint_name": "sessions_user_id_fkey",
+      "source": "auth.sessions",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 1465
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_24",
+      "constraint_name": "account_lifecycle_notices_user_id_fkey",
+      "source": "public.account_lifecycle_notices",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 1801
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_25",
+      "constraint_name": "account_lifecycle_state_user_id_fkey",
+      "source": "public.account_lifecycle_state",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 1801
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_26",
+      "constraint_name": "admin_role_permissions_permission_id_fkey",
+      "source": "public.admin_role_permissions",
+      "target": "public.admin_permissions",
+      "source_col": "permission_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 1745
+      },
+      "end": {
+        "x": 1794,
+        "y": 1745
+      }
+    },
+    {
+      "id": "mfk_27",
+      "constraint_name": "admin_role_permissions_role_id_fkey",
+      "source": "public.admin_role_permissions",
+      "target": "public.admin_roles",
+      "source_col": "role_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 1745
+      },
+      "end": {
+        "x": 1510,
+        "y": 1745
+      }
+    },
+    {
+      "id": "mfk_28",
+      "constraint_name": "admin_roles_created_by_fkey",
+      "source": "public.admin_roles",
+      "target": "auth.users",
+      "source_col": "created_by",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 1770,
+        "y": 1745
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_29",
+      "constraint_name": "api_key_request_logs_api_key_id_fkey",
+      "source": "public.api_key_request_logs",
+      "target": "public.api_keys",
+      "source_col": "api_key_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1271
+      },
+      "end": {
+        "x": 1510,
+        "y": 1271
+      }
+    },
+    {
+      "id": "mfk_30",
+      "constraint_name": "api_key_request_logs_email_id_fkey",
+      "source": "public.api_key_request_logs",
+      "target": "public.emails",
+      "source_col": "email_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 2054,
+        "y": 1271
+      },
+      "end": {
+        "x": 170,
+        "y": 685
+      }
+    },
+    {
+      "id": "mfk_31",
+      "constraint_name": "api_key_request_logs_user_id_fkey",
+      "source": "public.api_key_request_logs",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1271
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_32",
+      "constraint_name": "api_keys_organization_id_fkey",
+      "source": "public.api_keys",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1271
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_33",
+      "constraint_name": "api_keys_user_id_fkey",
+      "source": "public.api_keys",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1271
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_34",
+      "constraint_name": "automation_event_receipts_organization_id_fkey",
+      "source": "public.automation_event_receipts",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 741
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_35",
+      "constraint_name": "automation_events_organization_id_fkey",
+      "source": "public.automation_events",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 741
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_36",
+      "constraint_name": "automation_events_user_id_fkey",
+      "source": "public.automation_events",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 741
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_37",
+      "constraint_name": "automation_run_steps_run_id_fkey",
+      "source": "public.automation_run_steps",
+      "target": "public.automation_runs",
+      "source_col": "run_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 685
+      },
+      "end": {
+        "x": 3134,
+        "y": 685
+      }
+    },
+    {
+      "id": "mfk_38",
+      "constraint_name": "automation_runs_automation_id_fkey",
+      "source": "public.automation_runs",
+      "target": "public.automations",
+      "source_col": "automation_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 685
+      },
+      "end": {
+        "x": 2850,
+        "y": 685
+      }
+    },
+    {
+      "id": "mfk_39",
+      "constraint_name": "automation_runs_contact_id_fkey",
+      "source": "public.automation_runs",
+      "target": "public.contacts",
+      "source_col": "contact_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3394,
+        "y": 685
+      },
+      "end": {
+        "x": 1510,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_40",
+      "constraint_name": "automation_runs_organization_id_fkey",
+      "source": "public.automation_runs",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 685
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_41",
+      "constraint_name": "automation_waiting_events_automation_id_fkey",
+      "source": "public.automation_waiting_events",
+      "target": "public.automations",
+      "source_col": "automation_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 741
+      },
+      "end": {
+        "x": 2850,
+        "y": 685
+      }
+    },
+    {
+      "id": "mfk_42",
+      "constraint_name": "automation_waiting_events_contact_id_fkey",
+      "source": "public.automation_waiting_events",
+      "target": "public.contacts",
+      "source_col": "contact_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 741
+      },
+      "end": {
+        "x": 1510,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_43",
+      "constraint_name": "automation_waiting_events_organization_id_fkey",
+      "source": "public.automation_waiting_events",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 741
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_44",
+      "constraint_name": "automation_waiting_events_run_id_fkey",
+      "source": "public.automation_waiting_events",
+      "target": "public.automation_runs",
+      "source_col": "run_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 741
+      },
+      "end": {
+        "x": 3134,
+        "y": 685
+      }
+    },
+    {
+      "id": "mfk_45",
+      "constraint_name": "automations_organization_id_fkey",
+      "source": "public.automations",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 685
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_46",
+      "constraint_name": "automations_user_id_fkey",
+      "source": "public.automations",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 685
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_47",
+      "constraint_name": "billing_addon_orders_addon_id_fkey",
+      "source": "public.billing_addon_orders",
+      "target": "public.billing_addons",
+      "source_col": "addon_id",
+      "target_col": "id",
+      "delete_rule": "r",
+      "start": {
+        "x": 998,
+        "y": 1327
+      },
+      "end": {
+        "x": 738,
+        "y": 1271
+      }
+    },
+    {
+      "id": "mfk_48",
+      "constraint_name": "billing_addon_orders_organization_id_fkey",
+      "source": "public.billing_addon_orders",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 1327
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_49",
+      "constraint_name": "billing_addon_orders_user_id_fkey",
+      "source": "public.billing_addon_orders",
+      "target": "public.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 1327
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_50",
+      "constraint_name": "billing_dodo_snapshots_organization_id_fkey",
+      "source": "public.billing_dodo_snapshots",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 1383
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_51",
+      "constraint_name": "billing_fulfilled_payments_organization_id_fkey",
+      "source": "public.billing_fulfilled_payments",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 1383
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_52",
+      "constraint_name": "billing_payment_ledger_organization_id_fkey",
+      "source": "public.billing_payment_ledger",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1383
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_53",
+      "constraint_name": "billing_payment_ledger_plan_id_fkey",
+      "source": "public.billing_payment_ledger",
+      "target": "public.plans",
+      "source_col": "plan_id",
+      "target_col": "id",
+      "delete_rule": "a",
+      "start": {
+        "x": 714,
+        "y": 1383
+      },
+      "end": {
+        "x": 170,
+        "y": 1159
+      }
+    },
+    {
+      "id": "mfk_54",
+      "constraint_name": "blog_posts_author_id_fkey",
+      "source": "public.blog_posts",
+      "target": "public.blog_authors",
+      "source_col": "author_id",
+      "target_col": "id",
+      "delete_rule": "r",
+      "start": {
+        "x": 3110,
+        "y": 1159
+      },
+      "end": {
+        "x": 3134,
+        "y": 1159
+      }
+    },
+    {
+      "id": "mfk_55",
+      "constraint_name": "blog_posts_category_id_fkey",
+      "source": "public.blog_posts",
+      "target": "public.blog_categories",
+      "source_col": "category_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3110,
+        "y": 1159
+      },
+      "end": {
+        "x": 3418,
+        "y": 1159
+      }
+    },
+    {
+      "id": "mfk_56",
+      "constraint_name": "campaign_run_audience_campaign_run_id_fkey",
+      "source": "public.campaign_run_audience",
+      "target": "public.campaign_runs",
+      "source_col": "campaign_run_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 267
+      },
+      "end": {
+        "x": 3134,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_57",
+      "constraint_name": "campaign_run_audience_contact_id_fkey",
+      "source": "public.campaign_run_audience",
+      "target": "public.contacts",
+      "source_col": "contact_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 267
+      },
+      "end": {
+        "x": 1510,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_58",
+      "constraint_name": "campaign_run_audience_organization_id_fkey",
+      "source": "public.campaign_run_audience",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "a",
+      "start": {
+        "x": 3678,
+        "y": 267
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_59",
+      "constraint_name": "campaign_runs_campaign_id_fkey",
+      "source": "public.campaign_runs",
+      "target": "public.campaigns",
+      "source_col": "campaign_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 267
+      },
+      "end": {
+        "x": 2850,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_60",
+      "constraint_name": "campaign_runs_native_template_version_id_fkey",
+      "source": "public.campaign_runs",
+      "target": "public.native_template_versions",
+      "source_col": "native_template_version_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3394,
+        "y": 267
+      },
+      "end": {
+        "x": 2850,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_61",
+      "constraint_name": "campaign_runs_organization_id_fkey",
+      "source": "public.campaign_runs",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 267
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_62",
+      "constraint_name": "campaign_runs_user_id_fkey",
+      "source": "public.campaign_runs",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 267
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_63",
+      "constraint_name": "campaign_sending_holds_campaign_id_fkey",
+      "source": "public.campaign_sending_holds",
+      "target": "public.campaigns",
+      "source_col": "campaign_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 323
+      },
+      "end": {
+        "x": 2850,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_64",
+      "constraint_name": "campaign_sending_holds_organization_id_fkey",
+      "source": "public.campaign_sending_holds",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 323
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_65",
+      "constraint_name": "campaigns_folder_id_fkey",
+      "source": "public.campaigns",
+      "target": "public.contact_segments",
+      "source_col": "segment_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3110,
+        "y": 267
+      },
+      "end": {
+        "x": 1794,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_66",
+      "constraint_name": "campaigns_organization_id_fkey",
+      "source": "public.campaigns",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 267
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_67",
+      "constraint_name": "campaigns_template_id_fkey",
+      "source": "public.campaigns",
+      "target": "public.templates",
+      "source_col": "template_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3110,
+        "y": 267
+      },
+      "end": {
+        "x": 3134,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_68",
+      "constraint_name": "campaigns_topic_id_fkey",
+      "source": "public.campaigns",
+      "target": "public.topics",
+      "source_col": "topic_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3110,
+        "y": 267
+      },
+      "end": {
+        "x": 1794,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_69",
+      "constraint_name": "campaigns_user_id_fkey",
+      "source": "public.campaigns",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 267
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_70",
+      "constraint_name": "contact_properties_organization_id_fkey",
+      "source": "public.contact_properties",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 267
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_71",
+      "constraint_name": "contact_property_values_contact_id_fkey",
+      "source": "public.contact_property_values",
+      "target": "public.contacts",
+      "source_col": "contact_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 267
+      },
+      "end": {
+        "x": 1510,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_72",
+      "constraint_name": "contact_property_values_organization_id_fkey",
+      "source": "public.contact_property_values",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 267
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_73",
+      "constraint_name": "contact_property_values_property_id_fkey",
+      "source": "public.contact_property_values",
+      "target": "public.contact_properties",
+      "source_col": "property_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 267
+      },
+      "end": {
+        "x": 1794,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_74",
+      "constraint_name": "contact_segments_managed_topic_id_fkey",
+      "source": "public.contact_segments",
+      "target": "public.topics",
+      "source_col": "managed_topic_id",
+      "target_col": "id",
+      "delete_rule": "r",
+      "start": {
+        "x": 2054,
+        "y": 323
+      },
+      "end": {
+        "x": 1794,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_75",
+      "constraint_name": "contact_segments_organization_id_fkey",
+      "source": "public.contact_segments",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 323
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_76",
+      "constraint_name": "recipient_folders_user_id_fkey",
+      "source": "public.contact_segments",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 323
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_77",
+      "constraint_name": "contact_subscription_challenges_email_id_fkey",
+      "source": "public.contact_subscription_challenges",
+      "target": "public.emails",
+      "source_col": "email_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 2054,
+        "y": 435
+      },
+      "end": {
+        "x": 170,
+        "y": 685
+      }
+    },
+    {
+      "id": "mfk_78",
+      "constraint_name": "contact_subscription_challenges_subscription_id_fkey",
+      "source": "public.contact_subscription_challenges",
+      "target": "public.contact_topics",
+      "source_col": "subscription_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 435
+      },
+      "end": {
+        "x": 2078,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_79",
+      "constraint_name": "contact_subscription_events_contact_id_fkey",
+      "source": "public.contact_subscription_events",
+      "target": "public.contacts",
+      "source_col": "contact_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 435
+      },
+      "end": {
+        "x": 1510,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_80",
+      "constraint_name": "contact_subscription_events_organization_id_fkey",
+      "source": "public.contact_subscription_events",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 435
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_81",
+      "constraint_name": "contact_subscription_events_topic_id_fkey",
+      "source": "public.contact_subscription_events",
+      "target": "public.topics",
+      "source_col": "topic_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 435
+      },
+      "end": {
+        "x": 1794,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_82",
+      "constraint_name": "contact_topics_contact_id_fkey",
+      "source": "public.contact_topics",
+      "target": "public.contacts",
+      "source_col": "contact_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 379
+      },
+      "end": {
+        "x": 1510,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_83",
+      "constraint_name": "contact_topics_organization_id_fkey",
+      "source": "public.contact_topics",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 379
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_84",
+      "constraint_name": "contact_topics_topic_id_fkey",
+      "source": "public.contact_topics",
+      "target": "public.topics",
+      "source_col": "topic_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 379
+      },
+      "end": {
+        "x": 1794,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_85",
+      "constraint_name": "contacts_organization_id_fkey",
+      "source": "public.contacts",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 267
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_86",
+      "constraint_name": "recipients_user_id_fkey",
+      "source": "public.contacts",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 267
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_87",
+      "constraint_name": "email_send_confirmations_organization_id_fkey",
+      "source": "public.email_send_confirmations",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 685
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_88",
+      "constraint_name": "email_send_confirmations_user_id_fkey",
+      "source": "public.email_send_confirmations",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 685
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_89",
+      "constraint_name": "email_usage_operations_organization_id_fkey",
+      "source": "public.email_usage_operations",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 685
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_90",
+      "constraint_name": "email_usage_operations_period_id_fkey",
+      "source": "public.email_usage_operations",
+      "target": "public.organization_email_periods",
+      "source_col": "period_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 685
+      },
+      "end": {
+        "x": 454,
+        "y": 1215
+      }
+    },
+    {
+      "id": "mfk_91",
+      "constraint_name": "emails_account_id_fkey",
+      "source": "public.emails",
+      "target": "public.identities",
+      "source_col": "account_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 430,
+        "y": 685
+      },
+      "end": {
+        "x": 738,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_92",
+      "constraint_name": "emails_api_key_id_fkey",
+      "source": "public.emails",
+      "target": "public.api_keys",
+      "source_col": "api_key_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 430,
+        "y": 685
+      },
+      "end": {
+        "x": 1510,
+        "y": 1271
+      }
+    },
+    {
+      "id": "mfk_93",
+      "constraint_name": "emails_campaign_id_fkey",
+      "source": "public.emails",
+      "target": "public.campaigns",
+      "source_col": "campaign_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 685
+      },
+      "end": {
+        "x": 2850,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_94",
+      "constraint_name": "emails_campaign_run_id_fkey",
+      "source": "public.emails",
+      "target": "public.campaign_runs",
+      "source_col": "campaign_run_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 685
+      },
+      "end": {
+        "x": 3134,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_95",
+      "constraint_name": "emails_contact_id_fkey",
+      "source": "public.emails",
+      "target": "public.contacts",
+      "source_col": "contact_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 430,
+        "y": 685
+      },
+      "end": {
+        "x": 1510,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_96",
+      "constraint_name": "emails_organization_id_fkey",
+      "source": "public.emails",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 685
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_97",
+      "constraint_name": "emails_user_id_fkey",
+      "source": "public.emails",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 685
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_98",
+      "constraint_name": "help_ai_queries_organization_id_fkey",
+      "source": "public.help_ai_queries",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 2338,
+        "y": 1801
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_99",
+      "constraint_name": "help_ai_queries_user_id_fkey",
+      "source": "public.help_ai_queries",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 2338,
+        "y": 1801
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_100",
+      "constraint_name": "identities_organization_id_fkey",
+      "source": "public.identities",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 323
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_101",
+      "constraint_name": "identities_user_id_fkey",
+      "source": "public.identities",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 323
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_102",
+      "constraint_name": "mailbox_aliases_mailbox_id_fkey",
+      "source": "public.mailbox_aliases",
+      "target": "public.mailboxes",
+      "source_col": "mailbox_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 853
+      },
+      "end": {
+        "x": 1510,
+        "y": 853
+      }
+    },
+    {
+      "id": "mfk_103",
+      "constraint_name": "mailbox_aliases_organization_id_fkey",
+      "source": "public.mailbox_aliases",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 853
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_104",
+      "constraint_name": "mailboxes_created_by_fkey",
+      "source": "public.mailboxes",
+      "target": "auth.users",
+      "source_col": "created_by",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 853
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_105",
+      "constraint_name": "mailboxes_domain_id_fkey",
+      "source": "public.mailboxes",
+      "target": "public.sending_domains",
+      "source_col": "domain_id",
+      "target_col": "id",
+      "delete_rule": "r",
+      "start": {
+        "x": 1770,
+        "y": 853
+      },
+      "end": {
+        "x": 738,
+        "y": 797
+      }
+    },
+    {
+      "id": "mfk_106",
+      "constraint_name": "mailboxes_organization_id_fkey",
+      "source": "public.mailboxes",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 853
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_107",
+      "constraint_name": "mailofly_user_mail_queue_cron_user_id_fkey",
+      "source": "public.mailofly_user_mail_queue_cron",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 797
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_108",
+      "constraint_name": "managed_audience_programs_organization_id_fkey",
+      "source": "public.managed_audience_programs",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "a",
+      "start": {
+        "x": 2338,
+        "y": 435
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_109",
+      "constraint_name": "managed_audience_programs_segment_id_fkey",
+      "source": "public.managed_audience_programs",
+      "target": "public.contact_segments",
+      "source_col": "segment_id",
+      "target_col": "id",
+      "delete_rule": "a",
+      "start": {
+        "x": 2338,
+        "y": 435
+      },
+      "end": {
+        "x": 1794,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_110",
+      "constraint_name": "managed_audience_programs_topic_id_fkey",
+      "source": "public.managed_audience_programs",
+      "target": "public.topics",
+      "source_col": "topic_id",
+      "target_col": "id",
+      "delete_rule": "a",
+      "start": {
+        "x": 2338,
+        "y": 435
+      },
+      "end": {
+        "x": 1794,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_111",
+      "constraint_name": "managed_audience_programs_user_id_fkey",
+      "source": "public.managed_audience_programs",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "a",
+      "start": {
+        "x": 2338,
+        "y": 435
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_112",
+      "constraint_name": "native_template_versions_created_by_fkey",
+      "source": "public.native_template_versions",
+      "target": "auth.users",
+      "source_col": "created_by",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3110,
+        "y": 379
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_113",
+      "constraint_name": "native_template_versions_organization_id_fkey",
+      "source": "public.native_template_versions",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 379
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_114",
+      "constraint_name": "native_template_versions_template_id_fkey",
+      "source": "public.native_template_versions",
+      "target": "public.templates",
+      "source_col": "template_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 379
+      },
+      "end": {
+        "x": 3134,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_115",
+      "constraint_name": "oauth_access_tokens_client_id_fkey",
+      "source": "public.oauth_access_tokens",
+      "target": "public.oauth_clients",
+      "source_col": "client_id",
+      "target_col": "client_id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 1327
+      },
+      "end": {
+        "x": 1794,
+        "y": 1327
+      }
+    },
+    {
+      "id": "mfk_116",
+      "constraint_name": "oauth_access_tokens_organization_id_fkey",
+      "source": "public.oauth_access_tokens",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 1327
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_117",
+      "constraint_name": "oauth_access_tokens_user_id_fkey",
+      "source": "public.oauth_access_tokens",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 1327
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_118",
+      "constraint_name": "oauth_authorization_codes_client_id_fkey",
+      "source": "public.oauth_authorization_codes",
+      "target": "public.oauth_clients",
+      "source_col": "client_id",
+      "target_col": "client_id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1383
+      },
+      "end": {
+        "x": 1794,
+        "y": 1327
+      }
+    },
+    {
+      "id": "mfk_119",
+      "constraint_name": "oauth_authorization_codes_organization_id_fkey",
+      "source": "public.oauth_authorization_codes",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1383
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_120",
+      "constraint_name": "oauth_authorization_codes_user_id_fkey",
+      "source": "public.oauth_authorization_codes",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1383
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_121",
+      "constraint_name": "oauth_authorization_requests_client_id_fkey",
+      "source": "public.oauth_authorization_requests",
+      "target": "public.oauth_clients",
+      "source_col": "client_id",
+      "target_col": "client_id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 1383
+      },
+      "end": {
+        "x": 1794,
+        "y": 1327
+      }
+    },
+    {
+      "id": "mfk_122",
+      "constraint_name": "oauth_authorization_requests_organization_id_fkey",
+      "source": "public.oauth_authorization_requests",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 2338,
+        "y": 1383
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_123",
+      "constraint_name": "oauth_authorization_requests_user_id_fkey",
+      "source": "public.oauth_authorization_requests",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 2338,
+        "y": 1383
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_124",
+      "constraint_name": "oauth_clients_organization_id_fkey",
+      "source": "public.oauth_clients",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1327
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_125",
+      "constraint_name": "oauth_clients_user_id_fkey",
+      "source": "public.oauth_clients",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1327
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_126",
+      "constraint_name": "oauth_refresh_tokens_access_token_id_fkey",
+      "source": "public.oauth_refresh_tokens",
+      "target": "public.oauth_access_tokens",
+      "source_col": "access_token_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1383
+      },
+      "end": {
+        "x": 2078,
+        "y": 1327
+      }
+    },
+    {
+      "id": "mfk_127",
+      "constraint_name": "oauth_refresh_tokens_client_id_fkey",
+      "source": "public.oauth_refresh_tokens",
+      "target": "public.oauth_clients",
+      "source_col": "client_id",
+      "target_col": "client_id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1383
+      },
+      "end": {
+        "x": 1794,
+        "y": 1327
+      }
+    },
+    {
+      "id": "mfk_128",
+      "constraint_name": "oauth_refresh_tokens_organization_id_fkey",
+      "source": "public.oauth_refresh_tokens",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1383
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_129",
+      "constraint_name": "oauth_refresh_tokens_user_id_fkey",
+      "source": "public.oauth_refresh_tokens",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1383
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_130",
+      "constraint_name": "organization_addon_subscriptions_organization_id_fkey",
+      "source": "public.organization_addon_subscriptions",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1327
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_131",
+      "constraint_name": "user_addons_addon_id_fkey",
+      "source": "public.organization_addons",
+      "target": "public.billing_addons",
+      "source_col": "addon_id",
+      "target_col": "id",
+      "delete_rule": "r",
+      "start": {
+        "x": 430,
+        "y": 1327
+      },
+      "end": {
+        "x": 738,
+        "y": 1271
+      }
+    },
+    {
+      "id": "mfk_132",
+      "constraint_name": "user_addons_organization_id_fkey",
+      "source": "public.organization_addons",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 1327
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_133",
+      "constraint_name": "organization_billing_notifications_organization_id_fkey",
+      "source": "public.organization_billing_notifications",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1439
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_134",
+      "constraint_name": "organization_billing_notifications_user_id_fkey",
+      "source": "public.organization_billing_notifications",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1439
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_135",
+      "constraint_name": "organization_billing_plan_state_organization_id_fkey",
+      "source": "public.organization_billing_plan_state",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 1159
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_136",
+      "constraint_name": "organization_credit_transactions_organization_id_fkey",
+      "source": "public.organization_credit_transactions",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1271
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_137",
+      "constraint_name": "organization_email_days_organization_id_fkey",
+      "source": "public.organization_email_days",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 1215
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_138",
+      "constraint_name": "organization_email_periods_organization_id_fkey",
+      "source": "public.organization_email_periods",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1215
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_139",
+      "constraint_name": "organization_email_policy_organization_id_fkey",
+      "source": "public.organization_email_policy",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 1271
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_140",
+      "constraint_name": "organization_invitations_invited_by_fkey",
+      "source": "public.organization_invitations",
+      "target": "auth.users",
+      "source_col": "invited_by",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 267
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_141",
+      "constraint_name": "organization_invitations_organization_id_fkey",
+      "source": "public.organization_invitations",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 267
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_142",
+      "constraint_name": "organization_members_organization_id_fkey",
+      "source": "public.organization_members",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 267
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_143",
+      "constraint_name": "organization_members_user_id_fkey",
+      "source": "public.organization_members",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 267
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_144",
+      "constraint_name": "organization_payment_notice_state_organization_id_fkey",
+      "source": "public.organization_payment_notice_state",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 1495
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_145",
+      "constraint_name": "organization_sending_protection_organization_id_fkey",
+      "source": "public.organization_sending_protection",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1495
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_146",
+      "constraint_name": "organization_subscriptions_marketing_plan_id_fkey",
+      "source": "public.organization_subscriptions",
+      "target": "public.plans",
+      "source_col": "marketing_plan_id",
+      "target_col": "id",
+      "delete_rule": "a",
+      "start": {
+        "x": 714,
+        "y": 1159
+      },
+      "end": {
+        "x": 170,
+        "y": 1159
+      }
+    },
+    {
+      "id": "mfk_147",
+      "constraint_name": "user_subscriptions_organization_id_fkey",
+      "source": "public.organization_subscriptions",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1159
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_148",
+      "constraint_name": "user_subscriptions_plan_id_fkey",
+      "source": "public.organization_subscriptions",
+      "target": "public.plans",
+      "source_col": "plan_id",
+      "target_col": "id",
+      "delete_rule": "r",
+      "start": {
+        "x": 714,
+        "y": 1159
+      },
+      "end": {
+        "x": 170,
+        "y": 1159
+      }
+    },
+    {
+      "id": "mfk_149",
+      "constraint_name": "user_usage_organization_id_fkey",
+      "source": "public.organization_usage",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 1215
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_150",
+      "constraint_name": "organizations_created_by_fkey",
+      "source": "public.organizations",
+      "target": "auth.users",
+      "source_col": "created_by",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 430,
+        "y": 267
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_151",
+      "constraint_name": "platform_email_deliveries_email_id_fkey",
+      "source": "public.platform_email_deliveries",
+      "target": "public.emails",
+      "source_col": "email_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 430,
+        "y": 1913
+      },
+      "end": {
+        "x": 170,
+        "y": 685
+      }
+    },
+    {
+      "id": "mfk_152",
+      "constraint_name": "platform_email_preferences_organization_id_fkey",
+      "source": "public.platform_email_preferences",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1913
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_153",
+      "constraint_name": "platform_email_preferences_user_id_fkey",
+      "source": "public.platform_email_preferences",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1913
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_154",
+      "constraint_name": "platform_notification_events_organization_id_fkey",
+      "source": "public.platform_notification_events",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 1857
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_155",
+      "constraint_name": "platform_notification_events_user_id_fkey",
+      "source": "public.platform_notification_events",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 1857
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_156",
+      "constraint_name": "received_emails_domain_id_fkey",
+      "source": "public.received_emails",
+      "target": "public.sending_domains",
+      "source_col": "domain_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 1770,
+        "y": 909
+      },
+      "end": {
+        "x": 738,
+        "y": 797
+      }
+    },
+    {
+      "id": "mfk_157",
+      "constraint_name": "received_emails_organization_id_fkey",
+      "source": "public.received_emails",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 909
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_158",
+      "constraint_name": "received_emails_user_id_fkey",
+      "source": "public.received_emails",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 909
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_159",
+      "constraint_name": "referral_earnings_organization_id_fkey",
+      "source": "public.referral_earnings",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3110,
+        "y": 1103
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_160",
+      "constraint_name": "referral_earnings_plan_id_fkey",
+      "source": "public.referral_earnings",
+      "target": "public.plans",
+      "source_col": "plan_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3110,
+        "y": 1103
+      },
+      "end": {
+        "x": 170,
+        "y": 1159
+      }
+    },
+    {
+      "id": "mfk_161",
+      "constraint_name": "referral_earnings_referred_user_id_fkey",
+      "source": "public.referral_earnings",
+      "target": "public.users",
+      "source_col": "referred_user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 1103
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_162",
+      "constraint_name": "referral_earnings_referrer_user_id_fkey",
+      "source": "public.referral_earnings",
+      "target": "public.users",
+      "source_col": "referrer_user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3110,
+        "y": 1103
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_163",
+      "constraint_name": "referral_payout_methods_user_id_fkey",
+      "source": "public.referral_payout_methods",
+      "target": "public.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 1103
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_164",
+      "constraint_name": "referral_withdrawal_requests_payout_method_id_fkey",
+      "source": "public.referral_withdrawal_requests",
+      "target": "public.referral_payout_methods",
+      "source_col": "payout_method_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3678,
+        "y": 1103
+      },
+      "end": {
+        "x": 3134,
+        "y": 1103
+      }
+    },
+    {
+      "id": "mfk_165",
+      "constraint_name": "referral_withdrawal_requests_user_id_fkey",
+      "source": "public.referral_withdrawal_requests",
+      "target": "public.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 1103
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_166",
+      "constraint_name": "folder_recipients_folder_id_fkey",
+      "source": "public.segment_contacts",
+      "target": "public.contact_segments",
+      "source_col": "segment_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 323
+      },
+      "end": {
+        "x": 1794,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_167",
+      "constraint_name": "folder_recipients_recipient_id_fkey",
+      "source": "public.segment_contacts",
+      "target": "public.contacts",
+      "source_col": "contact_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 323
+      },
+      "end": {
+        "x": 1510,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_168",
+      "constraint_name": "segment_google_sheets_organization_id_fkey",
+      "source": "public.segment_google_sheets",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 379
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_169",
+      "constraint_name": "segment_google_sheets_segment_id_fkey",
+      "source": "public.segment_google_sheets",
+      "target": "public.contact_segments",
+      "source_col": "segment_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 379
+      },
+      "end": {
+        "x": 1794,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_170",
+      "constraint_name": "segment_google_sheets_user_id_fkey",
+      "source": "public.segment_google_sheets",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 379
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_171",
+      "constraint_name": "sending_domains_organization_id_fkey",
+      "source": "public.sending_domains",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 797
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_172",
+      "constraint_name": "sending_domains_user_id_fkey",
+      "source": "public.sending_domains",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 797
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_173",
+      "constraint_name": "ses_event_log_email_id_fkey",
+      "source": "public.ses_event_log",
+      "target": "public.emails",
+      "source_col": "email_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 714,
+        "y": 741
+      },
+      "end": {
+        "x": 170,
+        "y": 685
+      }
+    },
+    {
+      "id": "mfk_174",
+      "constraint_name": "ses_event_log_organization_id_fkey",
+      "source": "public.ses_event_log",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 741
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_175",
+      "constraint_name": "ses_organization_tenants_organization_id_fkey",
+      "source": "public.ses_organization_tenants",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 797
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_176",
+      "constraint_name": "ses_recipient_outcomes_organization_id_fkey",
+      "source": "public.ses_recipient_outcomes",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 998,
+        "y": 741
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_177",
+      "constraint_name": "ses_send_attempts_organization_id_fkey",
+      "source": "public.ses_send_attempts",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 797
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_178",
+      "constraint_name": "smtp_credentials_created_by_fkey",
+      "source": "public.smtp_credentials",
+      "target": "auth.users",
+      "source_col": "created_by",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 853
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_179",
+      "constraint_name": "smtp_credentials_organization_id_fkey",
+      "source": "public.smtp_credentials",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 853
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_180",
+      "constraint_name": "smtp_credentials_prefer_account_id_fkey",
+      "source": "public.smtp_credentials",
+      "target": "public.identities",
+      "source_col": "prefer_account_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 714,
+        "y": 853
+      },
+      "end": {
+        "x": 738,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_181",
+      "constraint_name": "supabase_integrations_created_by_fkey",
+      "source": "public.supabase_integrations",
+      "target": "auth.users",
+      "source_col": "created_by",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1439
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_182",
+      "constraint_name": "supabase_integrations_organization_id_fkey",
+      "source": "public.supabase_integrations",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1439
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_183",
+      "constraint_name": "supabase_integrations_template_id_fkey",
+      "source": "public.supabase_integrations",
+      "target": "public.templates",
+      "source_col": "template_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 1770,
+        "y": 1439
+      },
+      "end": {
+        "x": 3134,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_184",
+      "constraint_name": "support_ticket_messages_sender_id_fkey",
+      "source": "public.support_ticket_messages",
+      "target": "public.users",
+      "source_col": "sender_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1801
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_185",
+      "constraint_name": "support_ticket_messages_ticket_id_fkey",
+      "source": "public.support_ticket_messages",
+      "target": "public.support_tickets",
+      "source_col": "ticket_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 1801
+      },
+      "end": {
+        "x": 1510,
+        "y": 1801
+      }
+    },
+    {
+      "id": "mfk_186",
+      "constraint_name": "support_tickets_created_by_fkey",
+      "source": "public.support_tickets",
+      "target": "auth.users",
+      "source_col": "created_by",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1801
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_187",
+      "constraint_name": "template_editor_drafts_organization_id_fkey",
+      "source": "public.template_editor_drafts",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 323
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_188",
+      "constraint_name": "template_editor_drafts_template_id_fkey",
+      "source": "public.template_editor_drafts",
+      "target": "public.templates",
+      "source_col": "template_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 323
+      },
+      "end": {
+        "x": 3134,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_189",
+      "constraint_name": "template_editor_drafts_user_id_fkey",
+      "source": "public.template_editor_drafts",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3678,
+        "y": 323
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_190",
+      "constraint_name": "templates_native_published_fk",
+      "source": "public.templates",
+      "target": "public.native_template_versions",
+      "source_col": "published_native_version_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 3394,
+        "y": 323
+      },
+      "end": {
+        "x": 2850,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_191",
+      "constraint_name": "templates_organization_id_fkey",
+      "source": "public.templates",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 323
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_192",
+      "constraint_name": "templates_user_id_fkey",
+      "source": "public.templates",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 3394,
+        "y": 323
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_193",
+      "constraint_name": "tenant_suppression_list_organization_id_fkey",
+      "source": "public.tenant_suppression_list",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 491
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_194",
+      "constraint_name": "topics_organization_id_fkey",
+      "source": "public.topics",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2054,
+        "y": 379
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_195",
+      "constraint_name": "user_notifications_user_id_fkey",
+      "source": "public.user_notifications",
+      "target": "public.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 1857
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_196",
+      "constraint_name": "user_onboarding_responses_user_id_fkey",
+      "source": "public.user_onboarding_responses",
+      "target": "public.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 714,
+        "y": 379
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_197",
+      "constraint_name": "users_admin_role_id_fkey",
+      "source": "public.users",
+      "target": "public.admin_roles",
+      "source_col": "admin_role_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 430,
+        "y": 323
+      },
+      "end": {
+        "x": 1510,
+        "y": 1745
+      }
+    },
+    {
+      "id": "mfk_198",
+      "constraint_name": "users_default_organization_id_fkey",
+      "source": "public.users",
+      "target": "public.organizations",
+      "source_col": "default_organization_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 430,
+        "y": 323
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_199",
+      "constraint_name": "users_id_fkey",
+      "source": "public.users",
+      "target": "auth.users",
+      "source_col": "id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 430,
+        "y": 323
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_200",
+      "constraint_name": "users_referredby_fkey",
+      "source": "public.users",
+      "target": "public.users",
+      "source_col": "referredby",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 430,
+        "y": 323
+      },
+      "end": {
+        "x": 170,
+        "y": 323
+      }
+    },
+    {
+      "id": "mfk_201",
+      "constraint_name": "users_role_fkey",
+      "source": "public.users",
+      "target": "public.roles",
+      "source_col": "role",
+      "target_col": "name",
+      "delete_rule": "a",
+      "start": {
+        "x": 430,
+        "y": 323
+      },
+      "end": {
+        "x": 170,
+        "y": 379
+      }
+    },
+    {
+      "id": "mfk_202",
+      "constraint_name": "webhook_deliveries_organization_id_fkey",
+      "source": "public.webhook_deliveries",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1327
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_203",
+      "constraint_name": "webhook_deliveries_received_email_id_fkey",
+      "source": "public.webhook_deliveries",
+      "target": "public.received_emails",
+      "source_col": "received_email_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 1770,
+        "y": 1327
+      },
+      "end": {
+        "x": 1510,
+        "y": 909
+      }
+    },
+    {
+      "id": "mfk_204",
+      "constraint_name": "webhook_deliveries_webhook_id_fkey",
+      "source": "public.webhook_deliveries",
+      "target": "public.webhooks",
+      "source_col": "webhook_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 1770,
+        "y": 1327
+      },
+      "end": {
+        "x": 2078,
+        "y": 1271
+      }
+    },
+    {
+      "id": "mfk_205",
+      "constraint_name": "webhooks_created_by_fkey",
+      "source": "public.webhooks",
+      "target": "auth.users",
+      "source_col": "created_by",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 1271
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_206",
+      "constraint_name": "webhooks_organization_id_fkey",
+      "source": "public.webhooks",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "c",
+      "start": {
+        "x": 2338,
+        "y": 1271
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_207",
+      "constraint_name": "workspace_uploads_organization_id_fkey",
+      "source": "public.workspace_uploads",
+      "target": "public.organizations",
+      "source_col": "organization_id",
+      "target_col": "id",
+      "delete_rule": "r",
+      "start": {
+        "x": 2338,
+        "y": 1857
+      },
+      "end": {
+        "x": 170,
+        "y": 267
+      }
+    },
+    {
+      "id": "mfk_208",
+      "constraint_name": "workspace_uploads_user_id_fkey",
+      "source": "public.workspace_uploads",
+      "target": "auth.users",
+      "source_col": "user_id",
+      "target_col": "id",
+      "delete_rule": "n",
+      "start": {
+        "x": 2338,
+        "y": 1857
+      },
+      "end": {
+        "x": 2850,
+        "y": 1465
+      }
+    },
+    {
+      "id": "mfk_210",
+      "constraint_name": "objects_bucketId_fkey",
+      "source": "storage.objects",
+      "target": "storage.buckets",
+      "source_col": "bucket_id",
+      "target_col": "id",
+      "delete_rule": "a",
+      "start": {
+        "x": 3394,
+        "y": 1521
+      },
+      "end": {
+        "x": 2850,
+        "y": 1521
+      }
+    }
+  ]
+}

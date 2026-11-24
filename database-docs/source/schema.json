@@ -1,0 +1,1108 @@
+{
+  "collected_at": "2026-11-24T07:03:52.398549+00:00",
+  "database": "mailofly",
+  "project_ref": "aymarrhbnaygxkaorjfl",
+  "metadata_type": "schema.json",
+  "record_count": 137,
+  "source_info": {
+    "query": "pg_namespace aggregate"
+  },
+  "data": [
+    {
+      "schema_name": "auth",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 27,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "cron",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 2,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "extensions",
+      "schema_owner": "postgres",
+      "description": null,
+      "table_count": 0,
+      "view_count": 4,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "graphql",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "graphql_public",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "information_schema",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 4,
+      "view_count": 65,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "mailofly_lifecycle",
+      "schema_owner": "postgres",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "mailofly_notifications",
+      "schema_owner": "postgres",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "net",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 2,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_catalog",
+      "schema_owner": "supabase_admin",
+      "description": "system catalog schema",
+      "table_count": 64,
+      "view_count": 78,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_0",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_1",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_10",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_11",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_12",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_13",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_14",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_15",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_16",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_17",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_18",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_19",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_2",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_20",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_21",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_22",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_23",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_24",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_25",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_26",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_27",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_28",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_29",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_3",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_30",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_31",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_32",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_33",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_34",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_35",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_36",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_37",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_38",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_39",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_4",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_40",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_41",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_42",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_43",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_44",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_45",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_46",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_47",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_48",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_49",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_5",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_50",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_51",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_52",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_53",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_54",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_55",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_56",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_57",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_58",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_59",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_6",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_7",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_8",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_temp_9",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast",
+      "schema_owner": "supabase_admin",
+      "description": "reserved schema for TOAST tables",
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_0",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_1",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_10",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_11",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_12",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_13",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_14",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_15",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_16",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_17",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_18",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_19",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_2",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_20",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_21",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_22",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_23",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_24",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_25",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_26",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_27",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_28",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_29",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_3",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_30",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_31",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_32",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_33",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_34",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_35",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_36",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_37",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_38",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_39",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_4",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_40",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_41",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_42",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_43",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_44",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_45",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_46",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_47",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_48",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_49",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_5",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_50",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_51",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_52",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_53",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_54",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_55",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_56",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_57",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_58",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_59",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_6",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_7",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_8",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pg_toast_temp_9",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "pgbouncer",
+      "schema_owner": "pgbouncer",
+      "description": null,
+      "table_count": 0,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "public",
+      "schema_owner": "pg_database_owner",
+      "description": "standard public schema",
+      "table_count": 104,
+      "view_count": 7,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "realtime",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 9,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "storage",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 10,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "supabase_migrations",
+      "schema_owner": "postgres",
+      "description": null,
+      "table_count": 1,
+      "view_count": 0,
+      "materialized_view_count": 0
+    },
+    {
+      "schema_name": "vault",
+      "schema_owner": "supabase_admin",
+      "description": null,
+      "table_count": 1,
+      "view_count": 1,
+      "materialized_view_count": 0
+    }
+  ]
+}

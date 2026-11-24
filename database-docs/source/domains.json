@@ -1,0 +1,2123 @@
+{
+  "database": "mailofly",
+  "domain_count": 11,
+  "total_public_tables": 111,
+  "domains": {
+    "tenancy_and_users": {
+      "display_name": "Organizations, Tenancy & Users",
+      "description": "Multi-tenant boundary enforcement, organization hierarchies, user accounts, invitations, and identity mappings.",
+      "tables": [
+        "organizations",
+        "organization_members",
+        "organization_invitations",
+        "users",
+        "accounts",
+        "identities",
+        "roles",
+        "user_onboarding_responses"
+      ],
+      "external_tables": [
+        "auth.users",
+        "auth.identities"
+      ],
+      "internal_relationships_count": 7,
+      "external_relationships": [
+        {
+          "constraint_name": "identities_user_id_fkey",
+          "source_table": "identities",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "organization_invitations_invited_by_fkey",
+          "source_table": "organization_invitations",
+          "source_column": "invited_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "organization_members_user_id_fkey",
+          "source_table": "organization_members",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "organizations_created_by_fkey",
+          "source_table": "organizations",
+          "source_column": "created_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "users_admin_role_id_fkey",
+          "source_table": "users",
+          "source_column": "admin_role_id",
+          "target_schema": "public",
+          "target_table": "admin_roles",
+          "target_column": "id",
+          "target_domain": "admin_support_and_logging"
+        },
+        {
+          "constraint_name": "users_id_fkey",
+          "source_table": "users",
+          "source_column": "id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "identities",
+          "trigger_name": "account_lifecycle_sender_activity",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_sender_activity AFTER INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "identities",
+          "trigger_name": "account_lifecycle_sender_edit",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_sender_edit AFTER UPDATE OF name, smtp_host, smtp_port, smtp_username, custom_from_email, custom_from_display_name ON public.identities FOR EACH ROW WHEN (((old.name IS DISTINCT FROM new.name) OR (old.smtp_host IS DISTINCT FROM new.smtp_host) OR (old.smtp_port IS DISTINCT FROM new.smtp_port) OR (old.smtp_username IS DISTINCT FROM new.smtp_username) OR (old.custom_from_email IS DISTINCT FROM new.custom_from_email) OR (old.custom_from_display_name IS DISTINCT FROM new.custom_from_display_name))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        },
+        {
+          "schema_name": "public",
+          "table_name": "identities",
+          "trigger_name": "identities_link_orphaned_emails_after_insert",
+          "function_name": "mailofly_link_orphaned_emails_after_identity_insert",
+          "trigger_definition": "CREATE TRIGGER identities_link_orphaned_emails_after_insert AFTER INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_link_orphaned_emails_after_identity_insert()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "identities",
+          "trigger_name": "identities_sync_daily_usage_before_insert",
+          "function_name": "mailofly_sync_identity_daily_usage_on_insert",
+          "trigger_definition": "CREATE TRIGGER identities_sync_daily_usage_before_insert BEFORE INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_sync_identity_daily_usage_on_insert()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "identities",
+          "trigger_name": "identities_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER identities_updated_at BEFORE UPDATE ON public.identities FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "identities",
+          "trigger_name": "mailofly_plan_identities_after_addon",
+          "function_name": "mailofly_after_insert_account_addon",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_identities_after_addon AFTER INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_after_insert_account_addon()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "identities",
+          "trigger_name": "mailofly_plan_identities_insert",
+          "function_name": "mailofly_enforce_plan_accounts",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_identities_insert BEFORE INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_accounts()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "organization_members",
+          "trigger_name": "mailofly_keep_workspace_owner",
+          "function_name": "mailofly_keep_workspace_owner",
+          "trigger_definition": "CREATE TRIGGER mailofly_keep_workspace_owner BEFORE DELETE ON public.organization_members FOR EACH ROW EXECUTE FUNCTION mailofly_keep_workspace_owner()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 11
+        },
+        {
+          "schema_name": "public",
+          "table_name": "organizations",
+          "trigger_name": "initialize_org_billing_notice_state",
+          "function_name": "initialize_org_billing_notice_state",
+          "trigger_definition": "CREATE TRIGGER initialize_org_billing_notice_state AFTER INSERT ON public.organizations FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.initialize_org_billing_notice_state()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "organizations",
+          "trigger_name": "mailofly_guard_workspace_erasure",
+          "function_name": "mailofly_guard_workspace_erasure",
+          "trigger_definition": "CREATE TRIGGER mailofly_guard_workspace_erasure BEFORE DELETE ON public.organizations FOR EACH ROW EXECUTE FUNCTION mailofly_guard_workspace_erasure()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 11
+        },
+        {
+          "schema_name": "public",
+          "table_name": "organizations",
+          "trigger_name": "organizations_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER organizations_updated_at BEFORE UPDATE ON public.organizations FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "user_onboarding_responses",
+          "trigger_name": "user_onboarding_responses_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER user_onboarding_responses_updated_at BEFORE UPDATE ON public.user_onboarding_responses FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "users",
+          "trigger_name": "trg_users_protect_sensitive_columns",
+          "function_name": "users_protect_sensitive_columns",
+          "trigger_definition": "CREATE TRIGGER trg_users_protect_sensitive_columns BEFORE UPDATE ON public.users FOR EACH ROW EXECUTE FUNCTION users_protect_sensitive_columns()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "users",
+          "trigger_name": "trg_users_sync_role_from_admin_role",
+          "function_name": "users_sync_role_from_admin_role",
+          "trigger_definition": "CREATE TRIGGER trg_users_sync_role_from_admin_role BEFORE INSERT OR UPDATE OF admin_role_id, role ON public.users FOR EACH ROW EXECUTE FUNCTION users_sync_role_from_admin_role()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 23
+        }
+      ]
+    },
+    "contacts_and_crm": {
+      "display_name": "Contacts, Audience & CRM",
+      "description": "Audience management, contact attributes, dynamic/static segmentation, subscription status, topics, Google Sheets sync, and suppression lists.",
+      "tables": [
+        "contacts",
+        "contact_properties",
+        "contact_property_values",
+        "properties",
+        "contact_segments",
+        "segment_contacts",
+        "segment_google_sheets",
+        "topics",
+        "contact_topics",
+        "contact_subscription_events",
+        "contact_subscription_challenges",
+        "managed_audience_programs",
+        "newsletter_subscribers",
+        "newsletter_signup_windows",
+        "tenant_suppression_list",
+        "global_suppression_list"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 13,
+      "external_relationships": [
+        {
+          "constraint_name": "contact_properties_organization_id_fkey",
+          "source_table": "contact_properties",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "contact_property_values_organization_id_fkey",
+          "source_table": "contact_property_values",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "contact_segments_organization_id_fkey",
+          "source_table": "contact_segments",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "recipient_folders_user_id_fkey",
+          "source_table": "contact_segments",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "contact_subscription_challenges_email_id_fkey",
+          "source_table": "contact_subscription_challenges",
+          "source_column": "email_id",
+          "target_schema": "public",
+          "target_table": "emails",
+          "target_column": "id",
+          "target_domain": "email_delivery_and_ses"
+        },
+        {
+          "constraint_name": "contact_subscription_events_organization_id_fkey",
+          "source_table": "contact_subscription_events",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "contact_topics_organization_id_fkey",
+          "source_table": "contact_topics",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "contacts_organization_id_fkey",
+          "source_table": "contacts",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "recipients_user_id_fkey",
+          "source_table": "contacts",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "managed_audience_programs_organization_id_fkey",
+          "source_table": "managed_audience_programs",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "managed_audience_programs_user_id_fkey",
+          "source_table": "managed_audience_programs",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "segment_google_sheets_organization_id_fkey",
+          "source_table": "segment_google_sheets",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "segment_google_sheets_user_id_fkey",
+          "source_table": "segment_google_sheets",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "tenant_suppression_list_organization_id_fkey",
+          "source_table": "tenant_suppression_list",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "topics_organization_id_fkey",
+          "source_table": "topics",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "contact_segments",
+          "trigger_name": "contact_segments_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER contact_segments_updated_at BEFORE UPDATE ON public.contact_segments FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "contact_segments",
+          "trigger_name": "mailofly_plan_segments_insert",
+          "function_name": "mailofly_enforce_plan_segments",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_segments_insert BEFORE INSERT ON public.contact_segments FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_segments()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "contact_segments",
+          "trigger_name": "managed_segment_guard",
+          "function_name": "mailofly_managed_segment_guard",
+          "trigger_definition": "CREATE TRIGGER managed_segment_guard BEFORE UPDATE ON public.contact_segments FOR EACH ROW EXECUTE FUNCTION mailofly_managed_segment_guard()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "contact_topics",
+          "trigger_name": "native_subscription_guard",
+          "function_name": "mailofly_subscription_guard",
+          "trigger_definition": "CREATE TRIGGER native_subscription_guard BEFORE INSERT OR UPDATE ON public.contact_topics FOR EACH ROW EXECUTE FUNCTION mailofly_subscription_guard()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 23
+        },
+        {
+          "schema_name": "public",
+          "table_name": "contact_topics",
+          "trigger_name": "native_subscription_projection",
+          "function_name": "mailofly_subscription_projection",
+          "trigger_definition": "CREATE TRIGGER native_subscription_projection AFTER INSERT OR UPDATE ON public.contact_topics FOR EACH ROW EXECUTE FUNCTION mailofly_subscription_projection()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 21
+        },
+        {
+          "schema_name": "public",
+          "table_name": "contact_topics",
+          "trigger_name": "subscription_deleted",
+          "function_name": "mailofly_subscription_deleted",
+          "trigger_definition": "CREATE TRIGGER subscription_deleted AFTER DELETE ON public.contact_topics FOR EACH ROW EXECUTE FUNCTION mailofly_subscription_deleted()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 9
+        },
+        {
+          "schema_name": "public",
+          "table_name": "contacts",
+          "trigger_name": "contact_membership_projection",
+          "function_name": "mailofly_contact_membership_projection",
+          "trigger_definition": "CREATE TRIGGER contact_membership_projection AFTER UPDATE OF status, unsubscribed ON public.contacts FOR EACH ROW EXECUTE FUNCTION mailofly_contact_membership_projection()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        },
+        {
+          "schema_name": "public",
+          "table_name": "contacts",
+          "trigger_name": "mailofly_plan_contacts_insert",
+          "function_name": "mailofly_enforce_plan_contacts",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_contacts_insert BEFORE INSERT ON public.contacts FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_contacts()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "contacts",
+          "trigger_name": "native_blog_contact_labels",
+          "function_name": "mailofly_blog_contact_labels",
+          "trigger_definition": "CREATE TRIGGER native_blog_contact_labels BEFORE INSERT OR UPDATE OF properties ON public.contacts FOR EACH ROW EXECUTE FUNCTION mailofly_blog_contact_labels()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 23
+        },
+        {
+          "schema_name": "public",
+          "table_name": "newsletter_subscribers",
+          "trigger_name": "legacy_newsletter_bridge",
+          "function_name": "mailofly_legacy_newsletter_bridge",
+          "trigger_definition": "CREATE TRIGGER legacy_newsletter_bridge AFTER INSERT OR UPDATE ON public.newsletter_subscribers FOR EACH ROW EXECUTE FUNCTION mailofly_legacy_newsletter_bridge()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 21
+        },
+        {
+          "schema_name": "public",
+          "table_name": "segment_contacts",
+          "trigger_name": "managed_membership_guard",
+          "function_name": "mailofly_managed_membership_guard",
+          "trigger_definition": "CREATE TRIGGER managed_membership_guard BEFORE INSERT OR UPDATE ON public.segment_contacts FOR EACH ROW EXECUTE FUNCTION mailofly_managed_membership_guard()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 23
+        },
+        {
+          "schema_name": "public",
+          "table_name": "segment_google_sheets",
+          "trigger_name": "mailofly_plan_google_sheets_insert",
+          "function_name": "mailofly_enforce_plan_google_sheets",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_google_sheets_insert BEFORE INSERT ON public.segment_google_sheets FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_google_sheets()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "segment_google_sheets",
+          "trigger_name": "segment_google_sheets_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER segment_google_sheets_updated_at BEFORE UPDATE ON public.segment_google_sheets FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "topics",
+          "trigger_name": "managed_topic_guard",
+          "function_name": "mailofly_managed_topic_guard",
+          "trigger_definition": "CREATE TRIGGER managed_topic_guard BEFORE UPDATE ON public.topics FOR EACH ROW EXECUTE FUNCTION mailofly_managed_topic_guard()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        }
+      ]
+    },
+    "campaigns_and_templates": {
+      "display_name": "Campaign Management & Templates",
+      "description": "Marketing email campaigns, run orchestration, snapshot audience bindings, sending holds, and template draft versioning.",
+      "tables": [
+        "campaigns",
+        "campaign_runs",
+        "campaign_run_audience",
+        "campaign_sending_holds",
+        "templates",
+        "template_editor_drafts",
+        "native_template_versions"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 8,
+      "external_relationships": [
+        {
+          "constraint_name": "campaign_run_audience_contact_id_fkey",
+          "source_table": "campaign_run_audience",
+          "source_column": "contact_id",
+          "target_schema": "public",
+          "target_table": "contacts",
+          "target_column": "id",
+          "target_domain": "contacts_and_crm"
+        },
+        {
+          "constraint_name": "campaign_run_audience_organization_id_fkey",
+          "source_table": "campaign_run_audience",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "campaign_runs_organization_id_fkey",
+          "source_table": "campaign_runs",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "campaign_runs_user_id_fkey",
+          "source_table": "campaign_runs",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "campaign_sending_holds_organization_id_fkey",
+          "source_table": "campaign_sending_holds",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "campaigns_folder_id_fkey",
+          "source_table": "campaigns",
+          "source_column": "segment_id",
+          "target_schema": "public",
+          "target_table": "contact_segments",
+          "target_column": "id",
+          "target_domain": "contacts_and_crm"
+        },
+        {
+          "constraint_name": "campaigns_organization_id_fkey",
+          "source_table": "campaigns",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "campaigns_topic_id_fkey",
+          "source_table": "campaigns",
+          "source_column": "topic_id",
+          "target_schema": "public",
+          "target_table": "topics",
+          "target_column": "id",
+          "target_domain": "contacts_and_crm"
+        },
+        {
+          "constraint_name": "campaigns_user_id_fkey",
+          "source_table": "campaigns",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "native_template_versions_created_by_fkey",
+          "source_table": "native_template_versions",
+          "source_column": "created_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "native_template_versions_organization_id_fkey",
+          "source_table": "native_template_versions",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "template_editor_drafts_organization_id_fkey",
+          "source_table": "template_editor_drafts",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "template_editor_drafts_user_id_fkey",
+          "source_table": "template_editor_drafts",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "templates_organization_id_fkey",
+          "source_table": "templates",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "templates_user_id_fkey",
+          "source_table": "templates",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "campaign_runs",
+          "trigger_name": "trg_check_campaign_can_send",
+          "function_name": "check_campaign_can_send",
+          "trigger_definition": "CREATE TRIGGER trg_check_campaign_can_send BEFORE INSERT ON public.campaign_runs FOR EACH ROW EXECUTE FUNCTION check_campaign_can_send()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "account_lifecycle_campaign_activity",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_campaign_activity AFTER INSERT ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "account_lifecycle_campaign_edit",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_campaign_edit AFTER UPDATE OF title, subject, body_html, body_json, template_id ON public.campaigns FOR EACH ROW WHEN (((old.title IS DISTINCT FROM new.title) OR (old.subject IS DISTINCT FROM new.subject) OR (old.body_html IS DISTINCT FROM new.body_html) OR (old.body_json IS DISTINCT FROM new.body_json) OR (old.template_id IS DISTINCT FROM new.template_id))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "campaigns_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER campaigns_updated_at BEFORE UPDATE ON public.campaigns FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "mailofly_campaigns_automation_delete_cleanup",
+          "function_name": "mailofly_cleanup_campaign_automation_before_delete",
+          "trigger_definition": "CREATE TRIGGER mailofly_campaigns_automation_delete_cleanup BEFORE DELETE ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_cleanup_campaign_automation_before_delete()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 11
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "mailofly_plan_campaigns_after_addon",
+          "function_name": "mailofly_after_insert_campaign_addon",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_campaigns_after_addon AFTER INSERT ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_after_insert_campaign_addon()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "mailofly_plan_campaigns_insert",
+          "function_name": "mailofly_enforce_plan_campaigns",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_campaigns_insert BEFORE INSERT ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_campaigns()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "mailofly_plan_campaigns_update",
+          "function_name": "mailofly_enforce_plan_campaigns",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_campaigns_update BEFORE UPDATE ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_campaigns()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "platform_campaign_finished",
+          "function_name": "capture_product_event",
+          "trigger_definition": "CREATE TRIGGER platform_campaign_finished AFTER UPDATE OF status ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.capture_product_event()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        },
+        {
+          "schema_name": "public",
+          "table_name": "campaigns",
+          "trigger_name": "trg_enforce_campaign_status_transition",
+          "function_name": "enforce_campaign_status_transition",
+          "trigger_definition": "CREATE TRIGGER trg_enforce_campaign_status_transition BEFORE UPDATE ON public.campaigns FOR EACH ROW EXECUTE FUNCTION enforce_campaign_status_transition()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "native_template_versions",
+          "trigger_name": "immutable_native_template_version",
+          "function_name": "mailofly_immutable_template_version",
+          "trigger_definition": "CREATE TRIGGER immutable_native_template_version BEFORE UPDATE ON public.native_template_versions FOR EACH ROW EXECUTE FUNCTION mailofly_immutable_template_version()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "template_editor_drafts",
+          "trigger_name": "account_lifecycle_template_draft_edit",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_template_draft_edit AFTER INSERT OR UPDATE OF payload ON public.template_editor_drafts FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 21
+        },
+        {
+          "schema_name": "public",
+          "table_name": "templates",
+          "trigger_name": "a_native_template_guard",
+          "function_name": "mailofly_guard_native_template",
+          "trigger_definition": "CREATE TRIGGER a_native_template_guard BEFORE INSERT OR UPDATE ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_guard_native_template()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 23
+        },
+        {
+          "schema_name": "public",
+          "table_name": "templates",
+          "trigger_name": "account_lifecycle_template_create",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_template_create AFTER INSERT ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "templates",
+          "trigger_name": "account_lifecycle_template_edit",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_template_edit AFTER UPDATE OF name, subject, body, body_json ON public.templates FOR EACH ROW WHEN (((old.name IS DISTINCT FROM new.name) OR (old.subject IS DISTINCT FROM new.subject) OR (old.body IS DISTINCT FROM new.body) OR (old.body_json IS DISTINCT FROM new.body_json))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        },
+        {
+          "schema_name": "public",
+          "table_name": "templates",
+          "trigger_name": "mailofly_plan_templates_after_addon",
+          "function_name": "mailofly_after_insert_template_addon",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_templates_after_addon AFTER INSERT ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_after_insert_template_addon()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "templates",
+          "trigger_name": "mailofly_plan_templates_insert",
+          "function_name": "mailofly_enforce_plan_templates",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_templates_insert BEFORE INSERT ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_templates()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "templates",
+          "trigger_name": "template_editor_revision",
+          "function_name": "mailofly_template_editor_revision",
+          "trigger_definition": "CREATE TRIGGER template_editor_revision BEFORE UPDATE ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_template_editor_revision()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "templates",
+          "trigger_name": "templates_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER templates_updated_at BEFORE UPDATE ON public.templates FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        }
+      ]
+    },
+    "email_delivery_and_ses": {
+      "display_name": "Email Delivery & AWS SES Pipeline",
+      "description": "Outbound email queuing, AWS SES event ingestion, delivery confirmations, send attempts, recipient outcomes, SMTP credentials, and sending domain DKIM/SPF identities.",
+      "tables": [
+        "emails",
+        "email_send_confirmations",
+        "email_usage_operations",
+        "ses_event_inbox",
+        "ses_event_log",
+        "ses_recipient_outcomes",
+        "ses_send_attempts",
+        "ses_organization_tenants",
+        "sending_domains",
+        "sending_identities",
+        "smtp_credentials"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 1,
+      "external_relationships": [
+        {
+          "constraint_name": "email_send_confirmations_organization_id_fkey",
+          "source_table": "email_send_confirmations",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "email_send_confirmations_user_id_fkey",
+          "source_table": "email_send_confirmations",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "email_usage_operations_organization_id_fkey",
+          "source_table": "email_usage_operations",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "email_usage_operations_period_id_fkey",
+          "source_table": "email_usage_operations",
+          "source_column": "period_id",
+          "target_schema": "public",
+          "target_table": "organization_email_periods",
+          "target_column": "id",
+          "target_domain": "billing_and_subscriptions"
+        },
+        {
+          "constraint_name": "emails_account_id_fkey",
+          "source_table": "emails",
+          "source_column": "account_id",
+          "target_schema": "public",
+          "target_table": "identities",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "emails_api_key_id_fkey",
+          "source_table": "emails",
+          "source_column": "api_key_id",
+          "target_schema": "public",
+          "target_table": "api_keys",
+          "target_column": "id",
+          "target_domain": "developer_api_and_oauth"
+        },
+        {
+          "constraint_name": "emails_campaign_id_fkey",
+          "source_table": "emails",
+          "source_column": "campaign_id",
+          "target_schema": "public",
+          "target_table": "campaigns",
+          "target_column": "id",
+          "target_domain": "campaigns_and_templates"
+        },
+        {
+          "constraint_name": "emails_campaign_run_id_fkey",
+          "source_table": "emails",
+          "source_column": "campaign_run_id",
+          "target_schema": "public",
+          "target_table": "campaign_runs",
+          "target_column": "id",
+          "target_domain": "campaigns_and_templates"
+        },
+        {
+          "constraint_name": "emails_contact_id_fkey",
+          "source_table": "emails",
+          "source_column": "contact_id",
+          "target_schema": "public",
+          "target_table": "contacts",
+          "target_column": "id",
+          "target_domain": "contacts_and_crm"
+        },
+        {
+          "constraint_name": "emails_organization_id_fkey",
+          "source_table": "emails",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "emails_user_id_fkey",
+          "source_table": "emails",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "sending_domains_organization_id_fkey",
+          "source_table": "sending_domains",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "sending_domains_user_id_fkey",
+          "source_table": "sending_domains",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "ses_event_log_organization_id_fkey",
+          "source_table": "ses_event_log",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "ses_organization_tenants_organization_id_fkey",
+          "source_table": "ses_organization_tenants",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "ses_recipient_outcomes_organization_id_fkey",
+          "source_table": "ses_recipient_outcomes",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "ses_send_attempts_organization_id_fkey",
+          "source_table": "ses_send_attempts",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "smtp_credentials_created_by_fkey",
+          "source_table": "smtp_credentials",
+          "source_column": "created_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "smtp_credentials_organization_id_fkey",
+          "source_table": "smtp_credentials",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "smtp_credentials_prefer_account_id_fkey",
+          "source_table": "smtp_credentials",
+          "source_column": "prefer_account_id",
+          "target_schema": "public",
+          "target_table": "identities",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "emails",
+          "trigger_name": "account_lifecycle_email_activity",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_email_activity AFTER INSERT ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "emails",
+          "trigger_name": "account_lifecycle_email_sent",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_email_sent AFTER UPDATE OF sent_at ON public.emails FOR EACH ROW WHEN (((old.sent_at IS NULL) AND (new.sent_at IS NOT NULL))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        },
+        {
+          "schema_name": "public",
+          "table_name": "emails",
+          "trigger_name": "mailofly_email_sent_quota",
+          "function_name": "mailofly_before_email_sent_quota",
+          "trigger_definition": "CREATE TRIGGER mailofly_email_sent_quota BEFORE INSERT OR UPDATE OF status ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_before_email_sent_quota()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 23
+        },
+        {
+          "schema_name": "public",
+          "table_name": "emails",
+          "trigger_name": "mailofly_emails_set_updated_at",
+          "function_name": "mailofly_set_emails_updated_at",
+          "trigger_definition": "CREATE TRIGGER mailofly_emails_set_updated_at BEFORE UPDATE ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_set_emails_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "emails",
+          "trigger_name": "mailofly_plan_emails_insert",
+          "function_name": "mailofly_enforce_plan_emails",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_emails_insert BEFORE INSERT ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_emails()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "emails",
+          "trigger_name": "preserve_email_outcome",
+          "function_name": "mailofly_preserve_email_outcome",
+          "trigger_definition": "CREATE TRIGGER preserve_email_outcome BEFORE UPDATE ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_preserve_email_outcome()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "emails",
+          "trigger_name": "trg_prevent_duplicate_campaign_emails",
+          "function_name": "prevent_duplicate_campaign_emails",
+          "trigger_definition": "CREATE TRIGGER trg_prevent_duplicate_campaign_emails BEFORE INSERT ON public.emails FOR EACH ROW EXECUTE FUNCTION prevent_duplicate_campaign_emails()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "sending_domains",
+          "trigger_name": "account_lifecycle_domain_activity",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_domain_activity AFTER INSERT ON public.sending_domains FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "sending_domains",
+          "trigger_name": "account_lifecycle_domain_edit",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_domain_edit AFTER UPDATE OF use_avatar, avatar_url ON public.sending_domains FOR EACH ROW WHEN (((old.use_avatar IS DISTINCT FROM new.use_avatar) OR (old.avatar_url IS DISTINCT FROM new.avatar_url))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        },
+        {
+          "schema_name": "public",
+          "table_name": "sending_domains",
+          "trigger_name": "mailofly_plan_domains_after_addon",
+          "function_name": "mailofly_after_insert_domain_addon",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_domains_after_addon AFTER INSERT ON public.sending_domains FOR EACH ROW EXECUTE FUNCTION mailofly_after_insert_domain_addon()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "sending_domains",
+          "trigger_name": "mailofly_plan_domains_insert",
+          "function_name": "mailofly_enforce_plan_sending_domains",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_domains_insert BEFORE INSERT ON public.sending_domains FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_sending_domains()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        }
+      ]
+    },
+    "mailboxes_and_inbound": {
+      "display_name": "Mailboxes, Inbound Email & Stalwart Engine",
+      "description": "Inbound email handling, mailbox alias routing, received emails storage, and Stalwart mail server integration.",
+      "tables": [
+        "mailboxes",
+        "mailbox_aliases",
+        "mailbox_queue_events",
+        "received_emails",
+        "stalwart_accounts",
+        "stalwart_domains",
+        "stalwart_emails"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 1,
+      "external_relationships": [
+        {
+          "constraint_name": "mailbox_aliases_organization_id_fkey",
+          "source_table": "mailbox_aliases",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "mailboxes_created_by_fkey",
+          "source_table": "mailboxes",
+          "source_column": "created_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "mailboxes_domain_id_fkey",
+          "source_table": "mailboxes",
+          "source_column": "domain_id",
+          "target_schema": "public",
+          "target_table": "sending_domains",
+          "target_column": "id",
+          "target_domain": "email_delivery_and_ses"
+        },
+        {
+          "constraint_name": "mailboxes_organization_id_fkey",
+          "source_table": "mailboxes",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "received_emails_domain_id_fkey",
+          "source_table": "received_emails",
+          "source_column": "domain_id",
+          "target_schema": "public",
+          "target_table": "sending_domains",
+          "target_column": "id",
+          "target_domain": "email_delivery_and_ses"
+        },
+        {
+          "constraint_name": "received_emails_organization_id_fkey",
+          "source_table": "received_emails",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "received_emails_user_id_fkey",
+          "source_table": "received_emails",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "mailboxes",
+          "trigger_name": "mailofly_mailbox_seats",
+          "function_name": "mailofly_guard_mailbox_seats",
+          "trigger_definition": "CREATE TRIGGER mailofly_mailbox_seats BEFORE INSERT OR UPDATE OF organization_id ON public.mailboxes FOR EACH ROW EXECUTE FUNCTION mailofly_guard_mailbox_seats()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 23
+        }
+      ]
+    },
+    "automation_and_events": {
+      "display_name": "Automation Workflows & Background Queues",
+      "description": "Trigger-based automation state machines, execution step tracking, event receipts, delayed waiting events, and queue worker coordination.",
+      "tables": [
+        "automations",
+        "automation_runs",
+        "automation_run_steps",
+        "automation_events",
+        "automation_event_receipts",
+        "automation_waiting_events",
+        "queue_fallback_jobs",
+        "mailofly_user_mail_queue_cron"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 4,
+      "external_relationships": [
+        {
+          "constraint_name": "automation_event_receipts_organization_id_fkey",
+          "source_table": "automation_event_receipts",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "automation_events_organization_id_fkey",
+          "source_table": "automation_events",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "automation_events_user_id_fkey",
+          "source_table": "automation_events",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "automation_runs_contact_id_fkey",
+          "source_table": "automation_runs",
+          "source_column": "contact_id",
+          "target_schema": "public",
+          "target_table": "contacts",
+          "target_column": "id",
+          "target_domain": "contacts_and_crm"
+        },
+        {
+          "constraint_name": "automation_runs_organization_id_fkey",
+          "source_table": "automation_runs",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "automation_waiting_events_contact_id_fkey",
+          "source_table": "automation_waiting_events",
+          "source_column": "contact_id",
+          "target_schema": "public",
+          "target_table": "contacts",
+          "target_column": "id",
+          "target_domain": "contacts_and_crm"
+        },
+        {
+          "constraint_name": "automation_waiting_events_organization_id_fkey",
+          "source_table": "automation_waiting_events",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "automations_organization_id_fkey",
+          "source_table": "automations",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "automations_user_id_fkey",
+          "source_table": "automations",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "mailofly_user_mail_queue_cron_user_id_fkey",
+          "source_table": "mailofly_user_mail_queue_cron",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        }
+      ],
+      "triggers": []
+    },
+    "billing_and_subscriptions": {
+      "display_name": "Billing, Subscriptions & Ledgers",
+      "description": "Tiered plans, add-ons, credit transactions, payment ledgers, Dodo Payments webhook reconciliation, quota period tracking, and sending limits.",
+      "tables": [
+        "plans",
+        "organization_subscriptions",
+        "organization_billing_plan_state",
+        "organization_usage",
+        "organization_email_periods",
+        "organization_email_days",
+        "organization_email_policy",
+        "organization_credit_transactions",
+        "billing_addons",
+        "organization_addons",
+        "organization_addon_subscriptions",
+        "billing_addon_orders",
+        "billing_fulfilled_payments",
+        "billing_payment_ledger",
+        "billing_dodo_snapshots",
+        "billing_webhook_inbox",
+        "organization_billing_notifications",
+        "organization_billing_notification_policy",
+        "organization_payment_notice_state",
+        "organization_sending_protection"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 5,
+      "external_relationships": [
+        {
+          "constraint_name": "billing_addon_orders_organization_id_fkey",
+          "source_table": "billing_addon_orders",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "billing_addon_orders_user_id_fkey",
+          "source_table": "billing_addon_orders",
+          "source_column": "user_id",
+          "target_schema": "public",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "billing_dodo_snapshots_organization_id_fkey",
+          "source_table": "billing_dodo_snapshots",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "billing_fulfilled_payments_organization_id_fkey",
+          "source_table": "billing_fulfilled_payments",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "billing_payment_ledger_organization_id_fkey",
+          "source_table": "billing_payment_ledger",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_addon_subscriptions_organization_id_fkey",
+          "source_table": "organization_addon_subscriptions",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "user_addons_organization_id_fkey",
+          "source_table": "organization_addons",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_billing_notifications_organization_id_fkey",
+          "source_table": "organization_billing_notifications",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_billing_notifications_user_id_fkey",
+          "source_table": "organization_billing_notifications",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "organization_billing_plan_state_organization_id_fkey",
+          "source_table": "organization_billing_plan_state",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_credit_transactions_organization_id_fkey",
+          "source_table": "organization_credit_transactions",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_email_days_organization_id_fkey",
+          "source_table": "organization_email_days",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_email_periods_organization_id_fkey",
+          "source_table": "organization_email_periods",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_email_policy_organization_id_fkey",
+          "source_table": "organization_email_policy",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_payment_notice_state_organization_id_fkey",
+          "source_table": "organization_payment_notice_state",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "organization_sending_protection_organization_id_fkey",
+          "source_table": "organization_sending_protection",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "user_subscriptions_organization_id_fkey",
+          "source_table": "organization_subscriptions",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "user_usage_organization_id_fkey",
+          "source_table": "organization_usage",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "organization_sending_protection",
+          "trigger_name": "capture_reputation_notice",
+          "function_name": "capture_reputation_notice",
+          "trigger_definition": "CREATE TRIGGER capture_reputation_notice AFTER INSERT OR UPDATE ON public.organization_sending_protection FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.capture_reputation_notice()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 21
+        },
+        {
+          "schema_name": "public",
+          "table_name": "organization_sending_protection",
+          "trigger_name": "rotate_reputation_notice_revision",
+          "function_name": "rotate_reputation_notice_revision",
+          "trigger_definition": "CREATE TRIGGER rotate_reputation_notice_revision BEFORE UPDATE ON public.organization_sending_protection FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.rotate_reputation_notice_revision()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "organization_subscriptions",
+          "trigger_name": "mailofly_subscription_apply_locks",
+          "function_name": "mailofly_on_subscription_change_apply_locks",
+          "trigger_definition": "CREATE TRIGGER mailofly_subscription_apply_locks AFTER INSERT OR UPDATE OF plan_id, status ON public.organization_subscriptions FOR EACH ROW EXECUTE FUNCTION mailofly_on_subscription_change_apply_locks()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 21
+        }
+      ]
+    },
+    "developer_api_and_oauth": {
+      "display_name": "Developer API, Webhooks & OAuth 2.0",
+      "description": "External API key provisioning, request auditing, egress webhook dispatch, OAuth2 application authentication, and Supabase integration bridges.",
+      "tables": [
+        "api_keys",
+        "api_key_request_logs",
+        "webhooks",
+        "webhook_deliveries",
+        "oauth_clients",
+        "oauth_access_tokens",
+        "oauth_refresh_tokens",
+        "oauth_authorization_codes",
+        "oauth_authorization_requests",
+        "supabase_integrations"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 7,
+      "external_relationships": [
+        {
+          "constraint_name": "api_key_request_logs_email_id_fkey",
+          "source_table": "api_key_request_logs",
+          "source_column": "email_id",
+          "target_schema": "public",
+          "target_table": "emails",
+          "target_column": "id",
+          "target_domain": "email_delivery_and_ses"
+        },
+        {
+          "constraint_name": "api_key_request_logs_user_id_fkey",
+          "source_table": "api_key_request_logs",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "api_keys_organization_id_fkey",
+          "source_table": "api_keys",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "api_keys_user_id_fkey",
+          "source_table": "api_keys",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "oauth_access_tokens_organization_id_fkey",
+          "source_table": "oauth_access_tokens",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "oauth_access_tokens_user_id_fkey",
+          "source_table": "oauth_access_tokens",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "oauth_authorization_codes_organization_id_fkey",
+          "source_table": "oauth_authorization_codes",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "oauth_authorization_codes_user_id_fkey",
+          "source_table": "oauth_authorization_codes",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "oauth_authorization_requests_organization_id_fkey",
+          "source_table": "oauth_authorization_requests",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "oauth_authorization_requests_user_id_fkey",
+          "source_table": "oauth_authorization_requests",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "oauth_clients_organization_id_fkey",
+          "source_table": "oauth_clients",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "oauth_clients_user_id_fkey",
+          "source_table": "oauth_clients",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "oauth_refresh_tokens_organization_id_fkey",
+          "source_table": "oauth_refresh_tokens",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "oauth_refresh_tokens_user_id_fkey",
+          "source_table": "oauth_refresh_tokens",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "supabase_integrations_created_by_fkey",
+          "source_table": "supabase_integrations",
+          "source_column": "created_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "supabase_integrations_organization_id_fkey",
+          "source_table": "supabase_integrations",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "supabase_integrations_template_id_fkey",
+          "source_table": "supabase_integrations",
+          "source_column": "template_id",
+          "target_schema": "public",
+          "target_table": "templates",
+          "target_column": "id",
+          "target_domain": "campaigns_and_templates"
+        },
+        {
+          "constraint_name": "webhook_deliveries_organization_id_fkey",
+          "source_table": "webhook_deliveries",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "webhook_deliveries_received_email_id_fkey",
+          "source_table": "webhook_deliveries",
+          "source_column": "received_email_id",
+          "target_schema": "public",
+          "target_table": "received_emails",
+          "target_column": "id",
+          "target_domain": "mailboxes_and_inbound"
+        },
+        {
+          "constraint_name": "webhooks_created_by_fkey",
+          "source_table": "webhooks",
+          "source_column": "created_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "webhooks_organization_id_fkey",
+          "source_table": "webhooks",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "api_key_request_logs",
+          "trigger_name": "mailofly_plan_api_request_insert",
+          "function_name": "mailofly_enforce_api_request_quota",
+          "trigger_definition": "CREATE TRIGGER mailofly_plan_api_request_insert BEFORE INSERT ON public.api_key_request_logs FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_api_request_quota()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 7
+        },
+        {
+          "schema_name": "public",
+          "table_name": "api_keys",
+          "trigger_name": "account_lifecycle_api_key_create",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_api_key_create AFTER INSERT ON public.api_keys FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "api_keys",
+          "trigger_name": "account_lifecycle_api_key_use",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_api_key_use AFTER UPDATE OF last_used_at ON public.api_keys FOR EACH ROW WHEN ((old.last_used_at IS DISTINCT FROM new.last_used_at)) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        },
+        {
+          "schema_name": "public",
+          "table_name": "api_keys",
+          "trigger_name": "platform_api_key_created",
+          "function_name": "capture_product_event",
+          "trigger_definition": "CREATE TRIGGER platform_api_key_created AFTER INSERT ON public.api_keys FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.capture_product_event()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "oauth_access_tokens",
+          "trigger_name": "account_lifecycle_oauth_use",
+          "function_name": "record_activity",
+          "trigger_definition": "CREATE TRIGGER account_lifecycle_oauth_use AFTER UPDATE OF last_used_at ON public.oauth_access_tokens FOR EACH ROW WHEN ((old.last_used_at IS DISTINCT FROM new.last_used_at)) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 17
+        }
+      ]
+    },
+    "growth_referrals_and_blog": {
+      "display_name": "Referral Program & Content Engine",
+      "description": "Affiliate partner referrals, commission earnings, withdrawal requests, and public marketing blog CMS.",
+      "tables": [
+        "referral_earnings",
+        "referral_payout_methods",
+        "referral_withdrawal_requests",
+        "blog_posts",
+        "blog_authors",
+        "blog_categories"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 3,
+      "external_relationships": [
+        {
+          "constraint_name": "referral_earnings_organization_id_fkey",
+          "source_table": "referral_earnings",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "referral_earnings_plan_id_fkey",
+          "source_table": "referral_earnings",
+          "source_column": "plan_id",
+          "target_schema": "public",
+          "target_table": "plans",
+          "target_column": "id",
+          "target_domain": "billing_and_subscriptions"
+        },
+        {
+          "constraint_name": "referral_earnings_referred_user_id_fkey",
+          "source_table": "referral_earnings",
+          "source_column": "referred_user_id",
+          "target_schema": "public",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "referral_earnings_referrer_user_id_fkey",
+          "source_table": "referral_earnings",
+          "source_column": "referrer_user_id",
+          "target_schema": "public",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "referral_payout_methods_user_id_fkey",
+          "source_table": "referral_payout_methods",
+          "source_column": "user_id",
+          "target_schema": "public",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "referral_withdrawal_requests_user_id_fkey",
+          "source_table": "referral_withdrawal_requests",
+          "source_column": "user_id",
+          "target_schema": "public",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "blog_authors",
+          "trigger_name": "blog_authors_set_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER blog_authors_set_updated_at BEFORE UPDATE ON public.blog_authors FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "blog_categories",
+          "trigger_name": "blog_categories_set_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER blog_categories_set_updated_at BEFORE UPDATE ON public.blog_categories FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "blog_posts",
+          "trigger_name": "blog_posts_broadcast_after_publish",
+          "function_name": "mailofly_blog_post_broadcast_notify",
+          "trigger_definition": "CREATE TRIGGER blog_posts_broadcast_after_publish AFTER INSERT OR UPDATE OF published ON public.blog_posts FOR EACH ROW EXECUTE FUNCTION mailofly_blog_post_broadcast_notify()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 21
+        },
+        {
+          "schema_name": "public",
+          "table_name": "blog_posts",
+          "trigger_name": "blog_posts_set_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER blog_posts_set_updated_at BEFORE UPDATE ON public.blog_posts FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        }
+      ]
+    },
+    "lifecycle_and_notifications": {
+      "display_name": "Account Lifecycle & System Notifications",
+      "description": "Inactivity tracking, account deletion workflows, automated reminder notices, and multi-channel system notifications.",
+      "tables": [
+        "account_lifecycle_state",
+        "account_lifecycle_policy",
+        "account_lifecycle_notices",
+        "account_lifecycle_deletions",
+        "user_notifications",
+        "platform_notification_events",
+        "platform_email_deliveries",
+        "platform_email_preferences"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 0,
+      "external_relationships": [
+        {
+          "constraint_name": "account_lifecycle_notices_user_id_fkey",
+          "source_table": "account_lifecycle_notices",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "account_lifecycle_state_user_id_fkey",
+          "source_table": "account_lifecycle_state",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "platform_email_deliveries_email_id_fkey",
+          "source_table": "platform_email_deliveries",
+          "source_column": "email_id",
+          "target_schema": "public",
+          "target_table": "emails",
+          "target_column": "id",
+          "target_domain": "email_delivery_and_ses"
+        },
+        {
+          "constraint_name": "platform_email_preferences_organization_id_fkey",
+          "source_table": "platform_email_preferences",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "platform_email_preferences_user_id_fkey",
+          "source_table": "platform_email_preferences",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "platform_notification_events_organization_id_fkey",
+          "source_table": "platform_notification_events",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "platform_notification_events_user_id_fkey",
+          "source_table": "platform_notification_events",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "user_notifications_user_id_fkey",
+          "source_table": "user_notifications",
+          "source_column": "user_id",
+          "target_schema": "public",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        }
+      ],
+      "triggers": []
+    },
+    "admin_support_and_logging": {
+      "display_name": "Admin RBAC, Support & Workspace Auditing",
+      "description": "Internal staff RBAC, customer support ticketing, AI assistant queries, unified audit logs, workspace asset uploads, and system settings.",
+      "tables": [
+        "admin_roles",
+        "admin_permissions",
+        "admin_role_permissions",
+        "support_tickets",
+        "support_ticket_messages",
+        "help_ai_queries",
+        "app_settings",
+        "workspace_logs_unified",
+        "workspace_uploads",
+        "test_apply"
+      ],
+      "external_tables": [],
+      "internal_relationships_count": 3,
+      "external_relationships": [
+        {
+          "constraint_name": "admin_roles_created_by_fkey",
+          "source_table": "admin_roles",
+          "source_column": "created_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "help_ai_queries_organization_id_fkey",
+          "source_table": "help_ai_queries",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "help_ai_queries_user_id_fkey",
+          "source_table": "help_ai_queries",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "support_ticket_messages_sender_id_fkey",
+          "source_table": "support_ticket_messages",
+          "source_column": "sender_id",
+          "target_schema": "public",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "support_tickets_created_by_fkey",
+          "source_table": "support_tickets",
+          "source_column": "created_by",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        },
+        {
+          "constraint_name": "workspace_uploads_organization_id_fkey",
+          "source_table": "workspace_uploads",
+          "source_column": "organization_id",
+          "target_schema": "public",
+          "target_table": "organizations",
+          "target_column": "id",
+          "target_domain": "tenancy_and_users"
+        },
+        {
+          "constraint_name": "workspace_uploads_user_id_fkey",
+          "source_table": "workspace_uploads",
+          "source_column": "user_id",
+          "target_schema": "auth",
+          "target_table": "users",
+          "target_column": "id",
+          "target_domain": "auth"
+        }
+      ],
+      "triggers": [
+        {
+          "schema_name": "public",
+          "table_name": "admin_roles",
+          "trigger_name": "trg_admin_roles_prevent_system_delete",
+          "function_name": "admin_roles_prevent_system_delete",
+          "trigger_definition": "CREATE TRIGGER trg_admin_roles_prevent_system_delete BEFORE DELETE ON public.admin_roles FOR EACH ROW EXECUTE FUNCTION admin_roles_prevent_system_delete()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 11
+        },
+        {
+          "schema_name": "public",
+          "table_name": "app_settings",
+          "trigger_name": "app_settings_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER app_settings_updated_at BEFORE UPDATE ON public.app_settings FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        },
+        {
+          "schema_name": "public",
+          "table_name": "support_ticket_messages",
+          "trigger_name": "trg_support_ticket_message_inserted",
+          "function_name": "touch_support_ticket_updated_at",
+          "trigger_definition": "CREATE TRIGGER trg_support_ticket_message_inserted AFTER INSERT ON public.support_ticket_messages FOR EACH ROW EXECUTE FUNCTION touch_support_ticket_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 5
+        },
+        {
+          "schema_name": "public",
+          "table_name": "support_tickets",
+          "trigger_name": "support_tickets_set_updated_at",
+          "function_name": "set_updated_at",
+          "trigger_definition": "CREATE TRIGGER support_tickets_set_updated_at BEFORE UPDATE ON public.support_tickets FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+          "trigger_enabled": "O",
+          "trigger_type_int": 19
+        }
+      ]
+    }
+  }
+}

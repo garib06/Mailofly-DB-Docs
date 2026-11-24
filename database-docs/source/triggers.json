@@ -1,0 +1,858 @@
+{
+  "collected_at": "2026-11-24T07:03:58.440210+00:00",
+  "database": "mailofly",
+  "project_ref": "aymarrhbnaygxkaorjfl",
+  "metadata_type": "triggers.json",
+  "record_count": 94,
+  "source_info": {
+    "query": "pg_trigger non-internal"
+  },
+  "data": [
+    {
+      "schema_name": "auth",
+      "table_name": "users",
+      "trigger_name": "account_lifecycle_confirm",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_confirm AFTER UPDATE OF email_confirmed_at ON auth.users FOR EACH ROW WHEN (((old.email_confirmed_at IS NULL) AND (new.email_confirmed_at IS NOT NULL))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "auth",
+      "table_name": "users",
+      "trigger_name": "account_lifecycle_enroll",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_enroll AFTER INSERT ON auth.users FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "auth",
+      "table_name": "users",
+      "trigger_name": "mailofly_guard_account_erasure",
+      "function_name": "mailofly_guard_account_erasure",
+      "trigger_definition": "CREATE TRIGGER mailofly_guard_account_erasure BEFORE DELETE ON auth.users FOR EACH ROW EXECUTE FUNCTION mailofly_guard_account_erasure()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 11
+    },
+    {
+      "schema_name": "auth",
+      "table_name": "users",
+      "trigger_name": "on_auth_user_created",
+      "function_name": "handle_new_auth_user",
+      "trigger_definition": "CREATE TRIGGER on_auth_user_created AFTER INSERT ON auth.users FOR EACH ROW EXECUTE FUNCTION handle_new_auth_user()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "auth",
+      "table_name": "users",
+      "trigger_name": "on_auth_user_email_updated",
+      "function_name": "sync_public_user_email_from_auth",
+      "trigger_definition": "CREATE TRIGGER on_auth_user_email_updated AFTER UPDATE OF email ON auth.users FOR EACH ROW WHEN (((old.email)::text IS DISTINCT FROM (new.email)::text)) EXECUTE FUNCTION sync_public_user_email_from_auth()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "cron",
+      "table_name": "job",
+      "trigger_name": "cron_job_cache_invalidate",
+      "function_name": "job_cache_invalidate",
+      "trigger_definition": "CREATE TRIGGER cron_job_cache_invalidate AFTER INSERT OR DELETE OR UPDATE OR TRUNCATE ON cron.job FOR EACH STATEMENT EXECUTE FUNCTION cron.job_cache_invalidate()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 60
+    },
+    {
+      "schema_name": "public",
+      "table_name": "admin_roles",
+      "trigger_name": "trg_admin_roles_prevent_system_delete",
+      "function_name": "admin_roles_prevent_system_delete",
+      "trigger_definition": "CREATE TRIGGER trg_admin_roles_prevent_system_delete BEFORE DELETE ON public.admin_roles FOR EACH ROW EXECUTE FUNCTION admin_roles_prevent_system_delete()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 11
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_key_request_logs",
+      "trigger_name": "mailofly_plan_api_request_insert",
+      "function_name": "mailofly_enforce_api_request_quota",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_api_request_insert BEFORE INSERT ON public.api_key_request_logs FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_api_request_quota()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_keys",
+      "trigger_name": "account_lifecycle_api_key_create",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_api_key_create AFTER INSERT ON public.api_keys FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_keys",
+      "trigger_name": "account_lifecycle_api_key_use",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_api_key_use AFTER UPDATE OF last_used_at ON public.api_keys FOR EACH ROW WHEN ((old.last_used_at IS DISTINCT FROM new.last_used_at)) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "api_keys",
+      "trigger_name": "platform_api_key_created",
+      "function_name": "capture_product_event",
+      "trigger_definition": "CREATE TRIGGER platform_api_key_created AFTER INSERT ON public.api_keys FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.capture_product_event()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "app_settings",
+      "trigger_name": "app_settings_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER app_settings_updated_at BEFORE UPDATE ON public.app_settings FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_authors",
+      "trigger_name": "blog_authors_set_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER blog_authors_set_updated_at BEFORE UPDATE ON public.blog_authors FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_categories",
+      "trigger_name": "blog_categories_set_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER blog_categories_set_updated_at BEFORE UPDATE ON public.blog_categories FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_posts",
+      "trigger_name": "blog_posts_broadcast_after_publish",
+      "function_name": "mailofly_blog_post_broadcast_notify",
+      "trigger_definition": "CREATE TRIGGER blog_posts_broadcast_after_publish AFTER INSERT OR UPDATE OF published ON public.blog_posts FOR EACH ROW EXECUTE FUNCTION mailofly_blog_post_broadcast_notify()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 21
+    },
+    {
+      "schema_name": "public",
+      "table_name": "blog_posts",
+      "trigger_name": "blog_posts_set_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER blog_posts_set_updated_at BEFORE UPDATE ON public.blog_posts FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaign_runs",
+      "trigger_name": "trg_check_campaign_can_send",
+      "function_name": "check_campaign_can_send",
+      "trigger_definition": "CREATE TRIGGER trg_check_campaign_can_send BEFORE INSERT ON public.campaign_runs FOR EACH ROW EXECUTE FUNCTION check_campaign_can_send()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "account_lifecycle_campaign_activity",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_campaign_activity AFTER INSERT ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "account_lifecycle_campaign_edit",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_campaign_edit AFTER UPDATE OF title, subject, body_html, body_json, template_id ON public.campaigns FOR EACH ROW WHEN (((old.title IS DISTINCT FROM new.title) OR (old.subject IS DISTINCT FROM new.subject) OR (old.body_html IS DISTINCT FROM new.body_html) OR (old.body_json IS DISTINCT FROM new.body_json) OR (old.template_id IS DISTINCT FROM new.template_id))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "campaigns_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER campaigns_updated_at BEFORE UPDATE ON public.campaigns FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "mailofly_campaigns_automation_delete_cleanup",
+      "function_name": "mailofly_cleanup_campaign_automation_before_delete",
+      "trigger_definition": "CREATE TRIGGER mailofly_campaigns_automation_delete_cleanup BEFORE DELETE ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_cleanup_campaign_automation_before_delete()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 11
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "mailofly_plan_campaigns_after_addon",
+      "function_name": "mailofly_after_insert_campaign_addon",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_campaigns_after_addon AFTER INSERT ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_after_insert_campaign_addon()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "mailofly_plan_campaigns_insert",
+      "function_name": "mailofly_enforce_plan_campaigns",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_campaigns_insert BEFORE INSERT ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_campaigns()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "mailofly_plan_campaigns_update",
+      "function_name": "mailofly_enforce_plan_campaigns",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_campaigns_update BEFORE UPDATE ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_campaigns()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "platform_campaign_finished",
+      "function_name": "capture_product_event",
+      "trigger_definition": "CREATE TRIGGER platform_campaign_finished AFTER UPDATE OF status ON public.campaigns FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.capture_product_event()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "campaigns",
+      "trigger_name": "trg_enforce_campaign_status_transition",
+      "function_name": "enforce_campaign_status_transition",
+      "trigger_definition": "CREATE TRIGGER trg_enforce_campaign_status_transition BEFORE UPDATE ON public.campaigns FOR EACH ROW EXECUTE FUNCTION enforce_campaign_status_transition()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_segments",
+      "trigger_name": "contact_segments_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER contact_segments_updated_at BEFORE UPDATE ON public.contact_segments FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_segments",
+      "trigger_name": "mailofly_plan_segments_insert",
+      "function_name": "mailofly_enforce_plan_segments",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_segments_insert BEFORE INSERT ON public.contact_segments FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_segments()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_segments",
+      "trigger_name": "managed_segment_guard",
+      "function_name": "mailofly_managed_segment_guard",
+      "trigger_definition": "CREATE TRIGGER managed_segment_guard BEFORE UPDATE ON public.contact_segments FOR EACH ROW EXECUTE FUNCTION mailofly_managed_segment_guard()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_topics",
+      "trigger_name": "native_subscription_guard",
+      "function_name": "mailofly_subscription_guard",
+      "trigger_definition": "CREATE TRIGGER native_subscription_guard BEFORE INSERT OR UPDATE ON public.contact_topics FOR EACH ROW EXECUTE FUNCTION mailofly_subscription_guard()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_topics",
+      "trigger_name": "native_subscription_projection",
+      "function_name": "mailofly_subscription_projection",
+      "trigger_definition": "CREATE TRIGGER native_subscription_projection AFTER INSERT OR UPDATE ON public.contact_topics FOR EACH ROW EXECUTE FUNCTION mailofly_subscription_projection()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 21
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contact_topics",
+      "trigger_name": "subscription_deleted",
+      "function_name": "mailofly_subscription_deleted",
+      "trigger_definition": "CREATE TRIGGER subscription_deleted AFTER DELETE ON public.contact_topics FOR EACH ROW EXECUTE FUNCTION mailofly_subscription_deleted()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 9
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contacts",
+      "trigger_name": "contact_membership_projection",
+      "function_name": "mailofly_contact_membership_projection",
+      "trigger_definition": "CREATE TRIGGER contact_membership_projection AFTER UPDATE OF status, unsubscribed ON public.contacts FOR EACH ROW EXECUTE FUNCTION mailofly_contact_membership_projection()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contacts",
+      "trigger_name": "mailofly_plan_contacts_insert",
+      "function_name": "mailofly_enforce_plan_contacts",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_contacts_insert BEFORE INSERT ON public.contacts FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_contacts()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "contacts",
+      "trigger_name": "native_blog_contact_labels",
+      "function_name": "mailofly_blog_contact_labels",
+      "trigger_definition": "CREATE TRIGGER native_blog_contact_labels BEFORE INSERT OR UPDATE OF properties ON public.contacts FOR EACH ROW EXECUTE FUNCTION mailofly_blog_contact_labels()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "trigger_name": "account_lifecycle_email_activity",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_email_activity AFTER INSERT ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "trigger_name": "account_lifecycle_email_sent",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_email_sent AFTER UPDATE OF sent_at ON public.emails FOR EACH ROW WHEN (((old.sent_at IS NULL) AND (new.sent_at IS NOT NULL))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "trigger_name": "mailofly_email_sent_quota",
+      "function_name": "mailofly_before_email_sent_quota",
+      "trigger_definition": "CREATE TRIGGER mailofly_email_sent_quota BEFORE INSERT OR UPDATE OF status ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_before_email_sent_quota()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "trigger_name": "mailofly_emails_set_updated_at",
+      "function_name": "mailofly_set_emails_updated_at",
+      "trigger_definition": "CREATE TRIGGER mailofly_emails_set_updated_at BEFORE UPDATE ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_set_emails_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "trigger_name": "mailofly_plan_emails_insert",
+      "function_name": "mailofly_enforce_plan_emails",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_emails_insert BEFORE INSERT ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_emails()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "trigger_name": "preserve_email_outcome",
+      "function_name": "mailofly_preserve_email_outcome",
+      "trigger_definition": "CREATE TRIGGER preserve_email_outcome BEFORE UPDATE ON public.emails FOR EACH ROW EXECUTE FUNCTION mailofly_preserve_email_outcome()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "emails",
+      "trigger_name": "trg_prevent_duplicate_campaign_emails",
+      "function_name": "prevent_duplicate_campaign_emails",
+      "trigger_definition": "CREATE TRIGGER trg_prevent_duplicate_campaign_emails BEFORE INSERT ON public.emails FOR EACH ROW EXECUTE FUNCTION prevent_duplicate_campaign_emails()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "trigger_name": "account_lifecycle_sender_activity",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_sender_activity AFTER INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "trigger_name": "account_lifecycle_sender_edit",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_sender_edit AFTER UPDATE OF name, smtp_host, smtp_port, smtp_username, custom_from_email, custom_from_display_name ON public.identities FOR EACH ROW WHEN (((old.name IS DISTINCT FROM new.name) OR (old.smtp_host IS DISTINCT FROM new.smtp_host) OR (old.smtp_port IS DISTINCT FROM new.smtp_port) OR (old.smtp_username IS DISTINCT FROM new.smtp_username) OR (old.custom_from_email IS DISTINCT FROM new.custom_from_email) OR (old.custom_from_display_name IS DISTINCT FROM new.custom_from_display_name))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "trigger_name": "identities_link_orphaned_emails_after_insert",
+      "function_name": "mailofly_link_orphaned_emails_after_identity_insert",
+      "trigger_definition": "CREATE TRIGGER identities_link_orphaned_emails_after_insert AFTER INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_link_orphaned_emails_after_identity_insert()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "trigger_name": "identities_sync_daily_usage_before_insert",
+      "function_name": "mailofly_sync_identity_daily_usage_on_insert",
+      "trigger_definition": "CREATE TRIGGER identities_sync_daily_usage_before_insert BEFORE INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_sync_identity_daily_usage_on_insert()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "trigger_name": "identities_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER identities_updated_at BEFORE UPDATE ON public.identities FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "trigger_name": "mailofly_plan_identities_after_addon",
+      "function_name": "mailofly_after_insert_account_addon",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_identities_after_addon AFTER INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_after_insert_account_addon()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "identities",
+      "trigger_name": "mailofly_plan_identities_insert",
+      "function_name": "mailofly_enforce_plan_accounts",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_identities_insert BEFORE INSERT ON public.identities FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_accounts()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "mailboxes",
+      "trigger_name": "mailofly_mailbox_seats",
+      "function_name": "mailofly_guard_mailbox_seats",
+      "trigger_definition": "CREATE TRIGGER mailofly_mailbox_seats BEFORE INSERT OR UPDATE OF organization_id ON public.mailboxes FOR EACH ROW EXECUTE FUNCTION mailofly_guard_mailbox_seats()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "public",
+      "table_name": "native_template_versions",
+      "trigger_name": "immutable_native_template_version",
+      "function_name": "mailofly_immutable_template_version",
+      "trigger_definition": "CREATE TRIGGER immutable_native_template_version BEFORE UPDATE ON public.native_template_versions FOR EACH ROW EXECUTE FUNCTION mailofly_immutable_template_version()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "newsletter_subscribers",
+      "trigger_name": "legacy_newsletter_bridge",
+      "function_name": "mailofly_legacy_newsletter_bridge",
+      "trigger_definition": "CREATE TRIGGER legacy_newsletter_bridge AFTER INSERT OR UPDATE ON public.newsletter_subscribers FOR EACH ROW EXECUTE FUNCTION mailofly_legacy_newsletter_bridge()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 21
+    },
+    {
+      "schema_name": "public",
+      "table_name": "oauth_access_tokens",
+      "trigger_name": "account_lifecycle_oauth_use",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_oauth_use AFTER UPDATE OF last_used_at ON public.oauth_access_tokens FOR EACH ROW WHEN ((old.last_used_at IS DISTINCT FROM new.last_used_at)) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_members",
+      "trigger_name": "mailofly_keep_workspace_owner",
+      "function_name": "mailofly_keep_workspace_owner",
+      "trigger_definition": "CREATE TRIGGER mailofly_keep_workspace_owner BEFORE DELETE ON public.organization_members FOR EACH ROW EXECUTE FUNCTION mailofly_keep_workspace_owner()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 11
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_sending_protection",
+      "trigger_name": "capture_reputation_notice",
+      "function_name": "capture_reputation_notice",
+      "trigger_definition": "CREATE TRIGGER capture_reputation_notice AFTER INSERT OR UPDATE ON public.organization_sending_protection FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.capture_reputation_notice()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 21
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_sending_protection",
+      "trigger_name": "rotate_reputation_notice_revision",
+      "function_name": "rotate_reputation_notice_revision",
+      "trigger_definition": "CREATE TRIGGER rotate_reputation_notice_revision BEFORE UPDATE ON public.organization_sending_protection FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.rotate_reputation_notice_revision()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organization_subscriptions",
+      "trigger_name": "mailofly_subscription_apply_locks",
+      "function_name": "mailofly_on_subscription_change_apply_locks",
+      "trigger_definition": "CREATE TRIGGER mailofly_subscription_apply_locks AFTER INSERT OR UPDATE OF plan_id, status ON public.organization_subscriptions FOR EACH ROW EXECUTE FUNCTION mailofly_on_subscription_change_apply_locks()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 21
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organizations",
+      "trigger_name": "initialize_org_billing_notice_state",
+      "function_name": "initialize_org_billing_notice_state",
+      "trigger_definition": "CREATE TRIGGER initialize_org_billing_notice_state AFTER INSERT ON public.organizations FOR EACH ROW EXECUTE FUNCTION mailofly_notifications.initialize_org_billing_notice_state()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organizations",
+      "trigger_name": "mailofly_guard_workspace_erasure",
+      "function_name": "mailofly_guard_workspace_erasure",
+      "trigger_definition": "CREATE TRIGGER mailofly_guard_workspace_erasure BEFORE DELETE ON public.organizations FOR EACH ROW EXECUTE FUNCTION mailofly_guard_workspace_erasure()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 11
+    },
+    {
+      "schema_name": "public",
+      "table_name": "organizations",
+      "trigger_name": "organizations_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER organizations_updated_at BEFORE UPDATE ON public.organizations FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_contacts",
+      "trigger_name": "managed_membership_guard",
+      "function_name": "mailofly_managed_membership_guard",
+      "trigger_definition": "CREATE TRIGGER managed_membership_guard BEFORE INSERT OR UPDATE ON public.segment_contacts FOR EACH ROW EXECUTE FUNCTION mailofly_managed_membership_guard()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_google_sheets",
+      "trigger_name": "mailofly_plan_google_sheets_insert",
+      "function_name": "mailofly_enforce_plan_google_sheets",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_google_sheets_insert BEFORE INSERT ON public.segment_google_sheets FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_google_sheets()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "segment_google_sheets",
+      "trigger_name": "segment_google_sheets_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER segment_google_sheets_updated_at BEFORE UPDATE ON public.segment_google_sheets FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "sending_domains",
+      "trigger_name": "account_lifecycle_domain_activity",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_domain_activity AFTER INSERT ON public.sending_domains FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "sending_domains",
+      "trigger_name": "account_lifecycle_domain_edit",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_domain_edit AFTER UPDATE OF use_avatar, avatar_url ON public.sending_domains FOR EACH ROW WHEN (((old.use_avatar IS DISTINCT FROM new.use_avatar) OR (old.avatar_url IS DISTINCT FROM new.avatar_url))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "sending_domains",
+      "trigger_name": "mailofly_plan_domains_after_addon",
+      "function_name": "mailofly_after_insert_domain_addon",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_domains_after_addon AFTER INSERT ON public.sending_domains FOR EACH ROW EXECUTE FUNCTION mailofly_after_insert_domain_addon()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "sending_domains",
+      "trigger_name": "mailofly_plan_domains_insert",
+      "function_name": "mailofly_enforce_plan_sending_domains",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_domains_insert BEFORE INSERT ON public.sending_domains FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_sending_domains()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "support_ticket_messages",
+      "trigger_name": "trg_support_ticket_message_inserted",
+      "function_name": "touch_support_ticket_updated_at",
+      "trigger_definition": "CREATE TRIGGER trg_support_ticket_message_inserted AFTER INSERT ON public.support_ticket_messages FOR EACH ROW EXECUTE FUNCTION touch_support_ticket_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "support_tickets",
+      "trigger_name": "support_tickets_set_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER support_tickets_set_updated_at BEFORE UPDATE ON public.support_tickets FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "template_editor_drafts",
+      "trigger_name": "account_lifecycle_template_draft_edit",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_template_draft_edit AFTER INSERT OR UPDATE OF payload ON public.template_editor_drafts FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 21
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "trigger_name": "a_native_template_guard",
+      "function_name": "mailofly_guard_native_template",
+      "trigger_definition": "CREATE TRIGGER a_native_template_guard BEFORE INSERT OR UPDATE ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_guard_native_template()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "trigger_name": "account_lifecycle_template_create",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_template_create AFTER INSERT ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "trigger_name": "account_lifecycle_template_edit",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_template_edit AFTER UPDATE OF name, subject, body, body_json ON public.templates FOR EACH ROW WHEN (((old.name IS DISTINCT FROM new.name) OR (old.subject IS DISTINCT FROM new.subject) OR (old.body IS DISTINCT FROM new.body) OR (old.body_json IS DISTINCT FROM new.body_json))) EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "trigger_name": "mailofly_plan_templates_after_addon",
+      "function_name": "mailofly_after_insert_template_addon",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_templates_after_addon AFTER INSERT ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_after_insert_template_addon()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "trigger_name": "mailofly_plan_templates_insert",
+      "function_name": "mailofly_enforce_plan_templates",
+      "trigger_definition": "CREATE TRIGGER mailofly_plan_templates_insert BEFORE INSERT ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_enforce_plan_templates()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "trigger_name": "template_editor_revision",
+      "function_name": "mailofly_template_editor_revision",
+      "trigger_definition": "CREATE TRIGGER template_editor_revision BEFORE UPDATE ON public.templates FOR EACH ROW EXECUTE FUNCTION mailofly_template_editor_revision()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "templates",
+      "trigger_name": "templates_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER templates_updated_at BEFORE UPDATE ON public.templates FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "topics",
+      "trigger_name": "managed_topic_guard",
+      "function_name": "mailofly_managed_topic_guard",
+      "trigger_definition": "CREATE TRIGGER managed_topic_guard BEFORE UPDATE ON public.topics FOR EACH ROW EXECUTE FUNCTION mailofly_managed_topic_guard()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "user_onboarding_responses",
+      "trigger_name": "user_onboarding_responses_updated_at",
+      "function_name": "set_updated_at",
+      "trigger_definition": "CREATE TRIGGER user_onboarding_responses_updated_at BEFORE UPDATE ON public.user_onboarding_responses FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "users",
+      "trigger_name": "trg_users_protect_sensitive_columns",
+      "function_name": "users_protect_sensitive_columns",
+      "trigger_definition": "CREATE TRIGGER trg_users_protect_sensitive_columns BEFORE UPDATE ON public.users FOR EACH ROW EXECUTE FUNCTION users_protect_sensitive_columns()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "public",
+      "table_name": "users",
+      "trigger_name": "trg_users_sync_role_from_admin_role",
+      "function_name": "users_sync_role_from_admin_role",
+      "trigger_definition": "CREATE TRIGGER trg_users_sync_role_from_admin_role BEFORE INSERT OR UPDATE OF admin_role_id, role ON public.users FOR EACH ROW EXECUTE FUNCTION users_sync_role_from_admin_role()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "realtime",
+      "table_name": "subscription",
+      "trigger_name": "tr_check_filters",
+      "function_name": "subscription_check_filters",
+      "trigger_definition": "CREATE TRIGGER tr_check_filters BEFORE INSERT OR UPDATE ON realtime.subscription FOR EACH ROW EXECUTE FUNCTION realtime.subscription_check_filters()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "enforce_bucket_name_length_trigger",
+      "function_name": "enforce_bucket_name_length",
+      "trigger_definition": "CREATE TRIGGER enforce_bucket_name_length_trigger BEFORE INSERT OR UPDATE OF name ON storage.buckets FOR EACH ROW EXECUTE FUNCTION storage.enforce_bucket_name_length()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 23
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "enforce_versioning_status_transition",
+      "function_name": "enforce_versioning_status_transition",
+      "trigger_definition": "CREATE TRIGGER enforce_versioning_status_transition BEFORE UPDATE OF versioning_status ON storage.buckets FOR EACH ROW EXECUTE FUNCTION storage.enforce_versioning_status_transition()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "protect_active_lifecycle_states",
+      "function_name": "protect_active_lifecycle_states",
+      "trigger_definition": "CREATE TRIGGER protect_active_lifecycle_states BEFORE DELETE ON storage.buckets FOR EACH ROW EXECUTE FUNCTION storage.protect_active_lifecycle_states()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 11
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "protect_bucket_control_insert",
+      "function_name": "protect_bucket_control_columns",
+      "trigger_definition": "CREATE TRIGGER protect_bucket_control_insert BEFORE INSERT ON storage.buckets FOR EACH ROW EXECUTE FUNCTION storage.protect_bucket_control_columns('service_role')",
+      "trigger_enabled": "O",
+      "trigger_type_int": 7
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "protect_bucket_control_update",
+      "function_name": "protect_bucket_control_columns",
+      "trigger_definition": "CREATE TRIGGER protect_bucket_control_update BEFORE UPDATE OF lifecycle_configuration, lifecycle_configuration_generation ON storage.buckets FOR EACH ROW EXECUTE FUNCTION storage.protect_bucket_control_columns()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "protect_bucket_control_update_role",
+      "function_name": "enforce_bucket_lifecycle_service_role",
+      "trigger_definition": "CREATE TRIGGER protect_bucket_control_update_role AFTER UPDATE OF lifecycle_configuration, lifecycle_configuration_generation ON storage.buckets FOR EACH ROW EXECUTE FUNCTION storage.enforce_bucket_lifecycle_service_role('service_role')",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "protect_buckets_delete",
+      "function_name": "protect_delete",
+      "trigger_definition": "CREATE TRIGGER protect_buckets_delete BEFORE DELETE ON storage.buckets FOR EACH STATEMENT EXECUTE FUNCTION storage.protect_delete()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 10
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "wake_lifecycle_on_policy_write",
+      "function_name": "wake_lifecycle_state",
+      "trigger_definition": "CREATE TRIGGER wake_lifecycle_on_policy_write AFTER INSERT OR UPDATE OF lifecycle_configuration_generation ON storage.buckets FOR EACH ROW EXECUTE FUNCTION storage.wake_lifecycle_state()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 21
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "buckets",
+      "trigger_name": "wake_lifecycle_on_versioning_enable",
+      "function_name": "wake_lifecycle_state",
+      "trigger_definition": "CREATE TRIGGER wake_lifecycle_on_versioning_enable AFTER UPDATE OF versioning_status ON storage.buckets FOR EACH ROW WHEN ((new.lifecycle_configuration IS NOT NULL)) EXECUTE FUNCTION storage.wake_lifecycle_state()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 17
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "trigger_name": "account_lifecycle_upload_activity",
+      "function_name": "record_activity",
+      "trigger_definition": "CREATE TRIGGER account_lifecycle_upload_activity AFTER INSERT ON storage.objects FOR EACH ROW EXECUTE FUNCTION mailofly_lifecycle.record_activity()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 5
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "trigger_name": "protect_objects_delete",
+      "function_name": "protect_delete",
+      "trigger_definition": "CREATE TRIGGER protect_objects_delete BEFORE DELETE ON storage.objects FOR EACH STATEMENT EXECUTE FUNCTION storage.protect_delete()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 10
+    },
+    {
+      "schema_name": "storage",
+      "table_name": "objects",
+      "trigger_name": "update_objects_updated_at",
+      "function_name": "update_updated_at_column",
+      "trigger_definition": "CREATE TRIGGER update_objects_updated_at BEFORE UPDATE ON storage.objects FOR EACH ROW EXECUTE FUNCTION storage.update_updated_at_column()",
+      "trigger_enabled": "O",
+      "trigger_type_int": 19
+    }
+  ]
+}

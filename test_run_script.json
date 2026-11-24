@@ -1,0 +1,66 @@
+[
+  {
+    "command": "page.rename",
+    "params": { "name": "ERD Test Pilot" }
+  },
+  {
+    "command": "page.setBackground",
+    "params": { "color": "#0B0F19" }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "Canvas Container",
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 1000,
+      "props": {
+        "fill": "#0B0F19"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Title",
+      "text": "PILOT ERD TEST: ORGANIZATIONS & USERS",
+      "x": 50,
+      "y": 50,
+      "props": {
+        "fontSize": 20,
+        "fill": "#F8FAFC",
+        "fontWeight": 700
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "frame",
+      "name": "public.organizations",
+      "x": 100,
+      "y": 120,
+      "width": 380,
+      "height": 300,
+      "props": {
+        "fill": "#111827",
+        "stroke": "#334155",
+        "strokeWeight": 1.5,
+        "cornerRadius": 8
+      }
+    }
+  },
+  {
+    "command": "vector.create",
+    "params": {
+      "path": "M 480 200 L 600 200 L 600 300 L 700 300",
+      "props": {
+        "stroke": "#38BDF8",
+        "strokeWeight": 2
+      }
+    }
+  }
+]

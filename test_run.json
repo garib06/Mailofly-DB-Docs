@@ -1,0 +1,18 @@
+[
+    {
+        "params":  {
+                       "name":  "1. Test Page"
+                   },
+        "command":  "page.rename"
+    },
+    {
+        "params":  {
+                       "props":  "System.Collections.Hashtable",
+                       "width":  200,
+                       "name":  "Test Box",
+                       "height":  100,
+                       "type":  "frame"
+                   },
+        "command":  "node.create"
+    }
+]

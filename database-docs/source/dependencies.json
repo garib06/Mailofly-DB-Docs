@@ -1,0 +1,6956 @@
+{
+  "collected_at": "2026-11-24T07:03:59.547520+00:00",
+  "database": "mailofly",
+  "project_ref": "aymarrhbnaygxkaorjfl",
+  "metadata_type": "dependencies.json",
+  "record_count": 992,
+  "source_info": {
+    "query": "pg_depend normal and auto dependencies"
+  },
+  "data": [
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_13448_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_13448",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_13448_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_13448",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_13453_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_13453",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_13453_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_13453",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_13458_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_13458",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_13458_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_13458",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_13463_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_13463",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_13463_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_13463",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66384_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66384",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66384_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66384",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66392_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66392",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66392_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66392",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "support_tickets_category_idx",
+      "ref_schema": "public",
+      "ref_name": "support_tickets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16525_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16525",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16525_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16525",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59439_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59439",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59439_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59439",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_27715_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_27715",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_27715_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_27715",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16883_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16883",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16883_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16883",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16681_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16681",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16681_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16681",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16518_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16518",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16518_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16518",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16770_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16770",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16770_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16770",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16758_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16758",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16758_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16758",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16745_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16745",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16745_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16745",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "vault",
+      "obj_name": "secrets",
+      "ref_schema": "auth",
+      "ref_name": "oauth_authorizations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "vault",
+      "obj_name": "secrets",
+      "ref_schema": "auth",
+      "ref_name": "oauth_authorizations",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16995_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16995",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16995_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16995",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17068_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17068",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17068_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17068",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16965_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16965",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16965_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16965",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16608",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16608_index",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16608_index",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16608_index",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16608_index",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "vault",
+      "obj_name": "secrets_pkey",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "vault",
+      "obj_name": "secrets_pkey",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17028_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17028",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17028_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17028",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "vault",
+      "obj_name": "secrets_name_idx",
+      "ref_schema": "auth",
+      "ref_name": "one_time_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "vault",
+      "obj_name": "decrypted_secrets",
+      "ref_schema": "auth",
+      "ref_name": "one_time_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16933_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16933",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16933_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16933",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16507_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16507",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16507_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16507",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_id_seq",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16812_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16812",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16812_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16812",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16830_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16830",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16830_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16830",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16711_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16711",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16711_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16711",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16797_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16797",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16797_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16797",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16788_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16788",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16788_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16788",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16495_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16495",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16495_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16495",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_50209_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_50209",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_50209_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_50209",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_50186_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_50186",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_50186_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_50186",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "cron",
+      "obj_name": "jobid_seq",
+      "ref_schema": "extensions",
+      "ref_name": "pg_stat_statements",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "cron",
+      "obj_name": "job",
+      "ref_schema": "extensions",
+      "ref_name": "pg_stat_statements",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_56971_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_56971",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_56971_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_56971",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "cron",
+      "obj_name": "runid_seq",
+      "ref_schema": "extensions",
+      "ref_name": "pg_stat_statements",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "cron",
+      "obj_name": "job_run_details",
+      "ref_schema": "extensions",
+      "ref_name": "pg_stat_statements",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_56990_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_56990",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_56990_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_56990",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_57032_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_57032",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_57032_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_57032",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_57025_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_57025",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_57025_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_57025",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "net",
+      "obj_name": "http_request_queue_id_seq",
+      "ref_schema": "net",
+      "ref_name": "http_request_queue",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_63871_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_63871",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_63871_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_63871",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16495",
+      "ref_schema": "public",
+      "ref_name": "app_settings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_57064_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_57064",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_57064_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_57064",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16495_index",
+      "ref_schema": "public",
+      "ref_name": "campaign_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17651_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17651",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17651_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17651",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "identities",
+      "ref_schema": "public",
+      "ref_name": "contact_segments",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17554_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17554",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17554_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17554",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17575_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17575",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17575_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17575",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_token_unique",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_21011_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_21011",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_21011_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_21011",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_56874_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_56874",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_56874_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_56874",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_parent_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "identities_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_instance_id_email_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "confirmation_token_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "confirmation_token_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_56928_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_56928",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_56928_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_56928",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "recovery_token_idx",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "email_change_token_current_idx",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "email_change_token_new_idx",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "reauthentication_token_idx",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sessions_pkey",
+      "ref_schema": "realtime",
+      "ref_name": "subscription",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17103_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17103",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17103_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17103",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17171_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17171",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17171_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17171",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17320_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17320",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17320_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17320",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17360_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17360",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17360_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17360",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17181_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17181",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17181_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17181",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17245_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17245",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17245_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17245",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17260_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17260",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17260_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17260",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_factors",
+      "ref_schema": "storage",
+      "ref_name": "vector_indexes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17371_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17371",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17371_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17371",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17619_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17619",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17619_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17619",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16745",
+      "ref_schema": "vault",
+      "ref_name": "secrets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16745_index",
+      "ref_schema": "vault",
+      "ref_name": "secrets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_factors_pkey",
+      "ref_schema": "vault",
+      "ref_name": "secrets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16608_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16608",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16608_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_16608",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_factors_user_friendly_name_unique",
+      "ref_schema": "auth",
+      "ref_name": "custom_oauth_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_challenges",
+      "ref_schema": "auth",
+      "ref_name": "flow_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16758",
+      "ref_schema": "auth",
+      "ref_name": "instances",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16758_index",
+      "ref_schema": "auth",
+      "ref_name": "mfa_amr_claims",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16758_index",
+      "ref_schema": "auth",
+      "ref_name": "mfa_amr_claims",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_challenges_pkey",
+      "ref_schema": "auth",
+      "ref_name": "mfa_challenges",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_amr_claims",
+      "ref_schema": "auth",
+      "ref_name": "oauth_clients",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16770",
+      "ref_schema": "auth",
+      "ref_name": "one_time_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16770_index",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_amr_claims_session_id_authentication_method_pkey",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "amr_id_pk",
+      "ref_schema": "auth",
+      "ref_name": "sso_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "user_id_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "factor_id_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "webauthn_challenges",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sessions_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "webauthn_credentials",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_session_id_revoked_idx",
+      "ref_schema": "cron",
+      "ref_name": "job",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_providers",
+      "ref_schema": "cron",
+      "ref_name": "job_run_details",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16788",
+      "ref_schema": "public",
+      "ref_name": "campaign_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16788_index",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_providers_pkey",
+      "ref_schema": "public",
+      "ref_name": "segment_contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_providers_pkey",
+      "ref_schema": "public",
+      "ref_name": "segment_contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_providers_resource_id_idx",
+      "ref_schema": "public",
+      "ref_name": "newsletter_subscribers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_domains",
+      "ref_schema": "public",
+      "ref_name": "contact_segments",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16797",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16797",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16797_index",
+      "ref_schema": "realtime",
+      "ref_name": "subscription",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_domains_pkey",
+      "ref_schema": "realtime",
+      "ref_name": "schema_migrations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_domains_sso_provider_id_idx",
+      "ref_schema": "storage",
+      "ref_name": "s3_multipart_uploads_parts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_domains_domain_idx",
+      "ref_schema": "storage",
+      "ref_name": "s3_multipart_uploads",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_providers",
+      "ref_schema": "storage",
+      "ref_name": "vector_indexes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "audit_logs_instance_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "audit_log_entries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "confirmation_token_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "confirmation_token_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "custom_oauth_providers_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "custom_oauth_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "custom_oauth_providers_enabled_idx",
+      "ref_schema": "auth",
+      "ref_name": "custom_oauth_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "custom_oauth_providers_identifier_idx",
+      "ref_schema": "auth",
+      "ref_name": "custom_oauth_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "custom_oauth_providers_provider_type_idx",
+      "ref_schema": "auth",
+      "ref_name": "custom_oauth_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "email_change_token_current_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "email_change_token_current_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "email_change_token_new_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "email_change_token_new_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "factor_id_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "factor_id_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "flow_state_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "flow_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "identities_email_idx",
+      "ref_schema": "auth",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "identities_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "idx_auth_code",
+      "ref_schema": "auth",
+      "ref_name": "flow_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "idx_oauth_client_states_created_at",
+      "ref_schema": "auth",
+      "ref_name": "oauth_client_states",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "idx_user_id_auth_method",
+      "ref_schema": "auth",
+      "ref_name": "flow_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "idx_user_id_auth_method",
+      "ref_schema": "auth",
+      "ref_name": "flow_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_challenge_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "mfa_challenges",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_factors_user_friendly_name_unique",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_factors_user_friendly_name_unique",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_factors_user_friendly_name_unique",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_factors_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_auth_pending_exp_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_authorizations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_auth_pending_exp_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_authorizations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_clients_deleted_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_clients",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_consents_active_client_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_consents_active_client_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_consents_active_user_client_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_consents_active_user_client_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_consents_active_user_client_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_consents_user_order_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_consents_user_order_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "one_time_tokens_relates_to_hash_idx",
+      "ref_schema": "auth",
+      "ref_name": "one_time_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "one_time_tokens_token_hash_hash_idx",
+      "ref_schema": "auth",
+      "ref_name": "one_time_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "one_time_tokens_user_id_token_type_key",
+      "ref_schema": "auth",
+      "ref_name": "one_time_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "one_time_tokens_user_id_token_type_key",
+      "ref_schema": "auth",
+      "ref_name": "one_time_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "reauthentication_token_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "reauthentication_token_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "recovery_token_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "recovery_token_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_instance_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_instance_id_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_instance_id_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_parent_idx",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_session_id_revoked_idx",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_session_id_revoked_idx",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "refresh_tokens_updated_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_providers_sso_provider_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "saml_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "saml_relay_states",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_for_email_idx",
+      "ref_schema": "auth",
+      "ref_name": "saml_relay_states",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_sso_provider_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "saml_relay_states",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sessions_not_after_idx",
+      "ref_schema": "auth",
+      "ref_name": "sessions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sessions_oauth_client_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "sessions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sessions_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "sessions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_domains_domain_idx",
+      "ref_schema": "auth",
+      "ref_name": "sso_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_domains_domain_idx",
+      "ref_schema": "auth",
+      "ref_name": "sso_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_domains_sso_provider_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "sso_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_providers_resource_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "sso_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_providers_resource_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "sso_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "sso_providers_resource_id_pattern_idx",
+      "ref_schema": "auth",
+      "ref_name": "sso_providers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "unique_phone_factor_per_user",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "unique_phone_factor_per_user",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "user_id_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "sessions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "user_id_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "sessions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_email_partial_key",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_email_partial_key",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_instance_id_email_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_instance_id_email_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_instance_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_is_anonymous_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "webauthn_challenges_expires_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "webauthn_challenges",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "webauthn_challenges_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "webauthn_challenges",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "webauthn_credentials_credential_id_key",
+      "ref_schema": "auth",
+      "ref_name": "webauthn_credentials",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "webauthn_credentials_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "webauthn_credentials",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "net",
+      "obj_name": "_http_response_created_idx",
+      "ref_schema": "net",
+      "ref_name": "_http_response",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "identities_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaign_runs_campaign_id_idx",
+      "ref_schema": "public",
+      "ref_name": "campaign_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaign_runs_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "campaign_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaigns_segment_id_idx",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaigns_template_id_idx",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaigns_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contacts_user_status_idx",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contacts_user_status_idx",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_account_day_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_account_day_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_campaign_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_campaign_run_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_status_day_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_status_day_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "newsletter_subscribers_email_key",
+      "ref_schema": "public",
+      "ref_name": "newsletter_subscribers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "recipient_folders_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "contact_segments",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "recipients_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "segment_contacts_contact_id_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "segment_google_sheets_channel_id_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "segment_google_sheets_channel_id_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "segment_google_sheets_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "templates_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "ix_realtime_subscription_entity",
+      "ref_schema": "realtime",
+      "ref_name": "subscription",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "bname",
+      "ref_schema": "storage",
+      "ref_name": "buckets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "buckets_analytics_unique_name_idx",
+      "ref_schema": "storage",
+      "ref_name": "buckets_analytics",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "buckets_analytics_unique_name_idx",
+      "ref_schema": "storage",
+      "ref_name": "buckets_analytics",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_multipart_uploads_list",
+      "ref_schema": "storage",
+      "ref_name": "s3_multipart_uploads",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_multipart_uploads_list",
+      "ref_schema": "storage",
+      "ref_name": "s3_multipart_uploads",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_multipart_uploads_list",
+      "ref_schema": "storage",
+      "ref_name": "s3_multipart_uploads",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_bucket_id_name",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_bucket_id_name",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "name_prefix_search",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "vector_indexes_name_bucket_id_idx",
+      "ref_schema": "storage",
+      "ref_name": "vector_indexes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "vector_indexes_name_bucket_id_idx",
+      "ref_schema": "storage",
+      "ref_name": "vector_indexes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "vault",
+      "obj_name": "secrets_name_idx",
+      "ref_schema": "vault",
+      "ref_name": "secrets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "vault",
+      "obj_name": "secrets_name_idx",
+      "ref_schema": "vault",
+      "ref_name": "secrets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16812",
+      "ref_schema": "public",
+      "ref_name": "app_settings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16812_index",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_providers_pkey",
+      "ref_schema": "public",
+      "ref_name": "contact_segments",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_providers_entity_id_key",
+      "ref_schema": "public",
+      "ref_name": "segment_google_sheets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_providers_sso_provider_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_providers_sso_provider_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "users_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_providers_sso_provider_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16830",
+      "ref_schema": "auth",
+      "ref_name": "mfa_amr_claims",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16830",
+      "ref_schema": "auth",
+      "ref_name": "sessions_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16830",
+      "ref_schema": "auth",
+      "ref_name": "sessions",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_for_email_idx",
+      "ref_schema": "auth",
+      "ref_name": "mfa_factors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_for_email_idx",
+      "ref_schema": "auth",
+      "ref_name": "users_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_for_email_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_email_partial_key",
+      "ref_schema": "auth",
+      "ref_name": "oauth_consents",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_email_partial_key",
+      "ref_schema": "auth",
+      "ref_name": "users_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_email_partial_key",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "sessions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_clients_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "saml_relay_states_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "oauth_clients",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16711_index",
+      "ref_schema": "auth",
+      "ref_name": "sso_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16711_index",
+      "ref_schema": "auth",
+      "ref_name": "sso_providers_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16711_index",
+      "ref_schema": "auth",
+      "ref_name": "sso_providers",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_is_anonymous_idx",
+      "ref_schema": "public",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_is_anonymous_idx",
+      "ref_schema": "auth",
+      "ref_name": "users_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "users_is_anonymous_idx",
+      "ref_schema": "auth",
+      "ref_name": "users",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16933",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16933",
+      "ref_schema": "public",
+      "ref_name": "templates_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16933",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "one_time_tokens_relates_to_hash_idx",
+      "ref_schema": "public",
+      "ref_name": "segment_contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "one_time_tokens_relates_to_hash_idx",
+      "ref_schema": "public",
+      "ref_name": "recipient_folders_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "one_time_tokens_relates_to_hash_idx",
+      "ref_schema": "public",
+      "ref_name": "contact_segments",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16965_index",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16965_index",
+      "ref_schema": "public",
+      "ref_name": "recipients_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16965_index",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16995",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16995",
+      "ref_schema": "storage",
+      "ref_name": "buckets_pkey",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_16995",
+      "ref_schema": "storage",
+      "ref_name": "buckets",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17028",
+      "ref_schema": "cron",
+      "ref_name": "job_run_details",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17028",
+      "ref_schema": "cron",
+      "ref_name": "job_run_details",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17028_index",
+      "ref_schema": "public",
+      "ref_name": "newsletter_subscribers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_kind_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_kind_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_kind_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_source_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_source_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_source_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_source_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17068",
+      "ref_schema": "public",
+      "ref_name": "app_settings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17068_index",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17068_index",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17068_index",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_client_states_pkey",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_client_states_pkey",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "oauth_client_states_pkey",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65247_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65247",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65247_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65247",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_credit_transactions_org_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_credit_transactions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "idx_oauth_client_states_created_at",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "idx_oauth_client_states_created_at",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "n"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59397_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59397",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59397_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59397",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_61214_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_61214",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_61214_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_61214",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_keys_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "api_keys",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_keys_key_hash_idx",
+      "ref_schema": "public",
+      "ref_name": "api_keys",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "admin_roles_name_idx",
+      "ref_schema": "public",
+      "ref_name": "admin_roles",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66413_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66413",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66413_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66413",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "users_role_idx",
+      "ref_schema": "public",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59591_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59591",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59591_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59591",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "support_tickets_created_by_idx",
+      "ref_schema": "public",
+      "ref_name": "support_tickets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "support_tickets_status_idx",
+      "ref_schema": "public",
+      "ref_name": "support_tickets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "support_tickets_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "support_tickets",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59625_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59625",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59625_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59625",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "blog_categories_sort_idx",
+      "ref_schema": "public",
+      "ref_name": "blog_categories",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "blog_categories_sort_idx",
+      "ref_schema": "public",
+      "ref_name": "blog_categories",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59641_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59641",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59641_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59641",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "blog_posts_category_idx",
+      "ref_schema": "public",
+      "ref_name": "blog_posts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "blog_posts_published_idx",
+      "ref_schema": "public",
+      "ref_name": "blog_posts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "blog_posts_published_idx",
+      "ref_schema": "public",
+      "ref_name": "blog_posts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_61159_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_61159",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_61159_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_61159",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "user_onboarding_responses_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "user_onboarding_responses",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "user_onboarding_responses_question_key_idx",
+      "ref_schema": "public",
+      "ref_name": "user_onboarding_responses",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59721_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59721",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59721_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59721",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "blog_authors_sort_idx",
+      "ref_schema": "public",
+      "ref_name": "blog_authors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "blog_authors_sort_idx",
+      "ref_schema": "public",
+      "ref_name": "blog_authors",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contacts_email_validation_status_idx",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contacts_email_validation_status_idx",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contacts_email_validation_status_idx",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "blog_posts_author_id_idx",
+      "ref_schema": "public",
+      "ref_name": "blog_posts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addon_orders_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "billing_addon_orders",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addon_orders_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "billing_addon_orders",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59799_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59799",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59799_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59799",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "plans_active_sort_idx",
+      "ref_schema": "public",
+      "ref_name": "plans",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "plans_active_sort_idx",
+      "ref_schema": "public",
+      "ref_name": "plans",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_smtp_credential_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_smtp_credential_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_smtp_credential_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_smtp_credential_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_smtp_credential_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_smtp_credential_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_smtp_credential_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_user_pending_due_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_user_pending_due_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_user_pending_due_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_user_pending_due_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "sending_domains_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "sending_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "plans_dodo_product_id_key",
+      "ref_schema": "public",
+      "ref_name": "plans",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "plans_dodo_product_id_key",
+      "ref_schema": "public",
+      "ref_name": "plans",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addons_dodo_product_id_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addons",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addons_dodo_product_id_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addons",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_subscriptions_dodo_subscription_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_subscriptions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_subscriptions_dodo_subscription_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_subscriptions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addon_orders_dodo_checkout_session_id_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addon_orders",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addon_orders_dodo_checkout_session_id_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addon_orders",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addon_orders_dodo_payment_id_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addon_orders",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addon_orders_dodo_payment_id_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addon_orders",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_60019_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_60019",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_60019_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_60019",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64869_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64869",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64869_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64869",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59520_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59520",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_59520_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_59520",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_key_request_logs_api_key_created_idx",
+      "ref_schema": "public",
+      "ref_name": "api_key_request_logs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_key_request_logs_api_key_created_idx",
+      "ref_schema": "public",
+      "ref_name": "api_key_request_logs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_key_request_logs_user_created_idx",
+      "ref_schema": "public",
+      "ref_name": "api_key_request_logs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_key_request_logs_user_created_idx",
+      "ref_schema": "public",
+      "ref_name": "api_key_request_logs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "admin_role_permissions_role_id_idx",
+      "ref_schema": "public",
+      "ref_name": "admin_role_permissions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "admin_role_permissions_perm_id_idx",
+      "ref_schema": "public",
+      "ref_name": "admin_role_permissions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "users_admin_role_id_idx",
+      "ref_schema": "public",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhooks_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "webhooks",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhooks_org_enabled_idx",
+      "ref_schema": "public",
+      "ref_name": "webhooks",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhooks_org_enabled_idx",
+      "ref_schema": "public",
+      "ref_name": "webhooks",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_api_key_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_62618_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_62618",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_62618_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_62618",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "identities_user_billing_locked_idx",
+      "ref_schema": "public",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "identities_user_billing_locked_idx",
+      "ref_schema": "public",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaigns_user_billing_locked_idx",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaigns_user_billing_locked_idx",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_62657_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_62657",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_62657_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_62657",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_subscriptions_plan_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_subscriptions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_subscriptions_status_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_subscriptions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64898_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64898",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64898_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64898",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67577_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67577",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67577_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67577",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "user_addons_addon_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_addons",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_events_org_name",
+      "ref_schema": "public",
+      "ref_name": "automation_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_events_org_name",
+      "ref_schema": "public",
+      "ref_name": "automation_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_claim_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_claim_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_claim_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_webhook_id_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66570_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66570",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66570_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66570",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_members_user_id_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_members",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_members_user_id_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_members",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_campaign_run_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_campaign_run_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_campaign_run_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67601_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67601",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67601_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67601",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64229_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64229",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64229_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64229",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organizations_created_by_idx",
+      "ref_schema": "public",
+      "ref_name": "organizations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_members_user_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_members",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_members_org_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_members",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64271_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64271",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64271_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64271",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_invitations_pending_email_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_invitations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_invitations_pending_email_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_invitations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_invitations_pending_email_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_invitations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_invitations_email_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_invitations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_invitations_email_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_invitations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_invitations_email_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_invitations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "identities_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_keys_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "api_keys",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaigns_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "campaigns",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contacts_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contact_segments_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "contact_segments",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "sending_domains_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "sending_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "templates_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automations_org_status",
+      "ref_schema": "public",
+      "ref_name": "automations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_addons_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_addons",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addon_orders_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "billing_addon_orders",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64935_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64935",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64935_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64935",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automations_org_status",
+      "ref_schema": "public",
+      "ref_name": "automations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automations_org_created",
+      "ref_schema": "public",
+      "ref_name": "automations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automations_org_created",
+      "ref_schema": "public",
+      "ref_name": "automations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67628_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67628",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67628_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67628",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64501_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64501",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_64501_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_64501",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "user_notifications_user_created_idx",
+      "ref_schema": "public",
+      "ref_name": "user_notifications",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "user_notifications_user_created_idx",
+      "ref_schema": "public",
+      "ref_name": "user_notifications",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "user_notifications_user_unread_idx",
+      "ref_schema": "public",
+      "ref_name": "user_notifications",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "user_notifications_user_unread_idx",
+      "ref_schema": "public",
+      "ref_name": "user_notifications",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_runs_auto_status_created",
+      "ref_schema": "public",
+      "ref_name": "automation_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_runs_auto_status_created",
+      "ref_schema": "public",
+      "ref_name": "automation_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_runs_auto_status_created",
+      "ref_schema": "public",
+      "ref_name": "automation_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_runs_org_created",
+      "ref_schema": "public",
+      "ref_name": "automation_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_runs_org_created",
+      "ref_schema": "public",
+      "ref_name": "automation_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_runs_contact",
+      "ref_schema": "public",
+      "ref_name": "automation_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67660_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67660",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67660_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67660",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "smtp_credentials_username_uidx",
+      "ref_schema": "public",
+      "ref_name": "smtp_credentials",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "smtp_credentials_username_uidx",
+      "ref_schema": "public",
+      "ref_name": "smtp_credentials",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "smtp_credentials_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "smtp_credentials",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "smtp_credentials_org_enabled_idx",
+      "ref_schema": "public",
+      "ref_name": "smtp_credentials",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "smtp_credentials_org_enabled_idx",
+      "ref_schema": "public",
+      "ref_name": "smtp_credentials",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_credit_transactions_org_idx",
+      "ref_schema": "public",
+      "ref_name": "organization_credit_transactions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_automation_run_steps_run_id",
+      "ref_schema": "public",
+      "ref_name": "automation_run_steps",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65272_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65272",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65272_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65272",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "support_ticket_messages_ticket_idx",
+      "ref_schema": "public",
+      "ref_name": "support_ticket_messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "support_ticket_messages_ticket_idx",
+      "ref_schema": "public",
+      "ref_name": "support_ticket_messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "support_ticket_messages_sender_idx",
+      "ref_schema": "public",
+      "ref_name": "support_ticket_messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "supabase_integrations_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "supabase_integrations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "supabase_integrations_org_active_idx",
+      "ref_schema": "public",
+      "ref_name": "supabase_integrations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "supabase_integrations_org_active_idx",
+      "ref_schema": "public",
+      "ref_name": "supabase_integrations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "supabase_integrations_template_id_idx",
+      "ref_schema": "public",
+      "ref_name": "supabase_integrations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "supabase_integrations_template_id_idx",
+      "ref_schema": "public",
+      "ref_name": "supabase_integrations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67679_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67679",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_67679_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_67679",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66641_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66641",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66641_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66641",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailboxes_email_uidx",
+      "ref_schema": "public",
+      "ref_name": "mailboxes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailboxes_email_uidx",
+      "ref_schema": "public",
+      "ref_name": "mailboxes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailboxes_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "mailboxes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailboxes_domain_id_idx",
+      "ref_schema": "public",
+      "ref_name": "mailboxes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailboxes_org_active_idx",
+      "ref_schema": "public",
+      "ref_name": "mailboxes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailboxes_org_active_idx",
+      "ref_schema": "public",
+      "ref_name": "mailboxes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66676_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66676",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66676_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66676",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailbox_aliases_email_uidx",
+      "ref_schema": "public",
+      "ref_name": "mailbox_aliases",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailbox_aliases_email_uidx",
+      "ref_schema": "public",
+      "ref_name": "mailbox_aliases",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailbox_aliases_mailbox_id_idx",
+      "ref_schema": "public",
+      "ref_name": "mailbox_aliases",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "mailbox_aliases_organization_id_idx",
+      "ref_schema": "public",
+      "ref_name": "mailbox_aliases",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_waiting_events_lookup",
+      "ref_schema": "public",
+      "ref_name": "automation_waiting_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_waiting_events_lookup",
+      "ref_schema": "public",
+      "ref_name": "automation_waiting_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_waiting_events_lookup",
+      "ref_schema": "public",
+      "ref_name": "automation_waiting_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_waiting_events_lookup",
+      "ref_schema": "public",
+      "ref_name": "automation_waiting_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_waiting_events_timeout",
+      "ref_schema": "public",
+      "ref_name": "automation_waiting_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_waiting_events_timeout",
+      "ref_schema": "public",
+      "ref_name": "automation_waiting_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "users_referral_code_unique_idx",
+      "ref_schema": "public",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "users_referral_code_unique_idx",
+      "ref_schema": "public",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "users_referral_code_unique_idx",
+      "ref_schema": "public",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "users_referredby_idx",
+      "ref_schema": "public",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "users_referredby_idx",
+      "ref_schema": "public",
+      "ref_name": "users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65478_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65478",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65478_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65478",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_referrer_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_referrer_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_referred_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_dedupe_sub_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_dedupe_sub_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_dedupe_sub_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_dedupe_sub_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65517_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65517",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65517_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65517",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_payout_methods_user_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_payout_methods",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65538_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65538",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65538_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65538",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_withdrawal_requests_user_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_withdrawal_requests",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_withdrawal_requests_user_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_withdrawal_requests",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_withdrawal_requests_status_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_withdrawal_requests",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_key_request_logs_email_id_idx",
+      "ref_schema": "public",
+      "ref_name": "api_key_request_logs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_key_request_logs_email_id_idx",
+      "ref_schema": "public",
+      "ref_name": "api_key_request_logs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_bucket_id_name_version_key",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_bucket_id_name_version_key",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_bucket_id_name_version_key",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_current_version",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "plans_dodo_product_id_test_key",
+      "ref_schema": "public",
+      "ref_name": "plans",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "plans_dodo_product_id_test_key",
+      "ref_schema": "public",
+      "ref_name": "plans",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "plans_dodo_product_id_live_key",
+      "ref_schema": "public",
+      "ref_name": "plans",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "plans_dodo_product_id_live_key",
+      "ref_schema": "public",
+      "ref_name": "plans",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_current_version",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_current_version",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_null_version",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_null_version",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addons_dodo_product_id_test_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addons",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addons_dodo_product_id_test_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addons",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addons_dodo_product_id_live_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addons",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_addons_dodo_product_id_live_key",
+      "ref_schema": "public",
+      "ref_name": "billing_addons",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_null_version",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_event_log_retention_created_idx",
+      "ref_schema": "public",
+      "ref_name": "ses_event_log",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_retention_created_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "help_ai_queries_retention_created_idx",
+      "ref_schema": "public",
+      "ref_name": "help_ai_queries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76763_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76763",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76763_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76763",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76777_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76777",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76777_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76777",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_webhook_pending_idx",
+      "ref_schema": "public",
+      "ref_name": "billing_webhook_inbox",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_webhook_pending_idx",
+      "ref_schema": "public",
+      "ref_name": "billing_webhook_inbox",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_verified_payment_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "referral_earnings_verified_payment_idx",
+      "ref_schema": "public",
+      "ref_name": "referral_earnings",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76795_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76795",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76795_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76795",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65748_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65748",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65748_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65748",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_help_ai_queries_user_id",
+      "ref_schema": "public",
+      "ref_name": "help_ai_queries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_help_ai_queries_created_at",
+      "ref_schema": "public",
+      "ref_name": "help_ai_queries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_smtp_message_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_smtp_message_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65793_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65793",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65793_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65793",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_event_log_email_id_idx",
+      "ref_schema": "public",
+      "ref_name": "ses_event_log",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_event_log_ses_message_id_idx",
+      "ref_schema": "public",
+      "ref_name": "ses_event_log",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_event_log_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "ses_event_log",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_bounced_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_bounced_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_delivered_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_delivered_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_complained_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_complained_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_opened_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_opened_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_clicked_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_clicked_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_received_emails_org_created_at",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_received_emails_org_created_at",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_received_emails_domain_id",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_received_emails_to_address",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_received_emails_from_address",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_received_emails_message_id",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65882_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65882",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65882_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65882",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_tenant_suppression_org_email",
+      "ref_schema": "public",
+      "ref_name": "tenant_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_tenant_suppression_org_email",
+      "ref_schema": "public",
+      "ref_name": "tenant_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_tenant_suppression_email",
+      "ref_schema": "public",
+      "ref_name": "tenant_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_tenant_suppression_email",
+      "ref_schema": "public",
+      "ref_name": "tenant_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_tenant_suppression_created_at",
+      "ref_schema": "public",
+      "ref_name": "tenant_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65908_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65908",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65908_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65908",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_global_suppression_email",
+      "ref_schema": "public",
+      "ref_name": "global_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_global_suppression_email",
+      "ref_schema": "public",
+      "ref_name": "global_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_global_suppression_created_at",
+      "ref_schema": "public",
+      "ref_name": "global_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_71528_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_71528",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_71528_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_71528",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "workspace_uploads_org_idx",
+      "ref_schema": "public",
+      "ref_name": "workspace_uploads",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "workspace_uploads_org_idx",
+      "ref_schema": "public",
+      "ref_name": "workspace_uploads",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "workspace_uploads_user_idx",
+      "ref_schema": "public",
+      "ref_name": "workspace_uploads",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65946_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65946",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65946_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65946",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_topics_org",
+      "ref_schema": "public",
+      "ref_name": "topics",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65969_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65969",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65969_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65969",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_topics_org",
+      "ref_schema": "public",
+      "ref_name": "contact_topics",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_topics_contact",
+      "ref_schema": "public",
+      "ref_name": "contact_topics",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_topics_topic",
+      "ref_schema": "public",
+      "ref_name": "contact_topics",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68249_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68249",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68249_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68249",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_properties_organization_id",
+      "ref_schema": "public",
+      "ref_name": "contact_properties",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_api_key_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_api_key_id_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_api_key_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_api_key_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_api_key_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_api_key_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66747_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66747",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66747_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66747",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_user_name_key",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_user_name_key",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_user_name_key",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_external_id_key",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_external_id_key",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_external_id_key",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_external_id_key",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_user_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_user_name_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_user_name_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_user_name_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_user_name_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_created_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_updated_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_updated_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_updated_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_updated_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_sso_provider_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_users_deleted_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_users",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66778_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66778",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66778_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66778",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_tokens_token_hash_key",
+      "ref_schema": "auth",
+      "ref_name": "scim_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_tokens_sso_provider_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_tokens_expires_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "scim_tokens_revoked_at_idx",
+      "ref_schema": "auth",
+      "ref_name": "scim_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66822_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66822",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_66822_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_66822",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68280_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68280",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68280_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68280",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "mfa_recovery_codes_set_id_idx",
+      "ref_schema": "auth",
+      "ref_name": "mfa_recovery_codes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78309_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78309",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78309_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78309",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_property_values_org_contact",
+      "ref_schema": "public",
+      "ref_name": "contact_property_values",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_property_values_org_contact",
+      "ref_schema": "public",
+      "ref_name": "contact_property_values",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_property_values_property",
+      "ref_schema": "public",
+      "ref_name": "contact_property_values",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "bucket_lifecycle_states_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "bucket_lifecycle_states",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "bucket_lifecycle_states_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "bucket_lifecycle_states",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "bucket_lifecycle_states_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "bucket_lifecycle_states",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_order_uq",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_order_uq",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_order_uq",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_order_uq",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "objects_archived_due_idx",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_access_tokens_lookup",
+      "ref_schema": "public",
+      "ref_name": "oauth_access_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_access_tokens_lookup",
+      "ref_schema": "public",
+      "ref_name": "oauth_access_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_access_tokens_org",
+      "ref_schema": "public",
+      "ref_name": "oauth_access_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78337_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78337",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78337_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78337",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "lifecycle_abandoned_artifacts_attempted_at_idx",
+      "ref_schema": "storage",
+      "ref_name": "lifecycle_abandoned_artifacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_replay_index",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_replay_index",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_replay_index",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_replay_index",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_replay_index",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_delete_markers",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_refresh_tokens_lookup",
+      "ref_schema": "public",
+      "ref_name": "oauth_refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_refresh_tokens_lookup",
+      "ref_schema": "public",
+      "ref_name": "oauth_refresh_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68530_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68530",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68530_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68530",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_delete_markers",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "storage",
+      "obj_name": "idx_objects_delete_markers",
+      "ref_schema": "storage",
+      "ref_name": "objects",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68208_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68208",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68208_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68208",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_queue_fallback_jobs_pending",
+      "ref_schema": "public",
+      "ref_name": "queue_fallback_jobs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_queue_fallback_jobs_pending",
+      "ref_schema": "public",
+      "ref_name": "queue_fallback_jobs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_queue_fallback_jobs_pending",
+      "ref_schema": "public",
+      "ref_name": "queue_fallback_jobs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17527_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17527",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17527_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17527",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "identities_global_unique_email_idx",
+      "ref_schema": "public",
+      "ref_name": "identities",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_lower_from_created_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_lower_from_created_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_lower_from_created_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_account_id_created_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_account_id_created_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_account_id_created_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_10_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_10",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_10_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_10",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_10_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_10",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_10_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_10",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_10_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_10",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_11_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_11",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_11_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_11",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_11_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_11",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_11_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_11",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_11_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_11",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_15",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_15_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_15",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_15_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_15",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_15_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_15",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_15_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_15",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_15_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_15",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78889_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78889",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78889_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78889",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_queue_fallback_jobs_processed_at",
+      "ref_schema": "public",
+      "ref_name": "queue_fallback_jobs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_queue_fallback_jobs_processed_at",
+      "ref_schema": "public",
+      "ref_name": "queue_fallback_jobs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_keys_key_hash_covering_idx",
+      "ref_schema": "public",
+      "ref_name": "api_keys",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_keys_key_hash_covering_idx",
+      "ref_schema": "public",
+      "ref_name": "api_keys",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_keys_key_hash_covering_idx",
+      "ref_schema": "public",
+      "ref_name": "api_keys",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_keys_key_hash_covering_idx",
+      "ref_schema": "public",
+      "ref_name": "api_keys",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_keys_key_hash_covering_idx",
+      "ref_schema": "public",
+      "ref_name": "api_keys",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_kind_created_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_kind_created_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_kind_created_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_kind_created_id_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "tenant_suppression_org_email_idx",
+      "ref_schema": "public",
+      "ref_name": "tenant_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "tenant_suppression_org_email_idx",
+      "ref_schema": "public",
+      "ref_name": "tenant_suppression_list",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "api_key_request_logs_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "api_key_request_logs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_templates_is_public",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_templates_is_public",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contacts_properties",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contacts_unsubscribed",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contacts_unsubscribed",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_properties_key",
+      "ref_schema": "public",
+      "ref_name": "contact_properties",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_contact_properties_key",
+      "ref_schema": "public",
+      "ref_name": "contact_properties",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "sending_domains_lower_domain_unique_idx",
+      "ref_schema": "public",
+      "ref_name": "sending_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "sending_domains_lower_domain_unique_idx",
+      "ref_schema": "public",
+      "ref_name": "sending_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68362_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68362",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68362_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68362",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "subscription_subscription_id_entity_filters_hash_key",
+      "ref_schema": "realtime",
+      "ref_name": "subscription",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_emails_queue_claim",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_emails_queue_claim",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_emails_queue_claim",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_emails_queue_claim",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_emails_queue_claim",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_emails_suppressed_at",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_emails_suppressed_at",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68424_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68424",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68424_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68424",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68439_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68439",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68439_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68439",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_auth_codes_lookup",
+      "ref_schema": "public",
+      "ref_name": "oauth_authorization_codes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_auth_codes_lookup",
+      "ref_schema": "public",
+      "ref_name": "oauth_authorization_codes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68468_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68468",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68468_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68468",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "platform_notification_recovery_idx",
+      "ref_schema": "public",
+      "ref_name": "platform_email_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "platform_notification_recovery_idx",
+      "ref_schema": "public",
+      "ref_name": "platform_email_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "platform_notification_recovery_idx",
+      "ref_schema": "public",
+      "ref_name": "platform_email_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "platform_notification_recovery_idx",
+      "ref_schema": "public",
+      "ref_name": "platform_email_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_email_send_confirmations_lookup",
+      "ref_schema": "public",
+      "ref_name": "email_send_confirmations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_email_send_confirmations_lookup",
+      "ref_schema": "public",
+      "ref_name": "email_send_confirmations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "subscription_subscription_id_entity_filters_hash_key",
+      "ref_schema": "realtime",
+      "ref_name": "subscription",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "subscription_subscription_id_entity_filters_hash_key",
+      "ref_schema": "realtime",
+      "ref_name": "subscription",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "subscription_subscription_id_entity_filters_hash_key",
+      "ref_schema": "realtime",
+      "ref_name": "subscription",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "subscription_subscription_id_entity_filters_hash_key",
+      "ref_schema": "realtime",
+      "ref_name": "subscription",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76426_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76426",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_sending_domains_status",
+      "ref_schema": "public",
+      "ref_name": "sending_domains",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76426_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76426",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76443_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76443",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76443_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76443",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_outcomes_org_time",
+      "ref_schema": "public",
+      "ref_name": "ses_recipient_outcomes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_outcomes_org_time",
+      "ref_schema": "public",
+      "ref_name": "ses_recipient_outcomes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_source_to_email_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_source_to_email_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_source_to_email_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_source_to_email_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_org_source_to_email_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76456_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76456",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76456_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76456",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_attempts_org_time",
+      "ref_schema": "public",
+      "ref_name": "ses_send_attempts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_attempts_org_time",
+      "ref_schema": "public",
+      "ref_name": "ses_send_attempts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76476_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76476",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76476_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76476",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_event_inbox_pending",
+      "ref_schema": "public",
+      "ref_name": "ses_event_inbox",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_event_inbox_pending",
+      "ref_schema": "public",
+      "ref_name": "ses_event_inbox",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70350_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70350",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70350_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70350",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_auth_requests_lookup",
+      "ref_schema": "public",
+      "ref_name": "oauth_authorization_requests",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "idx_oauth_auth_requests_lookup",
+      "ref_schema": "public",
+      "ref_name": "oauth_authorization_requests",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68497_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68497",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_68497_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_68497",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76486_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76486",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76486_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76486",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_event_inbox_message_id",
+      "ref_schema": "public",
+      "ref_name": "ses_event_inbox",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_event_inbox_message_id",
+      "ref_schema": "public",
+      "ref_name": "ses_event_inbox",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_16",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76669_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76669",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76669_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76669",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "account_lifecycle_inactivity_idx",
+      "ref_schema": "public",
+      "ref_name": "account_lifecycle_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "account_lifecycle_inactivity_idx",
+      "ref_schema": "public",
+      "ref_name": "account_lifecycle_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "account_lifecycle_inactivity_idx",
+      "ref_schema": "public",
+      "ref_name": "account_lifecycle_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_attempts_active_org",
+      "ref_schema": "public",
+      "ref_name": "ses_send_attempts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_attempts_active_org",
+      "ref_schema": "public",
+      "ref_name": "ses_send_attempts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_outcomes_pending_org",
+      "ref_schema": "public",
+      "ref_name": "ses_recipient_outcomes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_outcomes_pending_org",
+      "ref_schema": "public",
+      "ref_name": "ses_recipient_outcomes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "ses_outcomes_pending_org",
+      "ref_schema": "public",
+      "ref_name": "ses_recipient_outcomes",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76686_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76686",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76686_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76686",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76701_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76701",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76701_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76701",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_12",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_12_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_12",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_12_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_12",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_created_at_idx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_12_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_12",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_12_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_12",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_12_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_12",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78718_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78718",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78718_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78718",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_16_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_16",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_16_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_16",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_16_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_16",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_16_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_16",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_16_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_16",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78908_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78908",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78908_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78908",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_idempotency_key_uidx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_idempotency_key_uidx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "emails_organization_idempotency_key_uidx",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70753_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70753",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70753_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70753",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "automation_event_receipts_org_created",
+      "ref_schema": "public",
+      "ref_name": "automation_event_receipts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "automation_event_receipts_org_created",
+      "ref_schema": "public",
+      "ref_name": "automation_event_receipts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "automation_event_receipts_processing",
+      "ref_schema": "public",
+      "ref_name": "automation_event_receipts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "automation_event_receipts_processing",
+      "ref_schema": "public",
+      "ref_name": "automation_event_receipts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "newsletter_active_idx",
+      "ref_schema": "public",
+      "ref_name": "newsletter_subscribers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "newsletter_active_idx",
+      "ref_schema": "public",
+      "ref_name": "newsletter_subscribers",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70814_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70814",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70814_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70814",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70840_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70840",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70840_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70840",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contacts_org_normalized_email",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "contacts_org_normalized_email",
+      "ref_schema": "public",
+      "ref_name": "contacts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70872_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70872",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70872_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70872",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70900_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70900",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70900_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70900",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "subscription_challenges_pending",
+      "ref_schema": "public",
+      "ref_name": "contact_subscription_challenges",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "subscription_challenges_pending",
+      "ref_schema": "public",
+      "ref_name": "contact_subscription_challenges",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70926_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70926",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_70926_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_70926",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "subscription_events_contact",
+      "ref_schema": "public",
+      "ref_name": "contact_subscription_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "subscription_events_contact",
+      "ref_schema": "public",
+      "ref_name": "contact_subscription_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "native_digest_email_identity",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "native_digest_email_identity",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "native_digest_email_identity",
+      "ref_schema": "public",
+      "ref_name": "emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_13",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78132_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78132",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78132_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78132",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78173_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78173",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78173_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78173",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "email_usage_operations_unsettled_idx",
+      "ref_schema": "public",
+      "ref_name": "email_usage_operations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "email_usage_operations_unsettled_idx",
+      "ref_schema": "public",
+      "ref_name": "email_usage_operations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "email_usage_operations_org_time_idx",
+      "ref_schema": "public",
+      "ref_name": "email_usage_operations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "email_usage_operations_org_time_idx",
+      "ref_schema": "public",
+      "ref_name": "email_usage_operations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "email_usage_operations_period_idx",
+      "ref_schema": "public",
+      "ref_name": "email_usage_operations",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78230_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78230",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78230_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78230",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17626_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17626",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_17626_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_17626",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76843_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76843",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76843_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76843",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "received_emails_provider_receipt_idx",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "received_emails_provider_receipt_idx",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "received_emails_provider_receipt_idx",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "received_emails_provider_receipt_idx",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "received_emails_pending_quota_idx",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "received_emails_pending_quota_idx",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "received_emails_pending_quota_idx",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "received_emails_pending_quota_idx",
+      "ref_schema": "public",
+      "ref_name": "received_emails",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_received_once_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_received_once_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_received_once_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "webhook_deliveries_received_once_idx",
+      "ref_schema": "public",
+      "ref_name": "webhook_deliveries",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_10",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78662_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78662",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76739_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76739",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76739_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76739",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_payment_entitlements_idx",
+      "ref_schema": "public",
+      "ref_name": "billing_payment_ledger",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_payment_entitlements_idx",
+      "ref_schema": "public",
+      "ref_name": "billing_payment_ledger",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "billing_payment_entitlements_idx",
+      "ref_schema": "public",
+      "ref_name": "billing_payment_ledger",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78662_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78662",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_13_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_13",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_13_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_13",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_13_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_13",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_13_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_13",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_13_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_13",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78747_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78747",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78747_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78747",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "auth",
+      "obj_name": "one_time_tokens_link_token_hash_hash_idx",
+      "ref_schema": "auth",
+      "ref_name": "one_time_tokens",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "template_editor_drafts_org_idx",
+      "ref_schema": "public",
+      "ref_name": "template_editor_drafts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "template_editor_drafts_author_idx",
+      "ref_schema": "public",
+      "ref_name": "template_editor_drafts",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65833_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65833",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_65833_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_65833",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "templates_org_key_unique",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "templates_org_key_unique",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "templates_org_key_unique",
+      "ref_schema": "public",
+      "ref_name": "templates",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76905_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76905",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76905_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76905",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "native_template_versions_org_template",
+      "ref_schema": "public",
+      "ref_name": "native_template_versions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "native_template_versions_org_template",
+      "ref_schema": "public",
+      "ref_name": "native_template_versions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "native_template_versions_org_template",
+      "ref_schema": "public",
+      "ref_name": "native_template_versions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "native_template_versions_author",
+      "ref_schema": "public",
+      "ref_name": "native_template_versions",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "campaign_runs_native_version_idx",
+      "ref_schema": "public",
+      "ref_name": "campaign_runs",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_11",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76997_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76997",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76997_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76997",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "platform_notification_events_pending",
+      "ref_schema": "public",
+      "ref_name": "platform_notification_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "platform_notification_events_pending",
+      "ref_schema": "public",
+      "ref_name": "platform_notification_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "platform_notification_events_pending",
+      "ref_schema": "public",
+      "ref_name": "platform_notification_events",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_77034_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_77034",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_77034_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_77034",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_77046_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_77046",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_77046_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_77046",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_77059_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_77059",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_77059_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_77059",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_billing_notifications_pending",
+      "ref_schema": "public",
+      "ref_name": "organization_billing_notifications",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_billing_notifications_pending",
+      "ref_schema": "public",
+      "ref_name": "organization_billing_notifications",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_billing_notifications_pending",
+      "ref_schema": "public",
+      "ref_name": "organization_billing_notifications",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_payment_notice_pending",
+      "ref_schema": "public",
+      "ref_name": "organization_payment_notice_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "public",
+      "obj_name": "organization_payment_notice_pending",
+      "ref_schema": "public",
+      "ref_name": "organization_payment_notice_state",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78680_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78680",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78680_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78680",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76410_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76410",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_76410_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_76410",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_14",
+      "ref_schema": "realtime",
+      "ref_name": "messages",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_14_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_14",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_14_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_14",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_14_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_14",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_14_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_14",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "realtime",
+      "obj_name": "messages_2026_11_14_topic_inserted_at_coalesce_idx",
+      "ref_schema": "realtime",
+      "ref_name": "messages_2026_11_14",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78865_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78865",
+      "dependency_type": "a"
+    },
+    {
+      "obj_schema": "pg_toast",
+      "obj_name": "pg_toast_78865_index",
+      "ref_schema": "pg_toast",
+      "ref_name": "pg_toast_78865",
+      "dependency_type": "a"
+    }
+  ]
+}

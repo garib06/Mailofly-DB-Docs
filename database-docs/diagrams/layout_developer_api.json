@@ -1,0 +1,4057 @@
+{
+  "domainKey": "developer_api_and_oauth",
+  "canvas": {
+    "width": 3232,
+    "height": 3788.250384024577,
+    "margin": 120
+  },
+  "nodes": [
+    {
+      "id": "public.api_keys",
+      "x": 1372,
+      "y": 3358.250384024577,
+      "width": 440,
+      "height": 290,
+      "meta": {
+        "fullTableName": "public.api_keys",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 2,
+            "column_name": "user_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 3,
+            "column_name": "name",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": "'API key'::text",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 4,
+            "column_name": "key_hash",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 5,
+            "column_name": "secret_suffix",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 6,
+            "column_name": "expires_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 7,
+            "column_name": "last_used_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 8,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_keys",
+            "ordinal_position": 10,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 290,
+        "colYOffsets": {
+          "id": 57,
+          "user_id": 83,
+          "name": 109,
+          "key_hash": 135,
+          "secret_suffix": 161,
+          "expires_at": 187,
+          "last_used_at": 213,
+          "created_at": 239,
+          "organization_id": 265
+        }
+      }
+    },
+    {
+      "id": "public.api_key_request_logs",
+      "x": 752,
+      "y": 3243.975874220656,
+      "width": 440,
+      "height": 394,
+      "meta": {
+        "fullTableName": "public.api_key_request_logs",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 2,
+            "column_name": "api_key_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 3,
+            "column_name": "user_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 4,
+            "column_name": "method",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 5,
+            "column_name": "path",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 6,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 7,
+            "column_name": "request_body",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 8,
+            "column_name": "response_body",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 9,
+            "column_name": "user_agent",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 10,
+            "column_name": "status_code",
+            "data_type": "integer",
+            "udt_name": "int4",
+            "is_nullable": "NO",
+            "column_default": "200",
+            "character_maximum_length": null,
+            "numeric_precision": 32,
+            "numeric_scale": 0,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 11,
+            "column_name": "email_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 12,
+            "column_name": "ip_address",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "api_key_request_logs",
+            "ordinal_position": 13,
+            "column_name": "duration_ms",
+            "data_type": "integer",
+            "udt_name": "int4",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": 32,
+            "numeric_scale": 0,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 394,
+        "colYOffsets": {
+          "id": 57,
+          "api_key_id": 83,
+          "user_id": 109,
+          "method": 135,
+          "path": 161,
+          "created_at": 187,
+          "request_body": 213,
+          "response_body": 239,
+          "user_agent": 265,
+          "status_code": 291,
+          "email_id": 317,
+          "ip_address": 343,
+          "duration_ms": 369
+        }
+      }
+    },
+    {
+      "id": "public.webhooks",
+      "x": 1372,
+      "y": 2890.2503840245777,
+      "width": 440,
+      "height": 368,
+      "meta": {
+        "fullTableName": "public.webhooks",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 2,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 3,
+            "column_name": "created_by",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 4,
+            "column_name": "name",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 5,
+            "column_name": "url",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 6,
+            "column_name": "secret_encrypted",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 7,
+            "column_name": "secret_suffix",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 8,
+            "column_name": "events",
+            "data_type": "ARRAY",
+            "udt_name": "_text",
+            "is_nullable": "NO",
+            "column_default": "'{}'::text[]",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 9,
+            "column_name": "source",
+            "data_type": "USER-DEFINED",
+            "udt_name": "webhook_source",
+            "is_nullable": "NO",
+            "column_default": "'all'::webhook_source",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 10,
+            "column_name": "enabled",
+            "data_type": "boolean",
+            "udt_name": "bool",
+            "is_nullable": "NO",
+            "column_default": "true",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 11,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhooks",
+            "ordinal_position": 12,
+            "column_name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 368,
+        "colYOffsets": {
+          "id": 57,
+          "organization_id": 83,
+          "created_by": 109,
+          "name": 135,
+          "url": 161,
+          "secret_encrypted": 187,
+          "secret_suffix": 213,
+          "events": 239,
+          "source": 265,
+          "enabled": 291,
+          "created_at": 317,
+          "updated_at": 343
+        }
+      }
+    },
+    {
+      "id": "public.webhook_deliveries",
+      "x": 752,
+      "y": 2747.917050691244,
+      "width": 440,
+      "height": 394,
+      "meta": {
+        "fullTableName": "public.webhook_deliveries",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 2,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 3,
+            "column_name": "webhook_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 4,
+            "column_name": "event",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 5,
+            "column_name": "payload",
+            "data_type": "jsonb",
+            "udt_name": "jsonb",
+            "is_nullable": "NO",
+            "column_default": "'{}'::jsonb",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 6,
+            "column_name": "status",
+            "data_type": "USER-DEFINED",
+            "udt_name": "webhook_delivery_status",
+            "is_nullable": "NO",
+            "column_default": "'pending'::webhook_delivery_status",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 7,
+            "column_name": "attempts",
+            "data_type": "integer",
+            "udt_name": "int4",
+            "is_nullable": "NO",
+            "column_default": "0",
+            "character_maximum_length": null,
+            "numeric_precision": 32,
+            "numeric_scale": 0,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 8,
+            "column_name": "next_attempt_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 9,
+            "column_name": "last_status_code",
+            "data_type": "integer",
+            "udt_name": "int4",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": 32,
+            "numeric_scale": 0,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 10,
+            "column_name": "last_error",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 11,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 12,
+            "column_name": "delivered_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "webhook_deliveries",
+            "ordinal_position": 13,
+            "column_name": "received_email_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 394,
+        "colYOffsets": {
+          "id": 57,
+          "organization_id": 83,
+          "webhook_id": 109,
+          "event": 135,
+          "payload": 161,
+          "status": 187,
+          "attempts": 213,
+          "next_attempt_at": 239,
+          "last_status_code": 265,
+          "last_error": 291,
+          "created_at": 317,
+          "delivered_at": 343,
+          "received_email_id": 369
+        }
+      }
+    },
+    {
+      "id": "public.oauth_clients",
+      "x": 1372,
+      "y": 616.9170506912443,
+      "width": 440,
+      "height": 472,
+      "meta": {
+        "fullTableName": "public.oauth_clients",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 2,
+            "column_name": "client_id",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 3,
+            "column_name": "client_secret_hash",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 4,
+            "column_name": "client_name",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 5,
+            "column_name": "redirect_uris",
+            "data_type": "ARRAY",
+            "udt_name": "_text",
+            "is_nullable": "NO",
+            "column_default": "'{}'::text[]",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 6,
+            "column_name": "allowed_scopes",
+            "data_type": "ARRAY",
+            "udt_name": "_text",
+            "is_nullable": "NO",
+            "column_default": "'{domains:read,emails:read,templates:read,emails:send}'::text[]",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 7,
+            "column_name": "is_trusted",
+            "data_type": "boolean",
+            "udt_name": "bool",
+            "is_nullable": "NO",
+            "column_default": "false",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 8,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "timezone('utc'::text, now())",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 9,
+            "column_name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "timezone('utc'::text, now())",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 10,
+            "column_name": "token_endpoint_auth_method",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": "'none'::text",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 11,
+            "column_name": "grant_types",
+            "data_type": "ARRAY",
+            "udt_name": "_text",
+            "is_nullable": "NO",
+            "column_default": "ARRAY['authorization_code'::text, 'refresh_token'::text]",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 12,
+            "column_name": "response_types",
+            "data_type": "ARRAY",
+            "udt_name": "_text",
+            "is_nullable": "NO",
+            "column_default": "ARRAY['code'::text]",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 13,
+            "column_name": "client_uri",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 14,
+            "column_name": "logo_uri",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 15,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_clients",
+            "ordinal_position": 16,
+            "column_name": "user_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 472,
+        "colYOffsets": {
+          "id": 57,
+          "client_id": 83,
+          "client_secret_hash": 109,
+          "client_name": 135,
+          "redirect_uris": 161,
+          "allowed_scopes": 187,
+          "is_trusted": 213,
+          "created_at": 239,
+          "updated_at": 265,
+          "token_endpoint_auth_method": 291,
+          "grant_types": 317,
+          "response_types": 343,
+          "client_uri": 369,
+          "logo_uri": 395,
+          "organization_id": 421,
+          "user_id": 447
+        }
+      }
+    },
+    {
+      "id": "public.oauth_access_tokens",
+      "x": 752,
+      "y": 1863.9170506912442,
+      "width": 440,
+      "height": 316,
+      "meta": {
+        "fullTableName": "public.oauth_access_tokens",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 2,
+            "column_name": "token_hash",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 3,
+            "column_name": "client_id",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 4,
+            "column_name": "user_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 5,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 6,
+            "column_name": "scopes",
+            "data_type": "ARRAY",
+            "udt_name": "_text",
+            "is_nullable": "NO",
+            "column_default": "'{}'::text[]",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 7,
+            "column_name": "expires_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 8,
+            "column_name": "revoked_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 9,
+            "column_name": "last_used_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_access_tokens",
+            "ordinal_position": 10,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "timezone('utc'::text, now())",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 316,
+        "colYOffsets": {
+          "id": 57,
+          "token_hash": 83,
+          "client_id": 109,
+          "user_id": 135,
+          "organization_id": 161,
+          "scopes": 187,
+          "expires_at": 213,
+          "revoked_at": 239,
+          "last_used_at": 265,
+          "created_at": 291
+        }
+      }
+    },
+    {
+      "id": "public.oauth_refresh_tokens",
+      "x": 132,
+      "y": 495.34285714285716,
+      "width": 440,
+      "height": 342,
+      "meta": {
+        "fullTableName": "public.oauth_refresh_tokens",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 2,
+            "column_name": "token_hash",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 3,
+            "column_name": "access_token_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 4,
+            "column_name": "client_id",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 5,
+            "column_name": "user_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 6,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 7,
+            "column_name": "scopes",
+            "data_type": "ARRAY",
+            "udt_name": "_text",
+            "is_nullable": "NO",
+            "column_default": "'{}'::text[]",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 8,
+            "column_name": "expires_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 9,
+            "column_name": "revoked_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 10,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "timezone('utc'::text, now())",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_refresh_tokens",
+            "ordinal_position": 11,
+            "column_name": "grant_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 342,
+        "colYOffsets": {
+          "id": 57,
+          "token_hash": 83,
+          "access_token_id": 109,
+          "client_id": 135,
+          "user_id": 161,
+          "organization_id": 187,
+          "scopes": 213,
+          "expires_at": 239,
+          "revoked_at": 265,
+          "created_at": 291,
+          "grant_id": 317
+        }
+      }
+    },
+    {
+      "id": "public.oauth_authorization_codes",
+      "x": 752,
+      "y": 2279.917050691244,
+      "width": 440,
+      "height": 368,
+      "meta": {
+        "fullTableName": "public.oauth_authorization_codes",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 2,
+            "column_name": "code_hash",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 3,
+            "column_name": "client_id",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 4,
+            "column_name": "user_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 5,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 6,
+            "column_name": "scopes",
+            "data_type": "ARRAY",
+            "udt_name": "_text",
+            "is_nullable": "NO",
+            "column_default": "'{}'::text[]",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 7,
+            "column_name": "redirect_uri",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 8,
+            "column_name": "code_challenge",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 9,
+            "column_name": "code_challenge_method",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": "'S256'::text",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 10,
+            "column_name": "expires_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 11,
+            "column_name": "used_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_codes",
+            "ordinal_position": 12,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "timezone('utc'::text, now())",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 368,
+        "colYOffsets": {
+          "id": 57,
+          "code_hash": 83,
+          "client_id": 109,
+          "user_id": 135,
+          "organization_id": 161,
+          "scopes": 187,
+          "redirect_uri": 213,
+          "code_challenge": 239,
+          "code_challenge_method": 265,
+          "expires_at": 291,
+          "used_at": 317,
+          "created_at": 343
+        }
+      }
+    },
+    {
+      "id": "public.oauth_authorization_requests",
+      "x": 752,
+      "y": 202.14285714285714,
+      "width": 440,
+      "height": 420,
+      "meta": {
+        "fullTableName": "public.oauth_authorization_requests",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 2,
+            "column_name": "client_id",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 3,
+            "column_name": "redirect_uri",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 4,
+            "column_name": "response_type",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": "'code'::text",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 5,
+            "column_name": "scope",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 6,
+            "column_name": "state",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 7,
+            "column_name": "code_challenge",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 8,
+            "column_name": "code_challenge_method",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": "'S256'::text",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 9,
+            "column_name": "user_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 10,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 11,
+            "column_name": "status",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": "'pending'::text",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 12,
+            "column_name": "code",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 13,
+            "column_name": "expires_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "oauth_authorization_requests",
+            "ordinal_position": 14,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "timezone('utc'::text, now())",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 420,
+        "colYOffsets": {
+          "id": 57,
+          "client_id": 83,
+          "redirect_uri": 109,
+          "response_type": 135,
+          "scope": 161,
+          "state": 187,
+          "code_challenge": 213,
+          "code_challenge_method": 239,
+          "user_id": 265,
+          "organization_id": 291,
+          "status": 317,
+          "code": 343,
+          "expires_at": 369,
+          "created_at": 395
+        }
+      }
+    },
+    {
+      "id": "public.supabase_integrations",
+      "x": 1372,
+      "y": 1188.9170506912442,
+      "width": 440,
+      "height": 654,
+      "meta": {
+        "fullTableName": "public.supabase_integrations",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 2,
+            "column_name": "organization_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 3,
+            "column_name": "created_by",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 4,
+            "column_name": "supabase_access_token_encrypted",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 5,
+            "column_name": "supabase_refresh_token_encrypted",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 6,
+            "column_name": "supabase_token_expires_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 7,
+            "column_name": "supabase_project_ref",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 8,
+            "column_name": "supabase_project_name",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 9,
+            "column_name": "supabase_org_id",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 10,
+            "column_name": "table_schema",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": "'public'::text",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 11,
+            "column_name": "table_name",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 12,
+            "column_name": "event_type",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 13,
+            "column_name": "filter_column",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 14,
+            "column_name": "filter_value",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 15,
+            "column_name": "recipient_column",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 16,
+            "column_name": "template_id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 17,
+            "column_name": "supabase_webhook_id",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 18,
+            "column_name": "supabase_webhook_secret_encrypted",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 19,
+            "column_name": "is_active",
+            "data_type": "boolean",
+            "udt_name": "bool",
+            "is_nullable": "NO",
+            "column_default": "false",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 20,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 21,
+            "column_name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 22,
+            "column_name": "emails_sent",
+            "data_type": "integer",
+            "udt_name": "int4",
+            "is_nullable": "NO",
+            "column_default": "0",
+            "character_maximum_length": null,
+            "numeric_precision": 32,
+            "numeric_scale": 0,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "supabase_integrations",
+            "ordinal_position": 23,
+            "column_name": "last_sent_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          }
+        ],
+        "width": 440,
+        "height": 654,
+        "colYOffsets": {
+          "id": 57,
+          "organization_id": 83,
+          "created_by": 109,
+          "supabase_access_token_encrypted": 135,
+          "supabase_refresh_token_encrypted": 161,
+          "supabase_token_expires_at": 187,
+          "supabase_project_ref": 213,
+          "supabase_project_name": 239,
+          "supabase_org_id": 265,
+          "table_schema": 291,
+          "table_name": 317,
+          "event_type": 343,
+          "filter_column": 369,
+          "filter_value": 395,
+          "recipient_column": 421,
+          "template_id": 447,
+          "supabase_webhook_id": 473,
+          "supabase_webhook_secret_encrypted": 499,
+          "is_active": 525,
+          "created_at": 551,
+          "updated_at": 577,
+          "emails_sent": 603,
+          "last_sent_at": 629
+        }
+      }
+    },
+    {
+      "id": "public.organizations",
+      "x": 1992,
+      "y": 397.1428571428571,
+      "width": 440,
+      "height": 420,
+      "meta": {
+        "fullTableName": "public.organizations",
+        "cols": [
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 1,
+            "column_name": "id",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 2,
+            "column_name": "name",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 3,
+            "column_name": "slug",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "NO",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 4,
+            "column_name": "created_by",
+            "data_type": "uuid",
+            "udt_name": "uuid",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": "User who created the workspace. Nullable after that auth user is deleted."
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 5,
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 6,
+            "column_name": "updated_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "NO",
+            "column_default": "now()",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 7,
+            "column_name": "type",
+            "data_type": "USER-DEFINED",
+            "udt_name": "organization_type",
+            "is_nullable": "NO",
+            "column_default": "'business'::organization_type",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 8,
+            "column_name": "credit_balance_cents",
+            "data_type": "integer",
+            "udt_name": "int4",
+            "is_nullable": "NO",
+            "column_default": "0",
+            "character_maximum_length": null,
+            "numeric_precision": 32,
+            "numeric_scale": 0,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 9,
+            "column_name": "ses_configuration_set",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": "Custom AWS SES Configuration Set name override for this organization (e.g. dedicated IP pool or enterprise config set)."
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 10,
+            "column_name": "unsubscribe_page_config",
+            "data_type": "jsonb",
+            "udt_name": "jsonb",
+            "is_nullable": "NO",
+            "column_default": "'{}'::jsonb",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": "Custom branding, copy, styling, and controls configuration for the public unsubscribe and preference center page."
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 11,
+            "column_name": "is_locked",
+            "data_type": "boolean",
+            "udt_name": "bool",
+            "is_nullable": "NO",
+            "column_default": "false",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 12,
+            "column_name": "locked_at",
+            "data_type": "timestamp with time zone",
+            "udt_name": "timestamptz",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 13,
+            "column_name": "locked_reason",
+            "data_type": "text",
+            "udt_name": "text",
+            "is_nullable": "YES",
+            "column_default": null,
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": null
+          },
+          {
+            "table_schema": "public",
+            "table_name": "organizations",
+            "ordinal_position": 14,
+            "column_name": "auto_verify_contacts",
+            "data_type": "boolean",
+            "udt_name": "bool",
+            "is_nullable": "NO",
+            "column_default": "false",
+            "character_maximum_length": null,
+            "numeric_precision": null,
+            "numeric_scale": null,
+            "is_identity": "NO",
+            "identity_generation": null,
+            "is_generated": "NEVER",
+            "generation_expression": null,
+            "column_comment": "When true, newly added or imported contacts are automatically queued for background deliverability verification"
+          }
+        ],
+        "width": 440,
+        "height": 420,
+        "colYOffsets": {
+          "id": 57,
+          "name": 83,
+          "slug": 109,
+          "created_by": 135,
+          "created_at": 161,
+          "updated_at": 187,
+          "type": 213,
+          "credit_balance_cents": 239,
+          "ses_configuration_set": 265,
+          "unsubscribe_page_config": 291,
+          "is_locked": 317,
+          "locked_at": 343,
+          "locked_reason": 369,
+          "auto_verify_contacts": 395
+        }
+      }
+    },
+    {
+      "id": "auth.users",
+      "x": 2612,
+      "y": 172,
+      "width": 440,
+      "height": 134,
+      "meta": {
+        "fullTableName": "auth.users",
+        "cols": [
+          {
+            "table_schema": "auth",
+            "table_name": "users",
+            "column_name": "id",
+            "data_type": "uuid",
+            "is_nullable": "NO",
+            "column_default": "gen_random_uuid()"
+          },
+          {
+            "table_schema": "auth",
+            "table_name": "users",
+            "column_name": "email",
+            "data_type": "text",
+            "is_nullable": "YES",
+            "column_default": null
+          },
+          {
+            "table_schema": "auth",
+            "table_name": "users",
+            "column_name": "created_at",
+            "data_type": "timestamp with time zone",
+            "is_nullable": "NO",
+            "column_default": "now()"
+          }
+        ],
+        "width": 440,
+        "height": 134,
+        "colYOffsets": {
+          "id": 57,
+          "email": 83,
+          "created_at": 109
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "fk_0_api_key_request_logs_api_key_id_fkey",
+      "meta": {
+        "constraint_name": "api_key_request_logs_api_key_id_fkey",
+        "source_schema": "public",
+        "source_table": "api_key_request_logs",
+        "source_column": "api_key_id",
+        "target_schema": "public",
+        "target_table": "api_keys",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 3375.3092075539894
+          },
+          "endPoint": {
+            "x": 1372,
+            "y": 3375.309207553989
+          },
+          "bendPoints": []
+        }
+      ]
+    },
+    {
+      "id": "fk_1_api_key_request_logs_user_id_fkey",
+      "meta": {
+        "constraint_name": "api_key_request_logs_user_id_fkey",
+        "source_schema": "public",
+        "source_table": "api_key_request_logs",
+        "source_column": "user_id",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 3506.6425408873224
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 1202,
+              "y": 3506.6425408873224
+            },
+            {
+              "x": 1202,
+              "y": 3658.250384024577
+            },
+            {
+              "x": 1842,
+              "y": 3658.250384024577
+            },
+            {
+              "x": 1842,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_2_api_keys_organization_id_fkey",
+      "meta": {
+        "constraint_name": "api_keys_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "api_keys",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1812,
+            "y": 3454.9170506912437
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": [
+            {
+              "x": 1832,
+              "y": 3454.9170506912437
+            },
+            {
+              "x": 1832,
+              "y": 412.1428571428571
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_3_api_keys_user_id_fkey",
+      "meta": {
+        "constraint_name": "api_keys_user_id_fkey",
+        "source_schema": "public",
+        "source_table": "api_keys",
+        "source_column": "user_id",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1812,
+            "y": 3551.5837173579107
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 1842,
+              "y": 3551.5837173579107
+            },
+            {
+              "x": 1842,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_4_oauth_access_tokens_client_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_access_tokens_client_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_access_tokens",
+        "source_column": "client_id",
+        "target_schema": "public",
+        "target_table": "oauth_clients",
+        "target_column": "client_id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 1942.9170506912442
+          },
+          "endPoint": {
+            "x": 1372,
+            "y": 632.1428571428572
+          },
+          "bendPoints": [
+            {
+              "x": 1202,
+              "y": 1942.9170506912442
+            },
+            {
+              "x": 1202,
+              "y": 632.1428571428572
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_5_oauth_access_tokens_organization_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_access_tokens_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_access_tokens",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 2021.9170506912442
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": [
+            {
+              "x": 1212,
+              "y": 2021.9170506912442
+            },
+            {
+              "x": 1212,
+              "y": 1852.9170506912442
+            },
+            {
+              "x": 1832,
+              "y": 1852.9170506912442
+            },
+            {
+              "x": 1832,
+              "y": 412.1428571428571
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_6_oauth_access_tokens_user_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_access_tokens_user_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_access_tokens",
+        "source_column": "user_id",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 2100.917050691244
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 1222,
+              "y": 2100.917050691244
+            },
+            {
+              "x": 1222,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_7_oauth_authorization_codes_client_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_authorization_codes_client_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_authorization_codes",
+        "source_column": "client_id",
+        "target_schema": "public",
+        "target_table": "oauth_clients",
+        "target_column": "client_id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 2371.917050691244
+          },
+          "endPoint": {
+            "x": 1372,
+            "y": 632.1428571428572
+          },
+          "bendPoints": [
+            {
+              "x": 1202,
+              "y": 2371.917050691244
+            },
+            {
+              "x": 1202,
+              "y": 632.1428571428572
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_8_oauth_authorization_codes_organization_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_authorization_codes_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_authorization_codes",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 2463.917050691244
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": [
+            {
+              "x": 1832,
+              "y": 2463.917050691244
+            },
+            {
+              "x": 1832,
+              "y": 412.1428571428571
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_9_oauth_authorization_codes_user_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_authorization_codes_user_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_authorization_codes",
+        "source_column": "user_id",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 2555.917050691244
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 1202,
+              "y": 2555.917050691244
+            },
+            {
+              "x": 1202,
+              "y": 2474.917050691244
+            },
+            {
+              "x": 1842,
+              "y": 2474.917050691244
+            },
+            {
+              "x": 1842,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_10_oauth_authorization_requests_client_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_authorization_requests_client_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_authorization_requests",
+        "source_column": "client_id",
+        "target_schema": "public",
+        "target_table": "oauth_clients",
+        "target_column": "client_id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 517.1428571428571
+          },
+          "endPoint": {
+            "x": 1372,
+            "y": 632.1428571428572
+          },
+          "bendPoints": [
+            {
+              "x": 1202,
+              "y": 517.1428571428571
+            },
+            {
+              "x": 1202,
+              "y": 632.1428571428572
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_11_oauth_authorization_requests_organization_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_authorization_requests_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_authorization_requests",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "n",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 412.1428571428571
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": []
+        }
+      ]
+    },
+    {
+      "id": "fk_12_oauth_authorization_requests_user_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_authorization_requests_user_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_authorization_requests",
+        "source_column": "user_id",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "n",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 307.1428571428571
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 1202,
+              "y": 307.1428571428571
+            },
+            {
+              "x": 1202,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_13_oauth_clients_organization_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_clients_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_clients",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1812,
+            "y": 931.5837173579109
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": [
+            {
+              "x": 1832,
+              "y": 931.5837173579109
+            },
+            {
+              "x": 1832,
+              "y": 412.1428571428571
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_14_oauth_clients_user_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_clients_user_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_clients",
+        "source_column": "user_id",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1812,
+            "y": 774.2503840245777
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 1822,
+              "y": 774.2503840245777
+            },
+            {
+              "x": 1822,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_15_oauth_refresh_tokens_access_token_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_refresh_tokens_access_token_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_refresh_tokens",
+        "source_column": "access_token_id",
+        "target_schema": "public",
+        "target_table": "oauth_access_tokens",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 572,
+            "y": 768.9428571428572
+          },
+          "endPoint": {
+            "x": 752,
+            "y": 1881.4726062467998
+          },
+          "bendPoints": [
+            {
+              "x": 582,
+              "y": 768.9428571428572
+            },
+            {
+              "x": 582,
+              "y": 1881.4726062467998
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_16_oauth_refresh_tokens_client_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_refresh_tokens_client_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_refresh_tokens",
+        "source_column": "client_id",
+        "target_schema": "public",
+        "target_table": "oauth_clients",
+        "target_column": "client_id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 572,
+            "y": 632.1428571428571
+          },
+          "endPoint": {
+            "x": 1372,
+            "y": 632.1428571428572
+          },
+          "bendPoints": []
+        }
+      ]
+    },
+    {
+      "id": "fk_17_oauth_refresh_tokens_organization_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_refresh_tokens_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_refresh_tokens",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 572,
+            "y": 700.5428571428572
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": [
+            {
+              "x": 592,
+              "y": 700.5428571428572
+            },
+            {
+              "x": 592,
+              "y": 1852.9170506912442
+            },
+            {
+              "x": 1832,
+              "y": 1852.9170506912442
+            },
+            {
+              "x": 1832,
+              "y": 412.1428571428571
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_18_oauth_refresh_tokens_user_id_fkey",
+      "meta": {
+        "constraint_name": "oauth_refresh_tokens_user_id_fkey",
+        "source_schema": "public",
+        "source_table": "oauth_refresh_tokens",
+        "source_column": "user_id",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 572,
+            "y": 563.7428571428571
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 582,
+              "y": 563.7428571428571
+            },
+            {
+              "x": 582,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_19_organizations_created_by_fkey",
+      "meta": {
+        "constraint_name": "organizations_created_by_fkey",
+        "source_schema": "public",
+        "source_table": "organizations",
+        "source_column": "created_by",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "n",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 2432,
+            "y": 607.1428571428571
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 2442,
+              "y": 607.1428571428571
+            },
+            {
+              "x": 2442,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_20_supabase_integrations_created_by_fkey",
+      "meta": {
+        "constraint_name": "supabase_integrations_created_by_fkey",
+        "source_schema": "public",
+        "source_table": "supabase_integrations",
+        "source_column": "created_by",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1812,
+            "y": 1406.9170506912442
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 1822,
+              "y": 1406.9170506912442
+            },
+            {
+              "x": 1822,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_21_supabase_integrations_organization_id_fkey",
+      "meta": {
+        "constraint_name": "supabase_integrations_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "supabase_integrations",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1812,
+            "y": 1624.9170506912442
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": [
+            {
+              "x": 1832,
+              "y": 1624.9170506912442
+            },
+            {
+              "x": 1832,
+              "y": 412.1428571428571
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_22_webhook_deliveries_organization_id_fkey",
+      "meta": {
+        "constraint_name": "webhook_deliveries_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "webhook_deliveries",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 2879.2503840245777
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": [
+            {
+              "x": 1832,
+              "y": 2879.2503840245777
+            },
+            {
+              "x": 1832,
+              "y": 412.1428571428571
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_23_webhook_deliveries_webhook_id_fkey",
+      "meta": {
+        "constraint_name": "webhook_deliveries_webhook_id_fkey",
+        "source_schema": "public",
+        "source_table": "webhook_deliveries",
+        "source_column": "webhook_id",
+        "target_schema": "public",
+        "target_table": "webhooks",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1192,
+            "y": 3010.5837173579107
+          },
+          "endPoint": {
+            "x": 1372,
+            "y": 2906.2503840245777
+          },
+          "bendPoints": [
+            {
+              "x": 1202,
+              "y": 3010.5837173579107
+            },
+            {
+              "x": 1202,
+              "y": 2906.2503840245777
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_24_webhooks_created_by_fkey",
+      "meta": {
+        "constraint_name": "webhooks_created_by_fkey",
+        "source_schema": "public",
+        "source_table": "webhooks",
+        "source_column": "created_by",
+        "target_schema": "auth",
+        "target_table": "users",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1812,
+            "y": 3135.583717357911
+          },
+          "endPoint": {
+            "x": 2612,
+            "y": 191.14285714285714
+          },
+          "bendPoints": [
+            {
+              "x": 1842,
+              "y": 3135.583717357911
+            },
+            {
+              "x": 1842,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 1863.9170506912442
+            },
+            {
+              "x": 2442,
+              "y": 191.14285714285714
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fk_25_webhooks_organization_id_fkey",
+      "meta": {
+        "constraint_name": "webhooks_organization_id_fkey",
+        "source_schema": "public",
+        "source_table": "webhooks",
+        "source_column": "organization_id",
+        "target_schema": "public",
+        "target_table": "organizations",
+        "target_column": "id",
+        "update_action": "a",
+        "delete_action": "c",
+        "is_deferrable": false,
+        "initially_deferred": false
+      },
+      "sections": [
+        {
+          "startPoint": {
+            "x": 1812,
+            "y": 3012.917050691244
+          },
+          "endPoint": {
+            "x": 1992,
+            "y": 412.1428571428571
+          },
+          "bendPoints": [
+            {
+              "x": 1832,
+              "y": 3012.917050691244
+            },
+            {
+              "x": 1832,
+              "y": 412.1428571428571
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
